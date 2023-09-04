@@ -1,0 +1,8 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sources_1/new/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sources_1/new/ram_design.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram_design
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sim_1/new/ram_design_db.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile_tb
+INFO: [VRFC 10-2458] undeclared symbol cout, assumed default net type wire [E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sim_1/new/ram_design_db.v:70]
+INFO: [VRFC 10-2458] undeclared symbol zero, assumed default net type wire [E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sim_1/new/ram_design_db.v:71]

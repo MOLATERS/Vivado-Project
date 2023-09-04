@@ -1,0 +1,158 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Sat Nov  5 10:20:35 2022
+# Process ID: 2960
+# Current directory: E:/Xlinx_project/Ledflow
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6768 E:\Xlinx_project\Ledflow\Ledflow.xpr
+# Log file: E:/Xlinx_project/Ledflow/vivado.log
+# Journal file: E:/Xlinx_project/Ledflow\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/Xlinx_project/Ledflow/Ledflow.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xlinx/Vivado/2020.1/data/ip'.
+open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:05 . Memory (MB): peak = 1113.059 ; gain = 0.000
+update_compile_order -fileset sources_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2020.1
+  **** Build date : May 27 2020 at 20:24:38
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+****** Xilinx cs_server v2020.1.0
+  **** Build date : May 14 2020-09:10:29
+    ** Copyright 2017-2020 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 1187.758 ; gain = 14.484
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a35tcsg324-3
+INFO: [Device 21-403] Loading part xc7a35tcsg324-3
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2721.680 ; gain = 0.000
+INFO: [Project 1-479] Netlist was created with Vivado 2020.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [E:/Xlinx_project/Ledflow/Ledflow.srcs/constrs_1/new/cnd_ledflow.xdc]
+CRITICAL WARNING: [Common 17-170] Unknown option '-waveform{2.5', please type 'create_clock -help' for usage info. [E:/Xlinx_project/Ledflow/Ledflow.srcs/constrs_1/new/cnd_ledflow.xdc:4]
+Finished Parsing XDC File [E:/Xlinx_project/Ledflow/Ledflow.srcs/constrs_1/new/cnd_ledflow.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2801.312 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 2924.289 ; gain = 447.445
+set_property is_loc_fixed true [get_ports [list  clk]]
+set_property package_pin "" [get_ports [list  clk]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {led[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {led[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {led[0]}]]
+place_ports clk R17
+set_property target_constrs_file E:/Xlinx_project/Ledflow/Ledflow.srcs/constrs_1/new/cnd_ledflow.xdc [current_fileset -constrset]
+save_constraints -force
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.232 . Memory (MB): peak = 3413.703 ; gain = 11.648
+[Sat Nov  5 10:27:58 2022] Launched impl_1...
+Run output will be captured here: E:/Xlinx_project/Ledflow/Ledflow.runs/impl_1/runme.log
+set_property IOSTANDARD LVCMOS33 [get_ports [list clk]]
+save_constraints
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.684 . Memory (MB): peak = 3414.625 ; gain = 0.922
+[Sat Nov  5 10:28:53 2022] Launched impl_1...
+Run output will be captured here: E:/Xlinx_project/Ledflow/Ledflow.runs/impl_1/runme.log
+place_ports clk V1
+save_constraints
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.240 . Memory (MB): peak = 3844.711 ; gain = 15.172
+[Sat Nov  5 10:30:19 2022] Launched impl_1...
+Run output will be captured here: E:/Xlinx_project/Ledflow/Ledflow.runs/impl_1/runme.log
+place_ports clk R1
+place_ports reset N4
+save_constraints
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.239 . Memory (MB): peak = 3845.426 ; gain = 0.715
+[Sat Nov  5 10:36:59 2022] Launched impl_1...
+Run output will be captured here: E:/Xlinx_project/Ledflow/Ledflow.runs/impl_1/runme.log
+set_property IOSTANDARD LVCMOS33 [get_ports [list {led[7]} {led[6]} {led[5]} {led[4]} {led[3]} {led[2]} {led[1]} {led[0]}]]
+save_constraints
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.286 . Memory (MB): peak = 3848.055 ; gain = 2.629
+[Sat Nov  5 10:39:25 2022] Launched impl_1...
+Run output will be captured here: E:/Xlinx_project/Ledflow/Ledflow.runs/impl_1/runme.log
+set_property IOSTANDARD LVCMOS18 [get_ports [list {led[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {led[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {led[1]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {led[7]} {led[6]} {led[5]} {led[4]} {led[3]} {led[2]} {led[1]} {led[0]}]]
+set_property IOSTANDARD LVCMOS18 [get_ports [list {led[7]} {led[6]} {led[5]} {led[4]} {led[3]} {led[2]} {led[1]} {led[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {led[7]} {led[6]} {led[5]} {led[4]} {led[3]} {led[2]} {led[1]} {led[0]}]]
+set_property IOSTANDARD LVCMOS18 [get_ports [list {led[7]} {led[6]} {led[5]} {led[4]} {led[3]} {led[2]} {led[1]} {led[0]}]]
+save_constraints
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.271 . Memory (MB): peak = 4807.242 ; gain = 15.562
+[Sat Nov  5 10:43:18 2022] Launched impl_1...
+Run output will be captured here: E:/Xlinx_project/Ledflow/Ledflow.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Sat Nov  5 12:03:22 2022] Launched synth_1...
+Run output will be captured here: E:/Xlinx_project/Ledflow/Ledflow.runs/synth_1/runme.log
+[Sat Nov  5 12:03:22 2022] Launched impl_1...
+Run output will be captured here: E:/Xlinx_project/Ledflow/Ledflow.runs/impl_1/runme.log
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat Nov  5 12:08:38 2022...

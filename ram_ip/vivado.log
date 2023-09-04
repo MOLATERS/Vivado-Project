@@ -1,0 +1,1394 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Thu Aug 31 18:19:27 2023
+# Process ID: 4036
+# Current directory: E:/Xlinx_project/ram_ip
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5720 E:\Xlinx_project\ram_ip\ram_ip.xpr
+# Log file: E:/Xlinx_project/ram_ip/vivado.log
+# Journal file: E:/Xlinx_project/ram_ip\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/Xlinx_project/ram_ip/ram_ip.xpr
+INFO: [Project 1-313] Project file moved from 'D:/Document/lab3/ram_ip' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xlinx/Vivado/2020.1/data/ip'.
+open_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:05 . Memory (MB): peak = 1112.953 ; gain = 0.000
+update_compile_order -fileset sources_1
+close [ open E:/Xlinx_project/ram_ip/ram_ip.srcs/sources_1/new/alu.v w ]
+add_files E:/Xlinx_project/ram_ip/ram_ip.srcs/sources_1/new/alu.v
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'E:/Xlinx/Vivado/2020.1/data/xsim/xsim.ini' copied to run dir:'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_top' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_top_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/ram_ip/ram_ip.srcs/sources_1/ip/block_ram/sim/block_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module block_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/ram_ip/ram_ip.srcs/sources_1/new/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/ram_ip/ram_ip.srcs/sources_1/new/data_ram_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/ram_ip/ram_ip.srcs/sim_1/new/data_ram_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+"xelab -wto 1a5e5ee58d234ae594cb02f63b61d990 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_4 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: E:/Xlinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 1a5e5ee58d234ae594cb02f63b61d990 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_4 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 5 for port 'Card' [E:/Xlinx_project/ram_ip/ram_ip.srcs/sim_1/new/data_ram_tb.v:31]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_output_stage(...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4(C_FAMILY="art...
+Compiling module xil_defaultlib.block_ram
+Compiling module xil_defaultlib.ram_top
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.tb_top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_top_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 1121.441 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_top_behav -key {Behavioral:sim_1:Functional:tb_top} -tclbatch {tb_top.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source tb_top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Block Memory Generator module tb_top.u_ram_top.block_ram.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+RAM Test Begin
+RAM Test Success
+$finish called at time : 240 ns : File "E:/Xlinx_project/ram_ip/ram_ip.srcs/sim_1/new/data_ram_tb.v" Line 116
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:12 . Memory (MB): peak = 1126.934 ; gain = 13.980
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'E:/Xlinx/Vivado/2020.1/data/xsim/xsim.ini' copied to run dir:'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_top' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_top_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/ram_ip/ram_ip.srcs/sources_1/ip/block_ram/sim/block_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module block_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/ram_ip/ram_ip.srcs/sources_1/new/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/ram_ip/ram_ip.srcs/sources_1/new/data_ram_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/ram_ip/ram_ip.srcs/sim_1/new/data_ram_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_top
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+"xelab -wto 1a5e5ee58d234ae594cb02f63b61d990 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_4 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: E:/Xlinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 1a5e5ee58d234ae594cb02f63b61d990 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_4 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 5 for port 'Card' [E:/Xlinx_project/ram_ip/ram_ip.srcs/sim_1/new/data_ram_tb.v:31]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_output_stage(...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4(C_FAMILY="art...
+Compiling module xil_defaultlib.block_ram
+Compiling module xil_defaultlib.ram_top
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.tb_top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_top_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_top_behav -key {Behavioral:sim_1:Functional:tb_top} -tclbatch {tb_top.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source tb_top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Block Memory Generator module tb_top.u_ram_top.block_ram.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+RAM Test Begin
+RAM Test Success
+$finish called at time : 240 ns : File "E:/Xlinx_project/ram_ip/ram_ip.srcs/sim_1/new/data_ram_tb.v" Line 117
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1142.215 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close [ open E:/Xlinx_project/ram_ip/ram_ip.srcs/sources_1/new/regfiles.v w ]
+add_files E:/Xlinx_project/ram_ip/ram_ip.srcs/sources_1/new/regfiles.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'E:/Xlinx/Vivado/2020.1/data/xsim/xsim.ini' copied to run dir:'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'alu_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj alu_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/ram_ip/ram_ip.srcs/sources_1/new/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/ram_ip/ram_ip.srcs/sim_1/new/data_ram_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+"xelab -wto 1a5e5ee58d234ae594cb02f63b61d990 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot alu_tb_behav xil_defaultlib.alu_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: E:/Xlinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 1a5e5ee58d234ae594cb02f63b61d990 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot alu_tb_behav xil_defaultlib.alu_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.alu_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot alu_tb_behav
+
+****** Webtalk v2020.1 (64-bit)
+  **** SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+  **** IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim/xsim.dir/alu_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Thu Aug 31 18:37:17 2023...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1149.836 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "alu_tb_behav -key {Behavioral:sim_1:Functional:alu_tb} -tclbatch {alu_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source alu_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'alu_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 1149.836 ; gain = 0.000
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+launch_simulation
+Command: launch_simulation 
+boost::filesystem::remove: 另一个程序正在使用此文件，进程无法访问。: "E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim/simulate.log"
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'E:/Xlinx/Vivado/2020.1/data/xsim/xsim.ini' copied to run dir:'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_top' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_top_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/ram_ip/ram_ip.srcs/sources_1/ip/block_ram/sim/block_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module block_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/ram_ip/ram_ip.srcs/sources_1/new/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/ram_ip/ram_ip.srcs/sources_1/new/data_ram_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/ram_ip/ram_ip.srcs/sim_1/new/data_ram_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_top
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+"xelab -wto 1a5e5ee58d234ae594cb02f63b61d990 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_4 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: E:/Xlinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 1a5e5ee58d234ae594cb02f63b61d990 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_4 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_output_stage(...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4(C_FAMILY="art...
+Compiling module xil_defaultlib.block_ram
+Compiling module xil_defaultlib.ram_top
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.tb_top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_top_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_top_behav -key {Behavioral:sim_1:Functional:tb_top} -tclbatch {tb_top.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source tb_top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Block Memory Generator module tb_top.u_ram_top.block_ram.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+RAM Test Begin
+RAM Test Success
+$finish called at time : 240 ns : File "E:/Xlinx_project/ram_ip/ram_ip.srcs/sim_1/new/data_ram_tb.v" Line 117
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 1149.836 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'E:/Xlinx/Vivado/2020.1/data/xsim/xsim.ini' copied to run dir:'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_top' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_top_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/ram_ip/ram_ip.srcs/sources_1/ip/block_ram/sim/block_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module block_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/ram_ip/ram_ip.srcs/sources_1/new/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/ram_ip/ram_ip.srcs/sources_1/new/data_ram_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/ram_ip/ram_ip.srcs/sim_1/new/data_ram_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_top
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+"xelab -wto 1a5e5ee58d234ae594cb02f63b61d990 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_4 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: E:/Xlinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 1a5e5ee58d234ae594cb02f63b61d990 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_4 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_output_stage(...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4(C_FAMILY="art...
+Compiling module xil_defaultlib.block_ram
+Compiling module xil_defaultlib.ram_top
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.tb_top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_top_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_top_behav -key {Behavioral:sim_1:Functional:tb_top} -tclbatch {tb_top.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source tb_top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Block Memory Generator module tb_top.u_ram_top.block_ram.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+RAM Test Begin
+RAM Test Success
+$finish called at time : 400 ns : File "E:/Xlinx_project/ram_ip/ram_ip.srcs/sim_1/new/data_ram_tb.v" Line 117
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1149.836 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'E:/Xlinx/Vivado/2020.1/data/xsim/xsim.ini' copied to run dir:'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_top' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_top_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/ram_ip/ram_ip.srcs/sources_1/ip/block_ram/sim/block_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module block_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/ram_ip/ram_ip.srcs/sources_1/new/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/ram_ip/ram_ip.srcs/sources_1/new/data_ram_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/ram_ip/ram_ip.srcs/sim_1/new/data_ram_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_top
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+"xelab -wto 1a5e5ee58d234ae594cb02f63b61d990 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_4 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: E:/Xlinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 1a5e5ee58d234ae594cb02f63b61d990 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_4 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_output_stage(...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4(C_FAMILY="art...
+Compiling module xil_defaultlib.block_ram
+Compiling module xil_defaultlib.ram_top
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.tb_top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_top_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_top_behav -key {Behavioral:sim_1:Functional:tb_top} -tclbatch {tb_top.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source tb_top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Block Memory Generator module tb_top.u_ram_top.block_ram.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+RAM Test Begin
+RAM Test Success
+$finish called at time : 700 ns : File "E:/Xlinx_project/ram_ip/ram_ip.srcs/sim_1/new/data_ram_tb.v" Line 117
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 1149.836 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'E:/Xlinx/Vivado/2020.1/data/xsim/xsim.ini' copied to run dir:'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_top' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_top_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/ram_ip/ram_ip.srcs/sources_1/ip/block_ram/sim/block_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module block_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/ram_ip/ram_ip.srcs/sources_1/new/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/ram_ip/ram_ip.srcs/sources_1/new/data_ram_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/ram_ip/ram_ip.srcs/sim_1/new/data_ram_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_top
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+"xelab -wto 1a5e5ee58d234ae594cb02f63b61d990 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_4 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: E:/Xlinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 1a5e5ee58d234ae594cb02f63b61d990 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_4 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_output_stage(...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4(C_FAMILY="art...
+Compiling module xil_defaultlib.block_ram
+Compiling module xil_defaultlib.ram_top
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.tb_top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_top_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_top_behav -key {Behavioral:sim_1:Functional:tb_top} -tclbatch {tb_top.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source tb_top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Block Memory Generator module tb_top.u_ram_top.block_ram.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+RAM Test Begin
+RAM Test Success
+$finish called at time : 550 ns : File "E:/Xlinx_project/ram_ip/ram_ip.srcs/sim_1/new/data_ram_tb.v" Line 117
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 1149.836 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'E:/Xlinx/Vivado/2020.1/data/xsim/xsim.ini' copied to run dir:'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_top' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_top_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/ram_ip/ram_ip.srcs/sources_1/ip/block_ram/sim/block_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module block_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/ram_ip/ram_ip.srcs/sources_1/new/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/ram_ip/ram_ip.srcs/sources_1/new/data_ram_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/ram_ip/ram_ip.srcs/sim_1/new/data_ram_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_top
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+"xelab -wto 1a5e5ee58d234ae594cb02f63b61d990 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_4 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: E:/Xlinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 1a5e5ee58d234ae594cb02f63b61d990 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_4 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_output_stage(...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4(C_FAMILY="art...
+Compiling module xil_defaultlib.block_ram
+Compiling module xil_defaultlib.ram_top
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.tb_top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_top_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_top_behav -key {Behavioral:sim_1:Functional:tb_top} -tclbatch {tb_top.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source tb_top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Block Memory Generator module tb_top.u_ram_top.block_ram.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+RAM Test Begin
+RAM Test Success
+$finish called at time : 550 ns : File "E:/Xlinx_project/ram_ip/ram_ip.srcs/sim_1/new/data_ram_tb.v" Line 117
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1161.293 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'E:/Xlinx/Vivado/2020.1/data/xsim/xsim.ini' copied to run dir:'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_top' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_top_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/ram_ip/ram_ip.srcs/sources_1/ip/block_ram/sim/block_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module block_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/ram_ip/ram_ip.srcs/sources_1/new/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/ram_ip/ram_ip.srcs/sources_1/new/data_ram_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/ram_ip/ram_ip.srcs/sim_1/new/data_ram_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_top
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+"xelab -wto 1a5e5ee58d234ae594cb02f63b61d990 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_4 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: E:/Xlinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 1a5e5ee58d234ae594cb02f63b61d990 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_4 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_output_stage(...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4(C_FAMILY="art...
+Compiling module xil_defaultlib.block_ram
+Compiling module xil_defaultlib.ram_top
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.tb_top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_top_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_top_behav -key {Behavioral:sim_1:Functional:tb_top} -tclbatch {tb_top.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source tb_top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Block Memory Generator module tb_top.u_ram_top.block_ram.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+RAM Test Begin
+RAM Test Success
+$finish called at time : 270 ns : File "E:/Xlinx_project/ram_ip/ram_ip.srcs/sim_1/new/data_ram_tb.v" Line 116
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1161.293 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'E:/Xlinx/Vivado/2020.1/data/xsim/xsim.ini' copied to run dir:'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_top' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_top_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/ram_ip/ram_ip.srcs/sources_1/ip/block_ram/sim/block_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module block_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/ram_ip/ram_ip.srcs/sources_1/new/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/ram_ip/ram_ip.srcs/sources_1/new/data_ram_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/ram_ip/ram_ip.srcs/sim_1/new/data_ram_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_top
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+"xelab -wto 1a5e5ee58d234ae594cb02f63b61d990 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_4 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: E:/Xlinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 1a5e5ee58d234ae594cb02f63b61d990 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_4 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_output_stage(...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4(C_FAMILY="art...
+Compiling module xil_defaultlib.block_ram
+Compiling module xil_defaultlib.ram_top
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.tb_top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_top_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_top_behav -key {Behavioral:sim_1:Functional:tb_top} -tclbatch {tb_top.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source tb_top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Block Memory Generator module tb_top.u_ram_top.block_ram.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+RAM Test Begin
+RAM Test Success
+$finish called at time : 210 ns : File "E:/Xlinx_project/ram_ip/ram_ip.srcs/sim_1/new/data_ram_tb.v" Line 116
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 1161.293 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'E:/Xlinx/Vivado/2020.1/data/xsim/xsim.ini' copied to run dir:'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_top' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_top_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/ram_ip/ram_ip.srcs/sources_1/ip/block_ram/sim/block_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module block_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/ram_ip/ram_ip.srcs/sources_1/new/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/ram_ip/ram_ip.srcs/sources_1/new/data_ram_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/ram_ip/ram_ip.srcs/sources_1/new/regfiles.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfiles
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/ram_ip/ram_ip.srcs/sim_1/new/data_ram_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_top
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+"xelab -wto 1a5e5ee58d234ae594cb02f63b61d990 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_4 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: E:/Xlinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 1a5e5ee58d234ae594cb02f63b61d990 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_4 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_output_stage(...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4(C_FAMILY="art...
+Compiling module xil_defaultlib.block_ram
+Compiling module xil_defaultlib.ram_top
+Compiling module xil_defaultlib.regfiles_default
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.tb_top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_top_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_top_behav -key {Behavioral:sim_1:Functional:tb_top} -tclbatch {tb_top.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source tb_top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Block Memory Generator module tb_top.u_ram_top.block_ram.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+RAM Test Begin
+RAM Test Success
+$finish called at time : 260 ns : File "E:/Xlinx_project/ram_ip/ram_ip.srcs/sim_1/new/data_ram_tb.v" Line 150
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 1161.293 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'E:/Xlinx/Vivado/2020.1/data/xsim/xsim.ini' copied to run dir:'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_top' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_top_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/ram_ip/ram_ip.srcs/sources_1/ip/block_ram/sim/block_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module block_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/ram_ip/ram_ip.srcs/sources_1/new/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/ram_ip/ram_ip.srcs/sources_1/new/data_ram_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/ram_ip/ram_ip.srcs/sources_1/new/regfiles.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfiles
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/ram_ip/ram_ip.srcs/sim_1/new/data_ram_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_top
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+"xelab -wto 1a5e5ee58d234ae594cb02f63b61d990 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_4 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: E:/Xlinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 1a5e5ee58d234ae594cb02f63b61d990 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_4 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_output_stage(...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4(C_FAMILY="art...
+Compiling module xil_defaultlib.block_ram
+Compiling module xil_defaultlib.ram_top
+Compiling module xil_defaultlib.regfiles_default
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.tb_top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_top_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_top_behav -key {Behavioral:sim_1:Functional:tb_top} -tclbatch {tb_top.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source tb_top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Block Memory Generator module tb_top.u_ram_top.block_ram.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+RAM Test Begin
+RAM Test Success
+$finish called at time : 250 ns : File "E:/Xlinx_project/ram_ip/ram_ip.srcs/sim_1/new/data_ram_tb.v" Line 110
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 1168.852 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'E:/Xlinx/Vivado/2020.1/data/xsim/xsim.ini' copied to run dir:'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_top' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_top_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/ram_ip/ram_ip.srcs/sources_1/ip/block_ram/sim/block_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module block_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/ram_ip/ram_ip.srcs/sources_1/new/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/ram_ip/ram_ip.srcs/sources_1/new/data_ram_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/ram_ip/ram_ip.srcs/sources_1/new/regfiles.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfiles
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/ram_ip/ram_ip.srcs/sim_1/new/data_ram_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_top
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+"xelab -wto 1a5e5ee58d234ae594cb02f63b61d990 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_4 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: E:/Xlinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 1a5e5ee58d234ae594cb02f63b61d990 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_4 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_output_stage(...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4(C_FAMILY="art...
+Compiling module xil_defaultlib.block_ram
+Compiling module xil_defaultlib.ram_top
+Compiling module xil_defaultlib.regfiles_default
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.tb_top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_top_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_top_behav -key {Behavioral:sim_1:Functional:tb_top} -tclbatch {tb_top.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source tb_top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Block Memory Generator module tb_top.u_ram_top.block_ram.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+RAM Test Begin
+RAM Test Success
+$finish called at time : 250 ns : File "E:/Xlinx_project/ram_ip/ram_ip.srcs/sim_1/new/data_ram_tb.v" Line 110
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1168.852 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'E:/Xlinx/Vivado/2020.1/data/xsim/xsim.ini' copied to run dir:'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_top' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_top_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/ram_ip/ram_ip.srcs/sources_1/ip/block_ram/sim/block_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module block_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/ram_ip/ram_ip.srcs/sources_1/new/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/ram_ip/ram_ip.srcs/sources_1/new/data_ram_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/ram_ip/ram_ip.srcs/sources_1/new/regfiles.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfiles
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/ram_ip/ram_ip.srcs/sim_1/new/data_ram_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_top
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+"xelab -wto 1a5e5ee58d234ae594cb02f63b61d990 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_4 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: E:/Xlinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 1a5e5ee58d234ae594cb02f63b61d990 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_4 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_output_stage(...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4(C_FAMILY="art...
+Compiling module xil_defaultlib.block_ram
+Compiling module xil_defaultlib.ram_top
+Compiling module xil_defaultlib.regfiles_default
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.tb_top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_top_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_top_behav -key {Behavioral:sim_1:Functional:tb_top} -tclbatch {tb_top.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source tb_top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Block Memory Generator module tb_top.u_ram_top.block_ram.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+RAM Test Begin
+RAM Test Success
+$finish called at time : 250 ns : File "E:/Xlinx_project/ram_ip/ram_ip.srcs/sim_1/new/data_ram_tb.v" Line 112
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 1168.852 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'E:/Xlinx/Vivado/2020.1/data/xsim/xsim.ini' copied to run dir:'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_top' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_top_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/ram_ip/ram_ip.srcs/sources_1/ip/block_ram/sim/block_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module block_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/ram_ip/ram_ip.srcs/sources_1/new/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/ram_ip/ram_ip.srcs/sources_1/new/data_ram_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/ram_ip/ram_ip.srcs/sources_1/new/regfiles.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfiles
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/ram_ip/ram_ip.srcs/sim_1/new/data_ram_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_top
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+"xelab -wto 1a5e5ee58d234ae594cb02f63b61d990 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_4 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: E:/Xlinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 1a5e5ee58d234ae594cb02f63b61d990 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_4 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_output_stage(...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4(C_FAMILY="art...
+Compiling module xil_defaultlib.block_ram
+Compiling module xil_defaultlib.ram_top
+Compiling module xil_defaultlib.regfiles_default
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.tb_top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_top_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_top_behav -key {Behavioral:sim_1:Functional:tb_top} -tclbatch {tb_top.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source tb_top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Block Memory Generator module tb_top.u_ram_top.block_ram.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+RAM Test Begin
+RAM Test Success
+$finish called at time : 250 ns : File "E:/Xlinx_project/ram_ip/ram_ip.srcs/sim_1/new/data_ram_tb.v" Line 112
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1168.852 ; gain = 0.000
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a200tfbg484-2L
+Top: ram_top
+INFO: [Device 21-403] Loading part xc7a200tfbg484-2L
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1739.594 ; gain = 243.852
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'ram_top' [E:/Xlinx_project/ram_ip/ram_ip.srcs/sources_1/new/data_ram_top.v:4]
+INFO: [Synth 8-6157] synthesizing module 'block_ram' [E:/Xlinx_project/ram_ip/.Xil/Vivado-4036-LAPTOP-LVJF678E/realtime/block_ram_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'block_ram' (1#1) [E:/Xlinx_project/ram_ip/.Xil/Vivado-4036-LAPTOP-LVJF678E/realtime/block_ram_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ram_top' (2#1) [E:/Xlinx_project/ram_ip/ram_ip.srcs/sources_1/new/data_ram_top.v:4]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1787.391 ; gain = 291.648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1787.391 ; gain = 291.648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1787.391 ; gain = 291.648
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'e:/Xlinx_project/ram_ip/ram_ip.srcs/sources_1/ip/block_ram/block_ram.dcp' for cell 'block_ram'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 1787.391 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 139 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-140] Inserted 50 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-141] Inserted 32 OBUFs to IO ports without IO buffers.
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1917.328 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 1922.824 ; gain = 427.082
+14 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:36 . Memory (MB): peak = 1922.824 ; gain = 753.973
+launch_runs impl_1 -jobs 4
+[Thu Aug 31 19:39:39 2023] Launched synth_1...
+Run output will be captured here: E:/Xlinx_project/ram_ip/ram_ip.runs/synth_1/runme.log
+[Thu Aug 31 19:39:39 2023] Launched impl_1...
+Run output will be captured here: E:/Xlinx_project/ram_ip/ram_ip.runs/impl_1/runme.log
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_project
+open_project E:/Xlinx_project/lab3_RAM/lab3_RAM.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xlinx/Vivado/2020.1/data/ip'.
+update_compile_order -fileset sources_1
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a200tfbg676-2
+Top: ram_design
+INFO: [Device 21-403] Loading part xc7a200tfbg676-2
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1930.477 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'ram_design' [E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sources_1/new/ram_design.v:23]
+	Parameter ADDR bound to: 5 - type: integer 
+	Parameter NUMB bound to: 32 - type: integer 
+	Parameter SIZE bound to: 32 - type: integer 
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sources_1/new/ram_design.v:42]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sources_1/new/ram_design.v:43]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sources_1/new/ram_design.v:42]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sources_1/new/ram_design.v:43]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sources_1/new/ram_design.v:42]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sources_1/new/ram_design.v:43]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sources_1/new/ram_design.v:42]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sources_1/new/ram_design.v:43]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sources_1/new/ram_design.v:42]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sources_1/new/ram_design.v:43]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sources_1/new/ram_design.v:42]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sources_1/new/ram_design.v:43]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sources_1/new/ram_design.v:42]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sources_1/new/ram_design.v:43]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sources_1/new/ram_design.v:42]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sources_1/new/ram_design.v:43]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sources_1/new/ram_design.v:42]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sources_1/new/ram_design.v:43]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sources_1/new/ram_design.v:42]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sources_1/new/ram_design.v:43]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sources_1/new/ram_design.v:42]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sources_1/new/ram_design.v:43]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sources_1/new/ram_design.v:42]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sources_1/new/ram_design.v:43]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sources_1/new/ram_design.v:42]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sources_1/new/ram_design.v:43]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sources_1/new/ram_design.v:42]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sources_1/new/ram_design.v:43]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sources_1/new/ram_design.v:42]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sources_1/new/ram_design.v:43]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sources_1/new/ram_design.v:42]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sources_1/new/ram_design.v:43]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sources_1/new/ram_design.v:42]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sources_1/new/ram_design.v:43]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sources_1/new/ram_design.v:42]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sources_1/new/ram_design.v:43]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sources_1/new/ram_design.v:42]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sources_1/new/ram_design.v:43]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sources_1/new/ram_design.v:42]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sources_1/new/ram_design.v:43]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sources_1/new/ram_design.v:42]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sources_1/new/ram_design.v:43]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sources_1/new/ram_design.v:42]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sources_1/new/ram_design.v:43]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sources_1/new/ram_design.v:42]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sources_1/new/ram_design.v:43]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sources_1/new/ram_design.v:42]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sources_1/new/ram_design.v:43]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sources_1/new/ram_design.v:42]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sources_1/new/ram_design.v:43]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sources_1/new/ram_design.v:42]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sources_1/new/ram_design.v:43]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sources_1/new/ram_design.v:42]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sources_1/new/ram_design.v:43]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sources_1/new/ram_design.v:42]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sources_1/new/ram_design.v:43]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sources_1/new/ram_design.v:42]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sources_1/new/ram_design.v:43]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sources_1/new/ram_design.v:42]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sources_1/new/ram_design.v:43]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sources_1/new/ram_design.v:42]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sources_1/new/ram_design.v:43]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sources_1/new/ram_design.v:42]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sources_1/new/ram_design.v:43]
+INFO: [Synth 8-6155] done synthesizing module 'ram_design' (1#1) [E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sources_1/new/ram_design.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1930.477 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1930.477 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1930.477 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1930.477 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1930.477 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2047.723 ; gain = 117.246
+6 Infos, 64 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 2047.723 ; gain = 117.246
+close_project
+open_project E:/Xlinx_project/ram_ip/ram_ip.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xlinx/Vivado/2020.1/data/ip'.
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+boost::filesystem::remove: 另一个程序正在使用此文件，进程无法访问。: "E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim/simulate.log"
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'E:/Xlinx/Vivado/2020.1/data/xsim/xsim.ini' copied to run dir:'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_top' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_top_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+"xelab -wto 1a5e5ee58d234ae594cb02f63b61d990 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_4 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: E:/Xlinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 1a5e5ee58d234ae594cb02f63b61d990 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_4 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/Xlinx_project/ram_ip/ram_ip.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_top_behav -key {Behavioral:sim_1:Functional:tb_top} -tclbatch {tb_top.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source tb_top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Block Memory Generator module tb_top.u_ram_top.block_ram.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+RAM Test Begin
+RAM Test Success
+$finish called at time : 250 ns : File "E:/Xlinx_project/ram_ip/ram_ip.srcs/sim_1/new/data_ram_tb.v" Line 112
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 2051.945 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+set_property top alu [current_fileset]
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Aug 31 19:46:58 2023...

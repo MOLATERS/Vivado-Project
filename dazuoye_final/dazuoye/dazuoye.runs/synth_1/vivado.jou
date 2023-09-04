@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Thu Nov 17 23:04:04 2022
+# Process ID: 14284
+# Current directory: E:/Xlinx_project/dazuoye_final/dazuoye/dazuoye.runs/synth_1
+# Command line: vivado.exe -log dazuoye.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source dazuoye.tcl
+# Log file: E:/Xlinx_project/dazuoye_final/dazuoye/dazuoye.runs/synth_1/dazuoye.vds
+# Journal file: E:/Xlinx_project/dazuoye_final/dazuoye/dazuoye.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source dazuoye.tcl -notrace

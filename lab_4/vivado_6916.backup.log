@@ -1,0 +1,372 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Sun Sep  3 14:03:49 2023
+# Process ID: 6916
+# Current directory: E:/Xlinx_project/lab_4
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1868 E:\Xlinx_project\lab_4\lab_4.xpr
+# Log file: E:/Xlinx_project/lab_4/vivado.log
+# Journal file: E:/Xlinx_project/lab_4\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/Xlinx_project/lab_4/lab_4.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xlinx/Vivado/2020.1/data/ip'.
+open_project: Time (s): cpu = 00:00:19 ; elapsed = 00:00:07 . Memory (MB): peak = 1111.320 ; gain = 0.000
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/Xlinx_project/lab_4/lab_4.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'cpu_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Xlinx_project/lab_4/lab_4.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj cpu_tb_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/Xlinx_project/lab_4/lab_4.sim/sim_1/behav/xsim'
+"xelab -wto 7c6f77e13414443cae5ad79d79daad28 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot cpu_tb_behav xil_defaultlib.cpu_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: E:/Xlinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 7c6f77e13414443cae5ad79d79daad28 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot cpu_tb_behav xil_defaultlib.cpu_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/Xlinx_project/lab_4/lab_4.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "cpu_tb_behav -key {Behavioral:sim_1:Functional:cpu_tb} -tclbatch {cpu_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source cpu_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: Too many words specified in data file E:\Xlinx_project\lab_4\lab4.data\cpu_trace
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'cpu_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1111.320 ; gain = 0.000
+update_compile_order -fileset sources_1
+current_wave_config {Untitled 1}
+Untitled 1
+add_wave {{/cpu_tb/U_cpu_top/U_cpu/U_IMEM/imem_rdata}} 
+run 10 us
+==============================================================
+Test begin!
+current_wave_config {Untitled 1}
+Untitled 1
+add_wave {{/cpu_tb/U_cpu_top/U_cpu/U_PC}} 
+run 10 us
+current_wave_config {Untitled 1}
+Untitled 1
+add_wave {{/cpu_tb/U_cpu_top/U_cpu/U_CU}} 
+run 10 us
+run 10 us
+run 10 us
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a200tfbv676-2
+Top: cpu_top
+INFO: [Device 21-403] Loading part xc7a200tfbv676-2
+WARNING: [Synth 8-2306] macro TRACE_FILE_PATH redefined [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/IMEM.v:21]
+WARNING: [Synth 8-2306] macro TRACE_FILE_PATH redefined [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/cpu_top.v:7]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1744.316 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'cpu_top' [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/cpu_top.v:10]
+INFO: [Synth 8-3876] $readmem data file 'E:\Xlinx_project\lab_4\lab4.data\cpu_trace' is read successfully [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/cpu_top.v:20]
+INFO: [Synth 8-6157] synthesizing module 'cpu' [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/cpu.v:3]
+INFO: [Synth 8-6157] synthesizing module 'IMEM' [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/IMEM.v:23]
+	Parameter ADDR bound to: 8 - type: integer 
+	Parameter NUMB bound to: 256 - type: integer 
+	Parameter SIZE bound to: 32 - type: integer 
+INFO: [Synth 8-3876] $readmem data file 'E:\Xlinx_project\lab_4\lab4.data\inst_data.txt' is read successfully [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/IMEM.v:39]
+INFO: [Synth 8-6155] done synthesizing module 'IMEM' (1#1) [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/IMEM.v:23]
+INFO: [Synth 8-6157] synthesizing module 'PC' [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/PC.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'PC' (2#1) [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/PC.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ADD' [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/ADD.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'ADD' (3#1) [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/ADD.v:23]
+INFO: [Synth 8-6157] synthesizing module 'NPC' [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/NPC.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'NPC' (4#1) [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/NPC.v:23]
+INFO: [Synth 8-6157] synthesizing module 'IR' [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/IR.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'IR' (5#1) [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/IR.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Regfile' [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/Regfile.v:22]
+	Parameter ADDR bound to: 5 - type: integer 
+	Parameter NUMB bound to: 32 - type: integer 
+	Parameter SIZE bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Regfile' (6#1) [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/Regfile.v:22]
+INFO: [Synth 8-6157] synthesizing module 'CU' [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/CU.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'CU' (7#1) [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/CU.v:3]
+INFO: [Synth 8-6157] synthesizing module 'Data_container' [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/data_container.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Data_container' (8#1) [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/data_container.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Extender' [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/Extender.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Extender' (9#1) [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/Extender.v:23]
+INFO: [Synth 8-6157] synthesizing module 'MUX_4_1' [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/MUX_4_1.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'MUX_4_1' (10#1) [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/MUX_4_1.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/ALU.v:85]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (11#1) [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/ALU.v:85]
+INFO: [Synth 8-6157] synthesizing module 'DMEM' [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/DMEM.v:23]
+	Parameter ADDR bound to: 8 - type: integer 
+	Parameter NUMB bound to: 256 - type: integer 
+	Parameter SIZE bound to: 32 - type: integer 
+INFO: [Synth 8-3876] $readmem data file 'E:\Xlinx_project\lab_4\lab4.data\data_data.txt' is read successfully [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/DMEM.v:40]
+INFO: [Synth 8-6155] done synthesizing module 'DMEM' (12#1) [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/DMEM.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'cpu' (13#1) [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/cpu.v:3]
+INFO: [Synth 8-251]     ----PASS!!! [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/cpu_top.v:58]
+INFO: [Synth 8-251] Test end! [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/cpu_top.v:59]
+INFO: [Synth 8-251] ============================================================== [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/cpu_top.v:60]
+INFO: [Synth 8-251] -------------------------------------------------------------- [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/cpu_top.v:68]
+INFO: [Synth 8-251] Error!!! [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/cpu_top.v:69]
+INFO: [Synth 8-251]     Reference : PC = 0xxxxxxxxx, write back reg number = x, write back data = 0xxxxxxxxx [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/cpu_top.v:70]
+INFO: [Synth 8-251]     Error     : PC = 0xxxxxxxxx, write back reg number = x, write back data = 0xxxxxxxxx [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/cpu_top.v:71]
+INFO: [Synth 8-251] -------------------------------------------------------------- [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/cpu_top.v:72]
+INFO: [Synth 8-251] ============================================================== [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/cpu_top.v:73]
+INFO: [Synth 8-6155] done synthesizing module 'cpu_top' (14#1) [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/cpu_top.v:10]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 1771.316 ; gain = 27.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 1771.316 ; gain = 27.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 1771.316 ; gain = 27.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 1771.316 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [E:/Xlinx_project/lab_4/lab_4.srcs/constrs_1/new/cpu.xdc]
+Finished Parsing XDC File [E:/Xlinx_project/lab_4/lab_4.srcs/constrs_1/new/cpu.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1887.984 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:21 . Memory (MB): peak = 1900.344 ; gain = 156.027
+44 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:35 . Memory (MB): peak = 1900.344 ; gain = 156.027
+remove_forces { {/cpu_tb/U_cpu_top/U_cpu/U_CU/Card} {/cpu_tb/U_cpu_top/U_cpu/U_IMEM/imem_rdata} {/cpu_tb/U_cpu_top/U_cpu/U_PC/Reset} {/cpu_tb/U_cpu_top/U_cpu/U_PC/Clk} {/cpu_tb/U_cpu_top/U_cpu/U_PC/PCwen} {/cpu_tb/U_cpu_top/U_cpu/U_PC/NPC} {/cpu_tb/U_cpu_top/U_cpu/U_PC/PC} {/cpu_tb/U_cpu_top/U_cpu/U_PC/Register} {/cpu_tb/U_cpu_top/U_cpu/U_CU/Instruct} {/cpu_tb/U_cpu_top/U_cpu/U_CU/Zero} {/cpu_tb/U_cpu_top/U_cpu/U_CU/Card} {/cpu_tb/U_cpu_top/U_cpu/U_IMEM/imem_rdata} {/cpu_tb/U_cpu_top/U_cpu/U_PC/Reset} {/cpu_tb/U_cpu_top/U_cpu/U_PC/PCwen} {/cpu_tb/U_cpu_top/U_cpu/U_PC/Clk} {/cpu_tb/U_cpu_top/U_cpu/U_PC/NPC} {/cpu_tb/U_cpu_top/U_cpu/U_PC/PC} {/cpu_tb/U_cpu_top/U_cpu/U_PC/Register} {/cpu_tb/U_cpu_top/U_cpu/U_CU/Instruct} {/cpu_tb/U_cpu_top/U_cpu/U_CU/Zero} {/cpu_tb/U_cpu_top/U_cpu/U_CU/ram_w} {/cpu_tb/U_cpu_top/U_cpu/U_CU/reg_w} {/cpu_tb/U_cpu_top/U_cpu/U_CU/PC_s} {/cpu_tb/U_cpu_top/U_cpu/U_CU/regfile_s} {/cpu_tb/U_cpu_top/U_cpu/U_CU/regfile_addr_s} {/cpu_tb/U_cpu_top/U_cpu/U_CU/ALU_As} {/cpu_tb/U_cpu_top/U_cpu/U_CU/ALU_Bs} {/cpu_tb/U_cpu_top/U_cpu/U_CU/Op} {/cpu_tb/U_cpu_top/U_cpu/U_CU/Func} }
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+refresh_design
+WARNING: [Synth 8-2306] macro TRACE_FILE_PATH redefined [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/IMEM.v:21]
+WARNING: [Synth 8-2306] macro TRACE_FILE_PATH redefined [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/cpu_top.v:7]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1948.375 ; gain = 24.938
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'cpu_top' [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/cpu_top.v:10]
+INFO: [Synth 8-3876] $readmem data file 'E:\Xlinx_project\lab_4\lab4.data\cpu_trace' is read successfully [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/cpu_top.v:20]
+INFO: [Synth 8-6157] synthesizing module 'cpu' [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/cpu.v:3]
+INFO: [Synth 8-6157] synthesizing module 'IMEM' [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/IMEM.v:23]
+	Parameter ADDR bound to: 8 - type: integer 
+	Parameter NUMB bound to: 256 - type: integer 
+	Parameter SIZE bound to: 32 - type: integer 
+INFO: [Synth 8-3876] $readmem data file 'E:\Xlinx_project\lab_4\lab4.data\inst_data.txt' is read successfully [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/IMEM.v:39]
+INFO: [Synth 8-6155] done synthesizing module 'IMEM' (1#1) [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/IMEM.v:23]
+INFO: [Synth 8-6157] synthesizing module 'PC' [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/PC.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'PC' (2#1) [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/PC.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ADD' [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/ADD.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'ADD' (3#1) [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/ADD.v:23]
+INFO: [Synth 8-6157] synthesizing module 'NPC' [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/NPC.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'NPC' (4#1) [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/NPC.v:23]
+INFO: [Synth 8-6157] synthesizing module 'IR' [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/IR.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'IR' (5#1) [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/IR.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Regfile' [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/Regfile.v:22]
+	Parameter ADDR bound to: 5 - type: integer 
+	Parameter NUMB bound to: 32 - type: integer 
+	Parameter SIZE bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Regfile' (6#1) [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/Regfile.v:22]
+INFO: [Synth 8-6157] synthesizing module 'CU' [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/CU.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'CU' (7#1) [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/CU.v:3]
+INFO: [Synth 8-6157] synthesizing module 'Data_container' [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/data_container.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Data_container' (8#1) [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/data_container.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Extender' [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/Extender.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Extender' (9#1) [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/Extender.v:23]
+INFO: [Synth 8-6157] synthesizing module 'MUX_4_1' [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/MUX_4_1.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'MUX_4_1' (10#1) [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/MUX_4_1.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/ALU.v:85]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (11#1) [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/ALU.v:85]
+INFO: [Synth 8-6157] synthesizing module 'DMEM' [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/DMEM.v:23]
+	Parameter ADDR bound to: 8 - type: integer 
+	Parameter NUMB bound to: 256 - type: integer 
+	Parameter SIZE bound to: 32 - type: integer 
+INFO: [Synth 8-3876] $readmem data file 'E:\Xlinx_project\lab_4\lab4.data\data_data.txt' is read successfully [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/DMEM.v:40]
+INFO: [Synth 8-6155] done synthesizing module 'DMEM' (12#1) [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/DMEM.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'cpu' (13#1) [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/cpu.v:3]
+INFO: [Synth 8-251]     ----PASS!!! [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/cpu_top.v:58]
+INFO: [Synth 8-251] Test end! [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/cpu_top.v:59]
+INFO: [Synth 8-251] ============================================================== [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/cpu_top.v:60]
+INFO: [Synth 8-251] -------------------------------------------------------------- [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/cpu_top.v:68]
+INFO: [Synth 8-251] Error!!! [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/cpu_top.v:69]
+INFO: [Synth 8-251]     Reference : PC = 0xxxxxxxxx, write back reg number = x, write back data = 0xxxxxxxxx [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/cpu_top.v:70]
+INFO: [Synth 8-251]     Error     : PC = 0xxxxxxxxx, write back reg number = x, write back data = 0xxxxxxxxx [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/cpu_top.v:71]
+INFO: [Synth 8-251] -------------------------------------------------------------- [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/cpu_top.v:72]
+INFO: [Synth 8-251] ============================================================== [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/cpu_top.v:73]
+INFO: [Synth 8-6155] done synthesizing module 'cpu_top' (14#1) [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/cpu_top.v:10]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1970.652 ; gain = 47.215
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1988.496 ; gain = 65.059
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1988.496 ; gain = 65.059
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 1988.496 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [E:/Xlinx_project/lab_4/lab_4.srcs/constrs_1/new/cpu.xdc]
+Finished Parsing XDC File [E:/Xlinx_project/lab_4/lab_4.srcs/constrs_1/new/cpu.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1988.496 ; gain = 65.059
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/Xlinx_project/lab_4/lab_4.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'cpu_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Xlinx_project/lab_4/lab_4.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj cpu_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/ADD.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ADD
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/CU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CU
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/DMEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DMEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/Extender.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Extender
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/IMEM.v" into library xil_defaultlib
+WARNING: [VRFC 10-3507] macro 'TRACE_FILE_PATH' redefined [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/IMEM.v:21]
+INFO: [VRFC 10-311] analyzing module IMEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/IR.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IR
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/MUX_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MUX_4_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/NPC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module NPC
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/Regfile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Regfile
+ERROR: [VRFC 10-8336] cannot open Verilog file '../../../../lab_4.srcs/sources_1/new/cpu.v'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'E:/Xlinx_project/lab_4/lab_4.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'E:/Xlinx_project/lab_4/lab_4.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+close_design
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/Xlinx_project/lab_4/lab_4.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'cpu_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Xlinx_project/lab_4/lab_4.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj cpu_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/ADD.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ADD
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/CU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CU
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/DMEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DMEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/Extender.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Extender
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/IMEM.v" into library xil_defaultlib
+WARNING: [VRFC 10-3507] macro 'TRACE_FILE_PATH' redefined [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/IMEM.v:21]
+INFO: [VRFC 10-311] analyzing module IMEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/IR.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IR
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/MUX_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MUX_4_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/NPC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module NPC
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/Regfile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Regfile
+ERROR: [VRFC 10-8336] cannot open Verilog file '../../../../lab_4.srcs/sources_1/new/cpu.v'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'E:/Xlinx_project/lab_4/lab_4.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'E:/Xlinx_project/lab_4/lab_4.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/Xlinx_project/lab_4/lab_4.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'cpu_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Xlinx_project/lab_4/lab_4.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj cpu_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/ADD.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ADD
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/CU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CU
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/DMEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DMEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/Extender.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Extender
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/IMEM.v" into library xil_defaultlib
+WARNING: [VRFC 10-3507] macro 'TRACE_FILE_PATH' redefined [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/IMEM.v:21]
+INFO: [VRFC 10-311] analyzing module IMEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/IR.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IR
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/MUX_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MUX_4_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/NPC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module NPC
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/Regfile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Regfile
+ERROR: [VRFC 10-8336] cannot open Verilog file '../../../../lab_4.srcs/sources_1/new/cpu.v'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'E:/Xlinx_project/lab_4/lab_4.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'E:/Xlinx_project/lab_4/lab_4.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Sep  3 14:58:21 2023...

@@ -1,0 +1,23 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Thu Aug 31 16:39:49 2023
+# Process ID: 6716
+# Current directory: E:/Xlinx_project/lab3_RAM
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5884 E:\Xlinx_project\lab3_RAM\lab3_RAM.xpr
+# Log file: E:/Xlinx_project/lab3_RAM/vivado.log
+# Journal file: E:/Xlinx_project/lab3_RAM\vivado.jou
+#-----------------------------------------------------------
+sstart_guioopen_project E:/Xlinx_project/lab3_RAM/lab3_RAM.xprupdate_compile_order -fileset sources_1
+lclose [ open E:/Xlinx_project/lab3_launch_simulation
+sources_1/new/alu.v w ]
+add_files E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sources_1/new/alu.v
+update_compile_order -fileset sources_1
+launch_simulation
+launch_simulation
+source regfile_tb.tcl
+close_sim
+launch_simulation
+source regfile_tb.tcl
+close_sim

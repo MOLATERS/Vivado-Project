@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/Ledflow/Ledflow.srcs/sources_1/new/flow_led.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module flow_led
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/Ledflow/Ledflow.srcs/sources_1/new/set_clk.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module set_clk
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/Ledflow/Ledflow.srcs/sim_1/new/sim_flow.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sim_flow

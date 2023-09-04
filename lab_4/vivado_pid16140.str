@@ -1,0 +1,167 @@
+/*
+
+Xilinx Vivado v2020.1 (64-bit) [Major: 2020, Minor: 1]
+SW Build: 2902540 on Wed May 27 19:54:49 MDT 2020
+IP Build: 2902112 on Wed May 27 22:43:36 MDT 2020
+
+Process ID (PID): 16140
+License: Customer
+
+Current time: 	Thu Aug 31 22:05:12 CST 2023
+Time zone: 	China Standard Time (Asia/Shanghai)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1920x1080
+Screen resolution (DPI): 142
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=17
+
+Java version: 	9.0.4 64-bit
+Java home: 	E:/Xlinx/Vivado/2020.1/tps/win64/jre9.0.4
+Java executable location: 	E:/Xlinx/Vivado/2020.1/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	Slater
+User home directory: C:/Users/Slater
+User working directory: E:/Xlinx_project/lab_4
+User country: 	CN
+User language: 	zh
+User locale: 	zh_CN
+
+RDI_BASEROOT: E:/Xlinx/Vivado
+HDI_APPROOT: E:/Xlinx/Vivado/2020.1
+RDI_DATADIR: E:/Xlinx/Vivado/2020.1/data
+RDI_BINDIR: E:/Xlinx/Vivado/2020.1/bin
+
+Vivado preferences file location: C:/Users/Slater/AppData/Roaming/Xilinx/Vivado/2020.1/vivado.xml
+Vivado preferences directory: C:/Users/Slater/AppData/Roaming/Xilinx/Vivado/2020.1/
+Vivado layouts directory: C:/Users/Slater/AppData/Roaming/Xilinx/Vivado/2020.1/data/layouts
+PlanAhead jar file location: 	E:/Xlinx/Vivado/2020.1/lib/classes/planAhead.jar
+Vivado log file location: 	E:/Xlinx_project/lab_4/vivado.log
+Vivado journal file location: 	E:/Xlinx_project/lab_4/vivado.jou
+Engine tmp dir: 	E:/Xlinx_project/lab_4/.Xil/Vivado-16140-LAPTOP-LVJF678E
+
+Xilinx Environment Variables
+----------------------------
+XILINX: E:/Xlinx/Vivado/2020.1/ids_lite/ISE
+XILINX_DSP: E:/Xlinx/Vivado/2020.1/ids_lite/ISE
+XILINX_PLANAHEAD: E:/Xlinx/Vivado/2020.1
+XILINX_VIVADO: E:/Xlinx/Vivado/2020.1
+XILINX_VIVADO_HLS: E:/Xlinx/Vivado/2020.1
+
+
+GUI allocated memory:	186 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,097 MB
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 108 MB (+110269kb) [00:00:05]
+// [Engine Memory]: 1,097 MB (+998861kb) [00:00:05]
+// aK (cs): Older Project Version: addNotify
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aK)
+// bz (cs):  Open Project : addNotify
+// Opening Vivado Project: E:\Xlinx_project\lab_4\lab_4.xpr. Version: Vivado v2019.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+dismissDialog("Older Project Version"); // aK (cs)
+// Tcl Message: open_project E:/Xlinx_project/lab_4/lab_4.xpr 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,097 MB. GUI used memory: 66 MB. Current time: 8/31/23, 10:05:13 PM CST
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 122 MB (+9158kb) [00:00:12]
+// WARNING: HEventQueue.dispatchEvent() is taking  2445 ms.
+// Tcl Message: open_project E:/Xlinx_project/lab_4/lab_4.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'E:/Xilinx/vivado_project/lab2/lab_2' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [Project 1-230] Project 'lab_4.xpr' upgraded for this version of Vivado. INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xlinx/Vivado/2020.1/data/ip'. 
+// Project name: lab_4; location: E:/Xlinx_project/lab_4; part: xc7a200tfbv676-2
+// Tcl Message: open_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:06 . Memory (MB): peak = 1113.441 ; gain = 0.000 
+dismissDialog("Open Project"); // bz (cs)
+// Tcl Message: update_compile_order -fileset sources_1 
+// [GUI Memory]: 130 MB (+2389kb) [00:00:24]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, cpu_top (cpu_top.v)]", 1, true); // B (F, cs) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, cpu_top (cpu_top.v)]", 1, true); // B (F, cs) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, cpu_top (cpu_top.v)]", 1, true, false, false, false, false, true); // B (F, cs) - Double Click - Node
+// Launch External Editor: 'C:/Users/Slater/AppData/Local/Programs/Microsoft VS Code/Code.exe -g "E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/cpu_top.v":10'
+// Elapsed time: 26 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, cpu_top (cpu_top.v), U_cpu : xil_defaultlib.cpu]", 2, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, cpu_top (cpu_top.v), U_cpu : xil_defaultlib.cpu]", 2, false, false, false, false, false, true); // B (F, cs) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 3, true); // B (F, cs) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 3, true, false, false, false, false, true); // B (F, cs) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 3, true); // B (F, cs) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 3, true); // B (F, cs) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 4, true); // B (F, cs) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, cpu_tb (cpu_tb.v)]", 6, true, false, false, false, false, true); // B (F, cs) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, cpu_tb (cpu_tb.v), U_cpu_top : cpu_top (cpu_top.v)]", 7, true); // B (F, cs) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, cpu_tb (cpu_tb.v), U_cpu_top : cpu_top (cpu_top.v)]", 7, true, false, false, false, false, true); // B (F, cs) - Double Click - Node
+// Launch External Editor: 'C:/Users/Slater/AppData/Local/Programs/Microsoft VS Code/Code.exe -g "E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/cpu_top.v":10'
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, cpu_tb (cpu_tb.v)]", 6, true); // B (F, cs) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, cpu_tb (cpu_tb.v)]", 6, true, false, false, false, false, true); // B (F, cs) - Double Click - Node
+// Launch External Editor: 'C:/Users/Slater/AppData/Local/Programs/Microsoft VS Code/Code.exe -g "E:/Xlinx_project/lab_4/lab_4.srcs/sim_1/new/cpu_tb.v":3'
+// RDIResource.RDIViews_PROPERTIES: Source File Properties: close view
+// PAResourceOtoP.PAViews_PROJECT_SUMMARY: Project Summary: close view
+// Elapsed time: 19 seconds
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+maximizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // aA (aL, cs)
+unMaximizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // aA (aL, cs)
+// Elapsed time: 332 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, cpu_top (cpu_top.v), U_cpu : xil_defaultlib.cpu]", 2, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, cpu_top (cpu_top.v), U_cpu : xil_defaultlib.cpu]", 2, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, cpu_top (cpu_top.v), U_cpu : xil_defaultlib.cpu]", 2, false, false, false, false, false, true); // B (F, cs) - Double Click
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 2466 ms. Increasing delay to 7398 ms.
+// Elapsed time: 215 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, cpu_top (cpu_top.v)]", 1, true); // B (F, cs) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, cpu_top (cpu_top.v)]", 1, true, false, false, false, false, true); // B (F, cs) - Double Click - Node
+// Launch External Editor: 'C:/Users/Slater/AppData/Local/Programs/Microsoft VS Code/Code.exe -g "E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/cpu_top.v":10'
+// WARNING: HTimer (HSTRUtils Dump STR Log Timer) is taking 1481ms to process. Increasing delay to 5000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1488 ms.
+// Elapsed time: 158 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, cpu_top (cpu_top.v)]", 1, true); // B (F, cs) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, cpu_top (cpu_top.v)]", 1, true, false, false, false, false, true); // B (F, cs) - Double Click - Node
+// Launch External Editor: 'C:/Users/Slater/AppData/Local/Programs/Microsoft VS Code/Code.exe -g "E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/cpu_top.v":10'
+// Elapsed time: 204 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, cpu_tb (cpu_tb.v)]", 6, true); // B (F, cs) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, cpu_tb (cpu_tb.v)]", 6, true, false, false, false, false, true); // B (F, cs) - Double Click - Node
+// Launch External Editor: 'C:/Users/Slater/AppData/Local/Programs/Microsoft VS Code/Code.exe -g "E:/Xlinx_project/lab_4/lab_4.srcs/sim_1/new/cpu_tb.v":3'
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // E (g, cs)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cs): Add Sources: addNotify
+// WARNING: HEventQueue.dispatchEvent() is taking  3101 ms.
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (E, c)
+// F (c): Create Source File: addNotify
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, (String) null); // ac (Q, F)
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, (String) null); // ac (Q, F)
+// [GUI Memory]: 138 MB (+1974kb) [00:24:10]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,097 MB. GUI used memory: 76 MB. Current time: 8/31/23, 10:35:13 PM CST
+// WARNING: HEventQueue.dispatchEvent() is taking  2970 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,097 MB. GUI used memory: 69 MB. Current time: 8/31/23, 11:05:14 PM CST

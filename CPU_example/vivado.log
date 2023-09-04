@@ -1,0 +1,26 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Sat Sep  2 23:09:08 2023
+# Process ID: 12712
+# Current directory: E:/Xlinx_project/CPU_example
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3488 E:\Xlinx_project\CPU_example\CPU_example.xpr
+# Log file: E:/Xlinx_project/CPU_example/vivado.log
+# Journal file: E:/Xlinx_project/CPU_example\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/Xlinx_project/CPU_example/CPU_example.xpr
+Scanning sources...
+Finished scanning sources
+WARNING: [IP_Flow 19-395] Problem validating against XML schema: : Unexpected end of message
+CRITICAL WARNING: [IP_Flow 19-5097] Unable to determine VLNV from IP file; verify it has the correct syntax: E:/Xlinx_project/CPU_example/CPU_example.srcs/sources_1/ip/ramb/ramb.xci
+WARNING: [IP_Flow 19-395] Problem validating against XML schema: : Unexpected end of message
+CRITICAL WARNING: [IP_Flow 19-5097] Unable to determine VLNV from IP file; verify it has the correct syntax: E:/Xlinx_project/CPU_example/CPU_example.srcs/sources_1/ip/ramd/ramd.xci
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xlinx/Vivado/2020.1/data/ip'.
+open_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:07 . Memory (MB): peak = 1113.344 ; gain = 0.000
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat Sep  2 23:23:38 2023...

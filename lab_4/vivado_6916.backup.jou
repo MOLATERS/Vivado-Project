@@ -1,0 +1,35 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Sun Sep  3 14:03:49 2023
+# Process ID: 6916
+# Current directory: E:/Xlinx_project/lab_4
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1868 E:\Xlinx_project\lab_4\lab_4.xpr
+# Log file: E:/Xlinx_project/lab_4/vivado.log
+# Journal file: E:/Xlinx_project/lab_4\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/Xlinx_project/lab_4/lab_4.xpr
+launch_simulation
+source cpu_tb.tcl
+update_compile_order -fileset sources_1
+current_wave_config {Untitled 1}
+add_wave {{/cpu_tb/U_cpu_top/U_cpu/U_IMEM/imem_rdata}} 
+run 10 us
+current_wave_config {Untitled 1}
+add_wave {{/cpu_tb/U_cpu_top/U_cpu/U_PC}} 
+run 10 us
+current_wave_config {Untitled 1}
+add_wave {{/cpu_tb/U_cpu_top/U_cpu/U_CU}} 
+run 10 us
+run 10 us
+run 10 us
+synth_design -rtl -name rtl_1
+remove_forces { {/cpu_tb/U_cpu_top/U_cpu/U_CU/Card} {/cpu_tb/U_cpu_top/U_cpu/U_IMEM/imem_rdata} {/cpu_tb/U_cpu_top/U_cpu/U_PC/Reset} {/cpu_tb/U_cpu_top/U_cpu/U_PC/Clk} {/cpu_tb/U_cpu_top/U_cpu/U_PC/PCwen} {/cpu_tb/U_cpu_top/U_cpu/U_PC/NPC} {/cpu_tb/U_cpu_top/U_cpu/U_PC/PC} {/cpu_tb/U_cpu_top/U_cpu/U_PC/Register} {/cpu_tb/U_cpu_top/U_cpu/U_CU/Instruct} {/cpu_tb/U_cpu_top/U_cpu/U_CU/Zero} {/cpu_tb/U_cpu_top/U_cpu/U_CU/Card} {/cpu_tb/U_cpu_top/U_cpu/U_IMEM/imem_rdata} {/cpu_tb/U_cpu_top/U_cpu/U_PC/Reset} {/cpu_tb/U_cpu_top/U_cpu/U_PC/PCwen} {/cpu_tb/U_cpu_top/U_cpu/U_PC/Clk} {/cpu_tb/U_cpu_top/U_cpu/U_PC/NPC} {/cpu_tb/U_cpu_top/U_cpu/U_PC/PC} {/cpu_tb/U_cpu_top/U_cpu/U_PC/Register} {/cpu_tb/U_cpu_top/U_cpu/U_CU/Instruct} {/cpu_tb/U_cpu_top/U_cpu/U_CU/Zero} {/cpu_tb/U_cpu_top/U_cpu/U_CU/ram_w} {/cpu_tb/U_cpu_top/U_cpu/U_CU/reg_w} {/cpu_tb/U_cpu_top/U_cpu/U_CU/PC_s} {/cpu_tb/U_cpu_top/U_cpu/U_CU/regfile_s} {/cpu_tb/U_cpu_top/U_cpu/U_CU/regfile_addr_s} {/cpu_tb/U_cpu_top/U_cpu/U_CU/ALU_As} {/cpu_tb/U_cpu_top/U_cpu/U_CU/ALU_Bs} {/cpu_tb/U_cpu_top/U_cpu/U_CU/Op} {/cpu_tb/U_cpu_top/U_cpu/U_CU/Func} }
+close_sim
+refresh_design
+launch_simulation
+close_design
+launch_simulation
+launch_simulation

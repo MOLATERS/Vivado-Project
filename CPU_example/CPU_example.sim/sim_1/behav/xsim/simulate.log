@@ -1,0 +1,14 @@
+Time resolution is 1 ps
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module cpu_tb.U_cpu_top.U_cpu.i_ram.i_ram.inst.\native_mem_module.blk_mem_gen_v8_4_6_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module cpu_tb.U_cpu_top.U_cpu.d_ram.d_ram.inst.\native_mem_module.blk_mem_gen_v8_4_6_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+WARNING: Too many words specified in data file F:\CPU_design\CPU\CPU.data\cpu_trace
+==============================================================
+Test begin!
+    ----PASS!!!
+Test end!
+==============================================================
+$finish called at time : 2150 ns : File "F:/CPU_design/CPU/CPU.srcs/sources_1/new/cpu_top.v" Line 64

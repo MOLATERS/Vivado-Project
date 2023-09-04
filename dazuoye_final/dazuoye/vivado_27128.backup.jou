@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Thu Nov 17 00:04:57 2022
+# Process ID: 27128
+# Current directory: E:/Xlinx_project/dazuoye_final/dazuoye
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent19884 E:\Xlinx_project\dazuoye_final\dazuoye\dazuoye.xpr
+# Log file: E:/Xlinx_project/dazuoye_final/dazuoye/vivado.log
+# Journal file: E:/Xlinx_project/dazuoye_final/dazuoye\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/Xlinx_project/dazuoye_final/dazuoye/dazuoye.xpr
+update_compile_order -fileset sources_1

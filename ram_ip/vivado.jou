@@ -1,0 +1,90 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Thu Aug 31 18:19:27 2023
+# Process ID: 4036
+# Current directory: E:/Xlinx_project/ram_ip
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5720 E:\Xlinx_project\ram_ip\ram_ip.xpr
+# Log file: E:/Xlinx_project/ram_ip/vivado.log
+# Journal file: E:/Xlinx_project/ram_ip\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/Xlinx_project/ram_ip/ram_ip.xpr
+update_compile_order -fileset sources_1
+close [ open E:/Xlinx_project/ram_ip/ram_ip.srcs/sources_1/new/alu.v w ]
+add_files E:/Xlinx_project/ram_ip/ram_ip.srcs/sources_1/new/alu.v
+update_compile_order -fileset sources_1
+launch_simulation
+source tb_top.tcl
+close_sim
+launch_simulation
+source tb_top.tcl
+close_sim
+close [ open E:/Xlinx_project/ram_ip/ram_ip.srcs/sources_1/new/regfiles.v w ]
+add_files E:/Xlinx_project/ram_ip/ram_ip.srcs/sources_1/new/regfiles.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+launch_simulation
+source alu_tb.tcl
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+launch_simulation
+close_sim
+launch_simulation
+source tb_top.tcl
+close_sim
+launch_simulation
+source tb_top.tcl
+close_sim
+launch_simulation
+source tb_top.tcl
+close_sim
+launch_simulation
+source tb_top.tcl
+close_sim
+launch_simulation
+source tb_top.tcl
+close_sim
+launch_simulation
+source tb_top.tcl
+close_sim
+launch_simulation
+source tb_top.tcl
+close_sim
+launch_simulation
+source tb_top.tcl
+close_sim
+launch_simulation
+source tb_top.tcl
+close_sim
+launch_simulation
+source tb_top.tcl
+close_sim
+launch_simulation
+source tb_top.tcl
+close_sim
+launch_simulation
+source tb_top.tcl
+synth_design -rtl -name rtl_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+close_sim
+close_project
+open_project E:/Xlinx_project/lab3_RAM/lab3_RAM.xpr
+update_compile_order -fileset sources_1
+synth_design -rtl -name rtl_1
+close_project
+open_project E:/Xlinx_project/ram_ip/ram_ip.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+launch_simulation
+source tb_top.tcl
+close_sim
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top alu [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Tue Aug 29 20:04:17 2023
+# Process ID: 4940
+# Current directory: E:/Xlinx_project/lab3_RAM/lab3_RAM.runs/block_ram_synth_1
+# Command line: vivado.exe -log block_ram.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source block_ram.tcl
+# Log file: E:/Xlinx_project/lab3_RAM/lab3_RAM.runs/block_ram_synth_1/block_ram.vds
+# Journal file: E:/Xlinx_project/lab3_RAM/lab3_RAM.runs/block_ram_synth_1\vivado.jou
+#-----------------------------------------------------------
+source block_ram.tcl -notrace

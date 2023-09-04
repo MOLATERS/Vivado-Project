@@ -1,0 +1,275 @@
+
+*** Running vivado
+    with args -log cpu_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source cpu_top.tcl
+
+
+
+****** Vivado v2020.1 (64-bit)
+  **** SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+  **** IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source cpu_top.tcl -notrace
+Command: synth_design -top cpu_top -part xc7a200tfbv676-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a200t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a200t'
+INFO: [Device 21-403] Loading part xc7a200tfbv676-2
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 16580
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1114.543 ; gain = 1.684
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'cpu_top' [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/cpu_top.v:10]
+INFO: [Synth 8-3876] $readmem data file 'E:\Xlinx_project\lab_4\lab4.data\cpu_trace' is read successfully [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/cpu_top.v:20]
+INFO: [Synth 8-6157] synthesizing module 'cpu' [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/cpu.v:23]
+INFO: [Synth 8-6157] synthesizing module 'IMEM' [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/IMEM.v:23]
+	Parameter ADDR bound to: 8 - type: integer 
+	Parameter NUMB bound to: 256 - type: integer 
+	Parameter SIZE bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'IMEM' (1#1) [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/IMEM.v:23]
+INFO: [Synth 8-6157] synthesizing module 'PC' [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/PC.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'PC' (2#1) [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/PC.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ADD' [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/ADD.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'ADD' (3#1) [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/ADD.v:23]
+INFO: [Synth 8-6157] synthesizing module 'NPC' [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/NPC.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'NPC' (4#1) [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/NPC.v:23]
+INFO: [Synth 8-6157] synthesizing module 'IR' [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/IR.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'IR' (5#1) [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/IR.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Regfile' [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/Regfile.v:22]
+	Parameter ADDR bound to: 5 - type: integer 
+	Parameter NUMB bound to: 32 - type: integer 
+	Parameter SIZE bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Regfile' (6#1) [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/Regfile.v:22]
+INFO: [Synth 8-6157] synthesizing module 'CU' [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/CU.v:3]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/CU.v:25]
+INFO: [Synth 8-6155] done synthesizing module 'CU' (7#1) [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/CU.v:3]
+INFO: [Synth 8-6157] synthesizing module 'Data_container' [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/data_container.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Data_container' (8#1) [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/data_container.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Extender' [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/Extender.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Extender' (9#1) [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/Extender.v:23]
+INFO: [Synth 8-6157] synthesizing module 'MUX_4_1' [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/MUX_4_1.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'MUX_4_1' (10#1) [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/MUX_4_1.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/ALU.v:85]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (11#1) [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/ALU.v:85]
+INFO: [Synth 8-6157] synthesizing module 'DMEM' [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/DMEM.v:23]
+	Parameter ADDR bound to: 8 - type: integer 
+	Parameter NUMB bound to: 256 - type: integer 
+	Parameter SIZE bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'DMEM' (12#1) [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/DMEM.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'cpu' (13#1) [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/cpu.v:23]
+INFO: [Synth 8-251]     ----PASS!!! [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/cpu_top.v:58]
+INFO: [Synth 8-251] Test end! [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/cpu_top.v:59]
+INFO: [Synth 8-251] ============================================================== [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/cpu_top.v:60]
+INFO: [Synth 8-251] -------------------------------------------------------------- [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/cpu_top.v:68]
+INFO: [Synth 8-251] Error!!! [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/cpu_top.v:69]
+INFO: [Synth 8-251]     Reference : PC = 0xxxxxxxxx, write back reg number = x, write back data = 0xxxxxxxxx [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/cpu_top.v:70]
+INFO: [Synth 8-251]     Error     : PC = 0xxxxxxxxx, write back reg number = x, write back data = 0xxxxxxxxx [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/cpu_top.v:71]
+INFO: [Synth 8-251] -------------------------------------------------------------- [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/cpu_top.v:72]
+INFO: [Synth 8-251] ============================================================== [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/cpu_top.v:73]
+INFO: [Synth 8-6155] done synthesizing module 'cpu_top' (14#1) [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/cpu_top.v:10]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1167.492 ; gain = 54.633
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 1167.492 ; gain = 54.633
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 1167.492 ; gain = 54.633
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 1167.492 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [E:/Xlinx_project/lab_4/lab_4.srcs/constrs_1/new/cpu.xdc]
+Finished Parsing XDC File [E:/Xlinx_project/lab_4/lab_4.srcs/constrs_1/new/cpu.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [E:/Xlinx_project/lab_4/lab_4.srcs/constrs_1/new/cpu.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/cpu_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/cpu_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1288.391 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 1288.391 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:16 . Memory (MB): peak = 1288.391 ; gain = 175.531
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a200tfbv676-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:16 . Memory (MB): peak = 1288.391 ; gain = 175.531
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:16 . Memory (MB): peak = 1288.391 ; gain = 175.531
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-327] inferring latch for variable 'ram_w_reg' [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/CU.v:27]
+WARNING: [Synth 8-327] inferring latch for variable 'reg_w_reg' [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/CU.v:28]
+WARNING: [Synth 8-327] inferring latch for variable 'Card_reg' [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/CU.v:29]
+WARNING: [Synth 8-327] inferring latch for variable 'PC_s_reg' [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/CU.v:30]
+WARNING: [Synth 8-327] inferring latch for variable 'regfile_s_reg' [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/CU.v:31]
+WARNING: [Synth 8-327] inferring latch for variable 'regfile_addr_s_reg' [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/CU.v:32]
+WARNING: [Synth 8-327] inferring latch for variable 'ALU_As_reg' [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/CU.v:33]
+WARNING: [Synth 8-327] inferring latch for variable 'ALU_Bs_reg' [E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/CU.v:34]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:17 . Memory (MB): peak = 1288.391 ; gain = 175.531
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 5     
+	   3 Input   32 Bit       Adders := 2     
+	   4 Input   32 Bit       Adders := 2     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 9     
+	               16 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	  12 Input   72 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 1     
+	   4 Input   32 Bit        Muxes := 5     
+	   2 Input    8 Bit        Muxes := 2     
+	   9 Input    5 Bit        Muxes := 1     
+	   6 Input    5 Bit        Muxes := 1     
+	   6 Input    2 Bit        Muxes := 3     
+	   9 Input    2 Bit        Muxes := 2     
+	   6 Input    1 Bit        Muxes := 5     
+	   9 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 740 (col length:100)
+BRAMs: 730 (col length: RAMB18 100 RAMB36 50)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+warning: Removed RAM U_cpu/U_IMEM/IMEM_reg due to inactive write enable
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:19 . Memory (MB): peak = 1288.391 ; gain = 175.531
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:25 . Memory (MB): peak = 1288.391 ; gain = 175.531
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:25 . Memory (MB): peak = 1288.391 ; gain = 175.531
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:26 . Memory (MB): peak = 1288.391 ; gain = 175.531
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:28 . Memory (MB): peak = 1288.391 ; gain = 175.531
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:28 . Memory (MB): peak = 1288.391 ; gain = 175.531
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:28 . Memory (MB): peak = 1288.391 ; gain = 175.531
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:28 . Memory (MB): peak = 1288.391 ; gain = 175.531
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:29 . Memory (MB): peak = 1288.391 ; gain = 175.531
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:29 . Memory (MB): peak = 1288.391 ; gain = 175.531
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |OBUF |    16|
++------+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:29 . Memory (MB): peak = 1288.391 ; gain = 175.531
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 8 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:26 . Memory (MB): peak = 1288.391 ; gain = 54.633
+Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:29 . Memory (MB): peak = 1288.391 ; gain = 175.531
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1288.391 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1294.734 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+52 Infos, 8 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:47 . Memory (MB): peak = 1294.734 ; gain = 181.875
+INFO: [Common 17-1381] The checkpoint 'E:/Xlinx_project/lab_4/lab_4.runs/synth_1/cpu_top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file cpu_top_utilization_synth.rpt -pb cpu_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Sep  2 23:08:52 2023...

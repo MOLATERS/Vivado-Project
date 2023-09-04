@@ -1,0 +1,6 @@
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+Block Memory Generator module tb_top.u_ram_top.block_ram.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+RAM Test Begin
+RAM Test Success
+$finish called at time : 250 ns : File "E:/Xlinx_project/ram_ip/ram_ip.srcs/sim_1/new/data_ram_tb.v" Line 112

@@ -1,0 +1,249 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Sun Sep  3 18:52:09 2023
+# Process ID: 13320
+# Current directory: E:/Xlinx_project/lab_4
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9628 E:\Xlinx_project\lab_4\lab_4.xpr
+# Log file: E:/Xlinx_project/lab_4/vivado.log
+# Journal file: E:/Xlinx_project/lab_4\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/Xlinx_project/lab_4/lab_4.xpr
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+{/cpu_tb/U_cpu_top/U_cpu/U_IMEM/addr}} 
+current_wave_config {Untitled 1}
+add_wave {{/cpu_tb/U_cpu_top/U_cpu/U_IMEM/imem_addr}} 
+current_wave_config {Untitled 1}
+add_wave {{/cpu_tb/U_cpu_top/U_cpu/U_IR/IRout}} 
+current_wave_config {Untitled 1}
+add_wave {{/cpu_tb/U_cpu_top/U_cpu/U_CU/Card}} 
+current_wave_config {Untitled 1}
+add_wave {{/cpu_tb/U_cpu_top/U_cpu/U_CU/PC_s}} 
+current_wave_config {Untitled 1}
+add_wave {{/cpu_tb/U_cpu_top/U_cpu/U_CU/regfile_s}} 
+current_wave_config {Untitled 1}
+add_wave {{/cpu_tb/U_cpu_top/U_cpu/U_CU/regfile_addr_s}} 
+current_wave_config {Untitled 1}
+add_wave {{/cpu_tb/U_cpu_top/U_cpu/U_CU/ALU_As}} 
+current_wave_config {Untitled 1}
+add_wave {{/cpu_tb/U_cpu_top/U_cpu/U_CU/ALU_Bs}} 
+current_wave_config {Untitled 1}
+add_wave {{/cpu_tb/U_cpu_top/U_cpu/U_CU/Zero}} 
+current_wave_config {Untitled 1}
+add_wave {{/cpu_tb/U_cpu_top/U_cpu/U_CU/reg_w}} 
+current_wave_config {Untitled 1}
+add_wave {{/cpu_tb/U_cpu_top/U_cpu/U_CU/ram_w}} 
+current_wave_config {Untitled 1}
+add_wave {{/cpu_tb/U_cpu_top/U_cpu/A_MUX/data_chosen}} 
+current_wave_config {Untitled 1}
+add_wave {{/cpu_tb/U_cpu_top/U_cpu/B_MUX/data_chosen}} 
+current_wave_config {Untitled 1}
+add_wave {{/cpu_tb/U_cpu_top/U_cpu/PC_MUX/data_chosen}} 
+current_wave_config {Untitled 1}
+add_wave {{/cpu_tb/U_cpu_top/U_cpu/WB_Reg_MUX/data_chosen}} 
+current_wave_config {Untitled 1}
+add_wave {{/cpu_tb/U_cpu_top/U_cpu/WB_Reg_Addr_MUX/data_chosen}} 
+current_wave_config {Untitled 1}
+add_wave {{/cpu_tb/U_cpu_top/U_cpu/U_DMEM/dmem_addr}} 
+current_wave_config {Untitled 1}
+add_wave {{/cpu_tb/U_cpu_top/U_cpu/U_DMEM/dmem_rdata}} 
+run 10 us
+run all
+run all
+run all
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+close_sim
+launch_simulation
+source cpu_tb.tcl
+current_wave_config {Untitled 2}
+add_wave {{/cpu_tb/U_cpu_top/U_cpu/U_IR/IRout}} 
+current_wave_config {Untitled 2}
+add_wave {{/cpu_tb/U_cpu_top/U_cpu/U_DMEM/dmem_rdata}} 
+current_wave_config {Untitled 2}
+add_wave {{/cpu_tb/U_cpu_top/U_cpu/A_MUX}} 
+current_wave_config {Untitled 2}
+add_wave {{/cpu_tb/U_cpu_top/U_cpu/B_MUX}} 
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close_sim
+launch_simulation
+source cpu_tb.tcl
+current_wave_config {Untitled 3}
+add_wave {{/cpu_tb/U_cpu_top/U_cpu/A_MUX/A_data_chosen}} 
+current_wave_config {Untitled 3}
+add_wave {{/cpu_tb/U_cpu_top/U_cpu/B_MUX}} 
+current_wave_config {Untitled 3}
+add_wave {{/cpu_tb/U_cpu_top/U_cpu/A_MUX}} 
+run 10 us
+close_sim
+launch_simulation
+source cpu_tb.tcl
+current_wave_config {Untitled 4}
+add_wave {{/cpu_tb/U_cpu_top/U_cpu/U_A/dout}} 
+current_wave_config {Untitled 4}
+add_wave {{/cpu_tb/U_cpu_top/U_cpu/U_B/dout}} 
+current_wave_config {Untitled 4}
+add_wave {{/cpu_tb/U_cpu_top/U_cpu/A_MUX/A_data_chosen}} 
+current_wave_config {Untitled 4}
+add_wave {{/cpu_tb/U_cpu_top/U_cpu/B_MUX/B_data_chosen}} 
+run 10 us
+close_sim
+launch_simulation
+source cpu_tb.tcl
+current_wave_config {Untitled 5}
+add_wave {{/cpu_tb/U_cpu_top/U_cpu/U_ALU_output/dout}} 
+current_wave_config {Untitled 5}
+add_wave {{/cpu_tb/U_cpu_top/U_cpu/A_MUX/A_data_chosen}} 
+current_wave_config {Untitled 5}
+add_wave {{/cpu_tb/U_cpu_top/U_cpu/B_MUX/B_data_chosen}} 
+current_wave_config {Untitled 5}
+add_wave {{/cpu_tb/U_cpu_top/U_cpu/U_DMEM/dmem_addr}} 
+current_wave_config {Untitled 5}
+add_wave {{/cpu_tb/U_cpu_top/U_cpu/U_DMEM/dmem_rdata}} 
+current_wave_config {Untitled 5}
+add_wave {{/cpu_tb/U_cpu_top/U_cpu/WB_Reg_MUX}} 
+current_wave_config {Untitled 5}
+add_wave {{/cpu_tb/U_cpu_top/U_cpu/WB_Reg_Addr_MUX}} 
+run 10 us
+close_sim
+launch_simulation
+source cpu_tb.tcl
+current_wave_config {Untitled 6}
+add_wave {{/cpu_tb/U_cpu_top/U_cpu/U_ALU/Card}} 
+current_wave_config {Untitled 6}
+add_wave {{/cpu_tb/U_cpu_top/U_cpu/A_MUX/A_data_chosen}} 
+current_wave_config {Untitled 6}
+add_wave {{/cpu_tb/U_cpu_top/U_cpu/B_MUX/B_data_chosen}} 
+current_wave_config {Untitled 6}
+add_wave {{/cpu_tb/U_cpu_top/U_cpu/U_ALU_output/dout}} 
+current_wave_config {Untitled 6}
+add_wave {{/cpu_tb/U_cpu_top/U_cpu/U_DMEM/dmem_rdata}} 
+current_wave_config {Untitled 6}
+add_wave {{/cpu_tb/U_cpu_top/U_cpu/U_DMEM/dmem_addr}} 
+current_wave_config {Untitled 6}
+add_wave {{/cpu_tb/U_cpu_top/U_cpu/WB_Reg_MUX/select}} 
+current_wave_config {Untitled 6}
+add_wave {{/cpu_tb/U_cpu_top/U_cpu/WB_Reg_Addr_MUX/select}} 
+run 10 us
+run 10 us
+close_sim
+launch_simulation
+source cpu_tb.tcl
+current_wave_config {Untitled 7}
+add_wave {{/cpu_tb/U_cpu_top/U_cpu/A_MUX/A_data_chosen}} 
+current_wave_config {Untitled 7}
+add_wave {{/cpu_tb/U_cpu_top/U_cpu/B_MUX/B_data_chosen}} 
+current_wave_config {Untitled 7}
+add_wave {{/cpu_tb/U_cpu_top/U_cpu/U_ALU_output/dout}} 
+current_wave_config {Untitled 7}
+add_wave {{/cpu_tb/U_cpu_top/U_cpu/PC_MUX/data_chosen}} 
+current_wave_config {Untitled 7}
+add_wave {{/cpu_tb/U_cpu_top/U_cpu/WB_Reg_MUX}} 
+current_wave_config {Untitled 7}
+add_wave {{/cpu_tb/U_cpu_top/U_cpu/WB_Reg_Addr_MUX}} 
+current_wave_config {Untitled 7}
+add_wave {{/cpu_tb/U_cpu_top/U_cpu/U_DMEM/dmem_addr}} 
+current_wave_config {Untitled 7}
+add_wave {{/cpu_tb/U_cpu_top/U_cpu/U_DMEM/dmem_rdata}} 
+run all
+run all
+close_sim
+launch_simulation
+source cpu_tb.tcl
+run all
+close_sim
+launch_simulation
+source cpu_tb.tcl
+run all
+close_sim
+launch_simulation
+source cpu_tb.tcl
+current_wave_config {Untitled 10}
+add_wave {{/cpu_tb/U_cpu_top/U_cpu/U_ALU_output/dout}} 
+current_wave_config {Untitled 10}
+add_wave {{/cpu_tb/U_cpu_top/U_cpu/U_DMEM/dmem_rdata}} 
+current_wave_config {Untitled 10}
+add_wave {{/cpu_tb/U_cpu_top/U_cpu/WB_Reg_Addr_MUX/data_chosen}} 
+current_wave_config {Untitled 10}
+add_wave {{/cpu_tb/U_cpu_top/U_cpu/WB_Reg_MUX/data_chosen}} 
+current_wave_config {Untitled 10}
+add_wave {{/cpu_tb/U_cpu_top/U_cpu/U_IR}} 
+run all
+close_sim
+launch_simulation
+source cpu_tb.tcl
+run all
+current_wave_config {Untitled 11}
+add_wave {{/cpu_tb/U_cpu_top/U_cpu/A_MUX}} 
+current_wave_config {Untitled 11}
+add_wave {{/cpu_tb/U_cpu_top/U_cpu/B_MUX}} 
+current_wave_config {Untitled 11}
+add_wave {{/cpu_tb/U_cpu_top/U_cpu/WB_Reg_MUX}} 
+current_wave_config {Untitled 11}
+add_wave {{/cpu_tb/U_cpu_top/U_cpu/WB_Reg_Addr_MUX}} 
+current_wave_config {Untitled 11}
+add_wave {{/cpu_tb/U_cpu_top/U_cpu/U_ALU_output}} 
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+relaunch_sim
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+relaunch_sim
+run all
+close_sim
+launch_simulation
+source cpu_tb.tcl
+run all
+close_sim

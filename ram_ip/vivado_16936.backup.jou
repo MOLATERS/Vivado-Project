@@ -1,0 +1,17 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Thu Aug 31 15:20:25 2023
+# Process ID: 16936
+# Current directory: D:/Document/lab3/ram_ip
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12104 D:\Document\lab3\ram_ip\ram_ip.xpr
+# Log file: D:/Document/lab3/ram_ip/vivado.log
+# Journal file: D:/Document/lab3/ram_ip\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Document/lab3/ram_ip/ram_ip.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source tb_top.tcl
+close_sim

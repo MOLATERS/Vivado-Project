@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Sat Sep  2 23:09:08 2023
+# Process ID: 12712
+# Current directory: E:/Xlinx_project/CPU_example
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3488 E:\Xlinx_project\CPU_example\CPU_example.xpr
+# Log file: E:/Xlinx_project/CPU_example/vivado.log
+# Journal file: E:/Xlinx_project/CPU_example\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/Xlinx_project/CPU_example/CPU_example.xpr
+update_compile_order -fileset sources_1
