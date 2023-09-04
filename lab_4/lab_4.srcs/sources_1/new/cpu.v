@@ -16,7 +16,7 @@ wire [31:0] NewPC;     // 表示增加之后的指令地址
 wire [31:0] NPC;       // 存储在 NPC 内的已经增加了的指令地址
 wire [31:0] IRin;      // 输入指令寄存器的值，也就是从指令存储器里面读出来的当前需要执行的指令
 wire [31:0] IRout;     // 指令寄存器输出
-wire [31:0] PC_chosen;
+wire [31:0] PC_chosen; // 最后选择的PC地址
 wire [31:0] reg_a_out; // 寄存器读出来的 A 数据
 wire [31:0] reg_b_out; // 寄存器读出来的 B 数据
 wire reg_w;            // 寄存器写使能
@@ -30,7 +30,7 @@ wire [1:0] B_s;        // ALU 输入 B 来源选择
 wire zero;             // 0 位
 wire [31:0] A_out;     // 作为 A 的数据输出
 wire [31:0] B_out;     // 作为 B 的数据输出
-wire [31:0] Imm;
+wire [31:0] Imm;       // 作为Imm的数据输出
 wire [31:0] Imm_out;   // 作为 Imm 的数据输出
 wire [31:0] ALU_A_in;  // 数据 A 的输入
 wire [31:0] ALU_B_in;  // 数据 B 的输入
@@ -69,7 +69,7 @@ ADD U_ADD (
 
 NPC U_NPC (
     .clk(clk),                 // 时钟输入
-    .rst(!resetn),               // 复位输入
+    .rst(!resetn),             // 复位输入
     .NPCin(NewPC),
     .load(1'b1),               // 载入使能
     .NPCout(NPC)
@@ -77,7 +77,7 @@ NPC U_NPC (
 
 IR U_IR (
     .clk(clk),                 // 时钟输入
-    .rst(!resetn),               // 复位输入
+    .rst(!resetn),             // 复位输入
     .IRin(IRin),
     .load(1'b1),               // 载入使能
     .IRout(IRout)
@@ -86,18 +86,18 @@ IR U_IR (
 
 /* ID 模块部分 */
 Regfile U_regfile (
-    .clk(clk),               // 时钟信号
-    .raddr1(IRout[25:21]),   // 寄存器堆读地址1
+    .clk(clk),                // 时钟信号
+    .raddr1(IRout[25:21]),    // 寄存器堆读地址1
     .rdata1(reg_a_out),       // 返回数据1
-    .raddr2(IRout[20:16]),   // 寄存器堆读地址2
+    .raddr2(IRout[20:16]),    // 寄存器堆读地址2
     .rdata2(reg_b_out),       // 返回数据2
-    .we(reg_w && IRout),     // 写使能
+    .we(reg_w && IRout),      // 写使能
     .waddr(reg_addr_choose[4:0]), // 写地址
     .wdata(reg_mux_out)       // 写数据
 );
 
 CU U_CU (
-    .Instruct(IRout),         // 输入指令
+    .Instruct(IRout),          // 输入指令
     .Zero(zero),               // 零标志位
     .ram_w(ram_w),             // 存储器写使能
     .reg_w(reg_w),             // 寄存器写使能
