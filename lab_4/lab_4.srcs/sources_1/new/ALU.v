@@ -70,6 +70,8 @@ module ALU (
     output          Cout,
     output          Zero
 );
+
+    
     wire [32:0]    Final; 
     wire [31:0]    add_result;
     wire [31:0]    addi_result;

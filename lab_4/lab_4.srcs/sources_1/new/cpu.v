@@ -143,7 +143,7 @@ Imm U_Imm (
 A_MUX A_MUX (
     .A_data1(A_out),                  //A寄存器的输出
     .A_data2(NPC),                    //根据现在的PC产生的NPC值
-    .A_data3({27'b0,IRout[25:21]}),   //代表base的值
+    .A_data3(A_out),                  //代表base的值
     .A_data4({27'b0,IRout[10:6]}),    //代表左移的偏置量sa
     .A_select(A_s),
     .A_data_chosen(ALU_A_in)
