@@ -1,0 +1,50 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/A.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module A
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/ADD.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ADD
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/ALU_out.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU_out
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/A_MUX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module A_MUX
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/B.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module B
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/B_MUX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module B_MUX
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/CU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CU
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/DMEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DMEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/Extender.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Extender
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/IMEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IMEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/IR.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IR
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/Imm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Imm
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/LDM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LDM
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/MUX_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MUX_4_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/NPC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module NPC
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/PC_MUX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC_MUX
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/Regfile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Regfile
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/WB_ADDR_MUX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module WB_ADDR_MUX
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/WB_DATA_MUX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module WB_DATA_MUX
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/cpu_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/Data_container.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Data_container
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/lab_4/lab_4.srcs/sim_1/new/cpu_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu_tb

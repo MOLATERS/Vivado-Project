@@ -31,7 +31,7 @@ module IMEM(
     wire [7:0] addr;
     assign addr = (imem_addr % 4 == 0)? imem_addr>>2 : 8'b0;
     reg [SIZE-1:0] IMEM [0:NUMB-1];//存储器堆
-
+    
     integer i = 0;
     initial begin//初始化寄存器
     $readmemh(`INS_FILE_PATH , IMEM);
