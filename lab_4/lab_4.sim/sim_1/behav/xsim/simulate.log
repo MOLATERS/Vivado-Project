@@ -7,3 +7,7 @@ Test begin!
 Test end!
 ==============================================================
 $finish called at time : 2140 ns : File "E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/cpu_top.v" Line 64
+    ----PASS!!!
+Test end!
+==============================================================
+$finish called at time : 2300 ns : File "E:/Xlinx_project/lab_4/lab_4.srcs/sources_1/new/cpu_top.v" Line 64

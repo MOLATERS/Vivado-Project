@@ -1,3 +1,24 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 2023/08/31 18:07:06
+// Design Name: 
+// Module Name: alu
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
 
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
@@ -70,8 +91,6 @@ module ALU (
     output          Cout,
     output          Zero
 );
-
-    
     wire [32:0]    Final; 
     wire [31:0]    add_result;
     wire [31:0]    addi_result;

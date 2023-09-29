@@ -6,11 +6,4 @@ Starting static elaboration
 Pass Through NonSizing Optimizer
 WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'Card' [E:/Xlinx_project/lab3_RAM/lab3_RAM.srcs/sim_1/new/ram_design_db.v:68]
 Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.ram_design_default
-Compiling module xil_defaultlib.alu
-Compiling module xil_defaultlib.regfile_tb
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot regfile_tb_behav
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel

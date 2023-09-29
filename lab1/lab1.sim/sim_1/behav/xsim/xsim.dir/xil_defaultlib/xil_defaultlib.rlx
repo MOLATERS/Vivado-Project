@@ -3,5 +3,7 @@
 May 27 2020
 20:09:33
 E:/Xlinx_project/lab1/lab1.sim/sim_1/behav/xsim/glbl.v,1590624368,verilog,,,,glbl,,,,,,,,
+E:/Xlinx_project/lab1/lab1.srcs/sim_1/new/beat_tb.v,1693212460,verilog,,,,beat_tb,,,,,,,,
 E:/Xlinx_project/lab1/lab1.srcs/sim_1/new/mux_simulation.v,1693212491,verilog,,,,mux_simulation,,,,,,,,
 E:/Xlinx_project/lab1/lab1.srcs/sources_1/new/2-1mux.v,1693211109,verilog,,E:/Xlinx_project/lab1/lab1.srcs/sim_1/new/mux_simulation.v,,mux,,,,,,,,
+E:/Xlinx_project/lab1/lab1.srcs/sources_1/new/beat.v,1693212273,verilog,,E:/Xlinx_project/lab1/lab1.srcs/sim_1/new/beat_tb.v,,beat,,,,,,,,

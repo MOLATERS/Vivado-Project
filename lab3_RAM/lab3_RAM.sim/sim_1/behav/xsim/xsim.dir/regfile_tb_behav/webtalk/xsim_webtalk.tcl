@@ -1,6 +1,6 @@
 webtalk_init -webtalk_dir E:/Xlinx_project/lab3_RAM/lab3_RAM.sim/sim_1/behav/xsim/xsim.dir/regfile_tb_behav/webtalk/
 webtalk_register_client -client project
-webtalk_add_data -client project -key date_generated -value "Thu Aug 31 16:50:03 2023" -context "software_version_and_target_device"
+webtalk_add_data -client project -key date_generated -value "Thu Sep 14 20:36:43 2023" -context "software_version_and_target_device"
 webtalk_add_data -client project -key product_version -value "XSIM v2020.1 (64-bit)" -context "software_version_and_target_device"
 webtalk_add_data -client project -key build_version -value "2902540" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_platform -value "WIN64" -context "software_version_and_target_device"
@@ -14,7 +14,7 @@ webtalk_add_data -client project -key target_package -value "not_applicable" -co
 webtalk_add_data -client project -key target_speed -value "not_applicable" -context "software_version_and_target_device"
 webtalk_add_data -client project -key random_id -value "44eb2757-5701-4e72-854d-e3a126f80cbc" -context "software_version_and_target_device"
 webtalk_add_data -client project -key project_id -value "b362d7424020498a99882bab3e09624e" -context "software_version_and_target_device"
-webtalk_add_data -client project -key project_iteration -value "4" -context "software_version_and_target_device"
+webtalk_add_data -client project -key project_iteration -value "7" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_name -value "Windows Server 2016 or Windows 10" -context "user_environment"
 webtalk_add_data -client project -key os_release -value "major release  (build 9200)" -context "user_environment"
 webtalk_add_data -client project -key cpu_name -value "11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz" -context "user_environment"
@@ -26,7 +26,7 @@ webtalk_add_data -client xsim -key Command -value "xsim" -context "xsim\\command
 webtalk_add_data -client xsim -key trace_waveform -value "true" -context "xsim\\usage"
 webtalk_add_data -client xsim -key runtime -value "80 ns" -context "xsim\\usage"
 webtalk_add_data -client xsim -key iteration -value "0" -context "xsim\\usage"
-webtalk_add_data -client xsim -key Simulation_Time -value "0.05_sec" -context "xsim\\usage"
-webtalk_add_data -client xsim -key Simulation_Memory -value "8588_KB" -context "xsim\\usage"
-webtalk_transmit -clientid 1038755466 -regid "" -xml E:/Xlinx_project/lab3_RAM/lab3_RAM.sim/sim_1/behav/xsim/xsim.dir/regfile_tb_behav/webtalk/usage_statistics_ext_xsim.xml -html E:/Xlinx_project/lab3_RAM/lab3_RAM.sim/sim_1/behav/xsim/xsim.dir/regfile_tb_behav/webtalk/usage_statistics_ext_xsim.html -wdm E:/Xlinx_project/lab3_RAM/lab3_RAM.sim/sim_1/behav/xsim/xsim.dir/regfile_tb_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
+webtalk_add_data -client xsim -key Simulation_Time -value "0.01_sec" -context "xsim\\usage"
+webtalk_add_data -client xsim -key Simulation_Memory -value "7116_KB" -context "xsim\\usage"
+webtalk_transmit -clientid 2386097751 -regid "" -xml E:/Xlinx_project/lab3_RAM/lab3_RAM.sim/sim_1/behav/xsim/xsim.dir/regfile_tb_behav/webtalk/usage_statistics_ext_xsim.xml -html E:/Xlinx_project/lab3_RAM/lab3_RAM.sim/sim_1/behav/xsim/xsim.dir/regfile_tb_behav/webtalk/usage_statistics_ext_xsim.html -wdm E:/Xlinx_project/lab3_RAM/lab3_RAM.sim/sim_1/behav/xsim/xsim.dir/regfile_tb_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
 webtalk_terminate

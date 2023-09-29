@@ -1,0 +1,12 @@
+srcscan starts
+INFO: analyzing module mux (VERI-9002)
+INFO: analyzing module beat (VERI-9002)
+INFO: analyzing module beat_tb (VERI-9002)
+INFO: analyzing module mux_simulation (VERI-9002)
+Listing tops:
+VeriTop library:xil_defaultlib mod:beat_tb
+VeriTop library:xil_defaultlib mod:mux_simulation
+END of tops
+E:/Xlinx_project/lab1/lab1.srcs/sim_1/new/beat_tb.v(23): INFO: compiling module 'beat_tb_default' (VERI-1018)
+E:/Xlinx_project/lab1/lab1.srcs/sim_1/new/mux_simulation.v(23): INFO: compiling module 'mux_simulation_default' (VERI-1018)
+srcscan exits with return value 0
