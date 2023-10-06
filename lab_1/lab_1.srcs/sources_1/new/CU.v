@@ -42,7 +42,7 @@ module CU(
     input Zero,                 // 零标志位
     output reg ram_w,           // 存储器写使能
     output reg reg_w,           // 寄存器写使能
-    output reg [4:0] Card,      // ALU功能码
+    output reg [4:0] alu_card,      // ALU功能码
     output reg [1:0] PC_s,            // PC数据来源选择
     output reg [1:0] regfile_s,       // 寄存器文件数据来源选择
     output reg [1:0] regfile_addr_s,  // 寄存器文件地址来源选择
@@ -62,7 +62,7 @@ module CU(
                     6'b100000: begin // 加法操作
                         ram_w <= 0;            // 存储器写禁用
                         reg_w <= 1;            // 寄存器写使能
-                        Card <= `ADD;             // ALU功能码为加法
+                        alu_card <= `ADD;             // ALU功能码为加法
                         PC_s <= 0;             // PC数据来源：NPC
                         regfile_s <= 0;        // 寄存器文件数据来源：ALU
                         regfile_addr_s <= 0;   // 寄存器文件地址来源：目标寄存器（rd）
@@ -72,7 +72,7 @@ module CU(
                     6'b100010: begin // 减法操作
                         ram_w <= 0;
                         reg_w <= 1;
-                        Card <= `SUB;             // ALU功能码为减法
+                        alu_card <= `SUB;             // ALU功能码为减法
                         PC_s <= 0;
                         regfile_s <= 0;
                         regfile_addr_s <= 0;
@@ -82,7 +82,7 @@ module CU(
                     6'b100100: begin // 与操作
                         ram_w <= 0;
                         reg_w <= 1;
-                        Card <= `AND;
+                        alu_card <= `AND;
                         PC_s <= 0;
                         regfile_s <= 0;
                         regfile_addr_s <= 0;
@@ -92,7 +92,7 @@ module CU(
                     6'b100101: begin // 或操作
                         ram_w <= 0;
                         reg_w <= 1;
-                        Card <= `OR;
+                        alu_card <= `OR;
                         PC_s <= 0;
                         regfile_s <= 0;
                         regfile_addr_s <= 0;
@@ -102,7 +102,7 @@ module CU(
                     6'b100110: begin // 异或操作
                         ram_w <= 0;
                         reg_w <= 1;
-                        Card <= `XOR;
+                        alu_card <= `XOR;
                         PC_s <= 0;
                         regfile_s <= 0;
                         regfile_addr_s <= 0;
@@ -112,7 +112,7 @@ module CU(
                     6'b101010: begin // SLT操作（设置小于）
                         ram_w <= 0;
                         reg_w <= 1;
-                        Card <= `SLT;
+                        alu_card <= `SLT;
                         PC_s <= 0;
                         regfile_s <= 0;
                         regfile_addr_s <= 0;
@@ -122,7 +122,7 @@ module CU(
                     6'b001010: begin // MOVZ操作（如果为零则移动）
                         ram_w <= 0;
                         reg_w <= Zero;        // 如果零标志位为1，则寄存器写使能
-                        Card <= `GB;
+                        alu_card <= `GB;
                         PC_s <= 0;
                         regfile_s <= 2;       // 寄存器文件数据来源：寄存器A
                         regfile_addr_s <= 0;
@@ -132,7 +132,7 @@ module CU(
                     6'b000000: begin // SLL操作（逻辑左移）
                         ram_w <= 0;
                         reg_w <= 1;
-                        Card <= `SLL;
+                        alu_card <= `SLL;
                         PC_s <= 0;
                         regfile_s <= 0;
                         regfile_addr_s <= 0;
@@ -142,7 +142,7 @@ module CU(
                     default: begin
                         ram_w <= 0;            // 默认值
                         reg_w <= 0;
-                        Card <= 0;
+                        alu_card <= 0;
                         PC_s <= 0;
                         regfile_s <= 0;
                         regfile_addr_s <= 0;
@@ -154,7 +154,7 @@ module CU(
             6'b101011: begin // SW操作（存储字）
                 ram_w <= 1;            // 存储器写使能
                 reg_w <= 0;
-                Card <= `ADD;      // ALU功能码用于地址计算
+                alu_card <= `ADD;      // ALU功能码用于地址计算
                 PC_s <= 0;
                 regfile_s <= 0;
                 regfile_addr_s <= 1;    // 地址来源：寄存器rt
@@ -164,7 +164,7 @@ module CU(
             6'b100011: begin // LW操作（加载字）
                 ram_w <= 0;
                 reg_w <= 1;
-                Card <= `ADD;      // ALU功能码用于地址计算
+                alu_card <= `ADD;      // ALU功能码用于地址计算
                 PC_s <= 0;
                 regfile_s <= 1;         // 寄存器文件数据来源：寄存器LMD
                 regfile_addr_s <= 1;    // 地址来源：寄存器rt
@@ -174,7 +174,7 @@ module CU(
             6'b000101: begin // BNE操作（如果不相等则分支）
                 ram_w <= 0;
                 reg_w <= 0;
-                Card <= `PC;       // ALU功能码用于分支地址计算
+                alu_card <= `PC;       // ALU功能码用于分支地址计算
                 if(Instruct[25:21]!=Instruct[20:16]) PC_s <= 1;  // PC数据来源：不相等跳转
                 else PC_s <= 0;
                 regfile_s <= 0;
@@ -185,7 +185,7 @@ module CU(
             6'b000010: begin // J操作（跳转）
                 ram_w <= 0;
                 reg_w <= 0;
-                Card <= 5'b00000;
+                alu_card <= 5'b00000;
                 PC_s <= 2;              // PC数据来源：无条件跳转
                 regfile_s <= 0;
                 regfile_addr_s <= 0;
@@ -195,7 +195,7 @@ module CU(
             default: begin
                 ram_w <= 0;            // 默认值
                 reg_w <= 5'b00000;
-                Card <= 0;
+                alu_card <= 0;
                 PC_s <= 0;
                 regfile_s <= 0;
                 regfile_addr_s <= 0;

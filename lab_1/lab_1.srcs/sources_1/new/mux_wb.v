@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 2023/09/03 15:36:41
+// Create Date: 2023/10/06 21:14:42
 // Design Name: 
-// Module Name: PC_MUX
+// Module Name: mux_wb
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,22 +20,16 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module PC_MUX(
+
+module mux_wb(
+    input [1:0] index, 
     input [31:0] data1,
     input [31:0] data2,
     input [31:0] data3,
     input [31:0] data4,
-    input [1:0] select,
-    output wire [31:0] data_chosen
+    output [31:0] wbdata //写回数据
     );
-    
-MUX_4_1 PC(
-    .data1(data1),
-    .data2(data2),
-    .data3(data3),
-    .data4(data4),
-    .select(select),
-    .data_chosen(data_chosen)
-);
-
+    assign wbdata = (index == 2'b00) ? data1 : 
+                    (index == 2'b01) ? data2 : 
+                    (index == 2'b10) ? data3 : data4;
 endmodule

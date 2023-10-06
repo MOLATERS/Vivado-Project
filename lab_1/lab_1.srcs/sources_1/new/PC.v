@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 2023/09/03 15:36:41
+// Create Date: 2023/09/30 22:40:35
 // Design Name: 
-// Module Name: PC_MUX
+// Module Name: PC
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,22 +20,15 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module PC_MUX(
-    input [31:0] data1,
-    input [31:0] data2,
-    input [31:0] data3,
-    input [31:0] data4,
-    input [1:0] select,
-    output wire [31:0] data_chosen
+module PC(
+    input wire [31:0] NPC,
+    input wire reset,
+    output wire [31:0] PC
     );
-    
-MUX_4_1 PC(
-    .data1(data1),
-    .data2(data2),
-    .data3(data3),
-    .data4(data4),
-    .select(select),
-    .data_chosen(data_chosen)
-);
-
+    reg [31:0] PC_next;
+    always @(*) begin
+        if (reset) 
+            PC_next = 32'h00000000;
+    end
+    assign PC = PC_next;
 endmodule

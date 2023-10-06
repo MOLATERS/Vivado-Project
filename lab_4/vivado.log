@@ -1,0 +1,28 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Fri Sep 29 23:10:16 2023
+# Process ID: 17516
+# Current directory: E:/Xlinx_project/lab_4
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15460 E:\Xlinx_project\lab_4\lab_4.xpr
+# Log file: E:/Xlinx_project/lab_4/vivado.log
+# Journal file: E:/Xlinx_project/lab_4\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/Xlinx_project/lab_4/lab_4.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xlinx/Vivado/2020.1/data/ip'.
+open_project: Time (s): cpu = 00:00:21 ; elapsed = 00:00:09 . Memory (MB): peak = 1111.262 ; gain = 0.000
+update_compile_order -fileset sources_1
+close_project
+create_project CA-Lab1 E:/Xlinx_project/CA-Lab1 -part xc7a200tfbg676-2
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xlinx/Vivado/2020.1/data/ip'.
+create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 1112.871 ; gain = 1.609
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Sep 29 23:12:37 2023...
