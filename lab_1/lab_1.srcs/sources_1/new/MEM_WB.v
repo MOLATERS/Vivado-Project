@@ -31,7 +31,7 @@ module MEM_WB(
 
         //ALU结果传递
         input [31:0] aluout,
-        output reg [31:0] outaluout,
+        output reg [31:0] out_aluout,
 
         //MEM结果传递
         input [31:0] ldm,
@@ -45,7 +45,7 @@ module MEM_WB(
         always @(posedge clk) begin
             outm2reg <= m2reg;
             outwreg <= wreg;
-            outaluout <= aluout;
+            out_aluout <= aluout;
             outldm <= ldm;
             WB_rn <= MEM_rn;
         end
