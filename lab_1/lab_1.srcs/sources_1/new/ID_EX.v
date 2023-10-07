@@ -56,6 +56,7 @@ module ID_EX(
         output reg [31:0] EX_inst
     );
 
+
     always @(posedge clk) begin
         EX_inst <= ID_inst;
         EX_Imm <= ID_Imm;
@@ -68,6 +69,7 @@ module ID_EX(
         outasourse <= asourse;
         outbsourse <= bsourse;
     end
+
 
 
 

@@ -1,46 +1,29 @@
 `timescale 1ns / 1ps
-`define ADD     5'b00001
-// 加
-`define ADDI    5'b00010
-// 加进位
-`define SUB     5'b00011
-// 减
-`define SUBI    5'b00100
-//减进位
-`define RSUB    5'b00101
-//反减
-`define RSUBI   5'b00110
-//反减再减进位
-`define GA      5'b00111
-//赋值为A
-`define GB      5'b01000
-//赋值为B
-`define NEGA    5'b01001
-//A取反
-`define NEGB    5'b01010
-//B取反
-`define OR      5'b01011
-//或
-`define AND     5'b01100
-//与
-`define XNOR    5'b01101
-//同或
-`define XOR     5'b01110
-//异或
-`define NAND    5'b01111
-//与取反
-`define ZERO    5'b10000
-//置零
-`define SLT     5'b10001
-//小于
-`define SLL     5'b10010
-//左移
-`define PC      5'b10011
-//更新PC
+`define ADD     5'b00001// 加
+`define ADDI    5'b00010// 加进位
+`define SUB     5'b00011// 减
+`define SUBI    5'b00100//减进位
+`define RSUB    5'b00101//反减
+`define RSUBI   5'b00110//反减再减进位
+`define GA      5'b00111//赋值为A
+`define GB      5'b01000//赋值为B
+`define NEGA    5'b01001//A取反
+`define NEGB    5'b01010//B取反
+`define OR      5'b01011//或
+`define AND     5'b01100//与
+`define XNOR    5'b01101//同或
+`define XOR     5'b01110//异或
+`define NAND    5'b01111//与取反
+`define ZERO    5'b10000//置零
+`define SLT     5'b10001//小于
+`define SLL     5'b10010//左移
+`define PC      5'b10011//更新PC
+
 module CU(
     input [5:0] func,
     input [5:0] op,
     input Zero,                 // 零标志位
+    input Equal,
     output reg wmem,           // 存储器写使能
     output reg wreg,           // 寄存器写使能
     output reg [4:0] aluc,      // ALU功能码
@@ -137,7 +120,7 @@ module CU(
                         PCsourse <= 0;
                         m2reg <= 0;
                         regaddr <= 0;
-                        asourse <= 3;          // ALU输入A来源：指令中的位移量（sa）
+                        asourse <= 2;          // ALU输入A来源：指令中的位移量（sa）
                         bsourse <= 0;          // ALU输入B来源：寄存器B
                     end
                     default: begin
@@ -158,8 +141,8 @@ module CU(
                 aluc <= `ADD;      // ALU功能码用于地址计算
                 PCsourse <= 0;
                 m2reg <= 0;
-                regaddr <= 1;    // 地址来源：寄存器rt
-                asourse <= 2;            // ALU输入A来源：指令中的base部分
+                regaddr <= 1;             // 地址来源：寄存器rt
+                asourse <= 1;            // ALU输入A来源：指令中的base部分
                 bsourse <= 1;            // ALU输入B来源：寄存器Imm
             end
             6'b100011: begin // LW操作（加载字）
@@ -168,20 +151,25 @@ module CU(
                 aluc <= `ADD;      // ALU功能码用于地址计算
                 PCsourse <= 0;
                 m2reg <= 1;         // 寄存器文件数据来源：寄存器LMD
-                regaddr <= 1;    // 地址来源：寄存器rt
-                asourse <= 2;            // ALU输入A来源：指令中的base部分
+                regaddr <= 1;            // 地址来源：寄存器rt
+                asourse <= 1;            // ALU输入A来源：指令中的base部分
                 bsourse <= 1;            // ALU输入B来源：寄存器Imm
             end
+
+            //这里需要改一下: 现在已经不需要使用ALU了
+
             6'b000101: begin // BNE操作（如果不相等则分支）
                 wmem <= 0;
                 wreg <= 0;
-                aluc <= `PC;       // ALU功能码用于分支地址计算
-                PCsourse <= 0;
+                aluc <= 5'b00000;       // ALU功能码用于分支地址计算
+                if(Equal == 1) PCsourse <= 0;
+                else  PCsourse <= 1;
                 m2reg <= 0;
                 regaddr <= 0;
-                asourse <= 1;            // ALU输入A来源：寄存器NPC
-                bsourse <= 1;            // ALU输入B来源：寄存器Imm
+                asourse <= 0;            // ALU输入A来源：寄存器NPC
+                bsourse <= 0;            // ALU输入B来源：寄存器Imm
             end
+
             6'b000010: begin // J操作（跳转）
                 wmem <= 0;
                 wreg <= 0;

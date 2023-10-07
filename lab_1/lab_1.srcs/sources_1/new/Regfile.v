@@ -1,5 +1,5 @@
 `timescale 1ns / 1ps
-
+`define REG_FILE_PATH "E:\\Xlinx_project\\lab_1\\lab_1.data\\base_reg_data"
 module Regfile(
     input clk,//时钟信号
     input [4:0] raddr1,//寄存器堆读地址1
@@ -16,12 +16,8 @@ module Regfile(
 
     reg [SIZE-1:0] Reg_files [0:NUMB-1];//寄存器堆
 
-    reg i = 0;
     initial begin//初始化寄存器
-        repeat(NUMB) begin
-            Reg_files[i] <= 0;
-            i = i+1;
-    end
+    $readmemh(`REG_FILE_PATH , IMEM);
     end
 
     always @(posedge clk) begin

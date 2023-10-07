@@ -37,6 +37,7 @@ set rt::rc [catch {
       rt::read_verilog {
       E:/Xlinx_project/lab_1/lab_1.srcs/sources_1/new/ALU.v
       E:/Xlinx_project/lab_1/lab_1.srcs/sources_1/new/CU.v
+      E:/Xlinx_project/lab_1/lab_1.srcs/sources_1/new/Cond.v
       E:/Xlinx_project/lab_1/lab_1.srcs/sources_1/new/Container.v
       E:/Xlinx_project/lab_1/lab_1.srcs/sources_1/new/DMEM.v
       E:/Xlinx_project/lab_1/lab_1.srcs/sources_1/new/Decoder.v

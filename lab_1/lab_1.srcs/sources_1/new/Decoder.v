@@ -22,7 +22,7 @@
 
 module Decoder(
     input [31:0] IR,
-    output reg [10:0] op,
+    output reg [5:0] op,
     output reg [5:0] func,
     output reg [4:0] rs,
     output reg [4:0] rd,

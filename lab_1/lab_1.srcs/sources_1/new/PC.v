@@ -22,16 +22,19 @@
 
 module PC(
     input clk,
+    input stop,
     input [31:0] NPC,
     input resetn,
     output reg [31:0] PC
     );
     reg [31:0] PC_next;
     always @(*) begin
-        if (!resetn) 
-            PC_next = 32'h00000000;
+
     end
-    always @(posedge clk)begin
+    always @(posedge clk or negedge resetn)begin
+    if(stop) begin
+        if (!resetn) PC_next = 32'h00000000;
         PC <= NPC;
+    end
     end    
 endmodule

@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 2023/10/07 08:57:48
+// Create Date: 2023/10/07 16:17:40
 // Design Name: 
-// Module Name: plus4
+// Module Name: Cond
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,11 +20,12 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module plus4(
-    input [31:0] data,
-    output [32:0] result 
+module Cond(
+    input [31:0] ra,
+    input [31:0] rb,
+    output equal
     );
 
-    assign result = data << 2;
+    assign equal = (ra == rb)? 0 : 1;
 
 endmodule

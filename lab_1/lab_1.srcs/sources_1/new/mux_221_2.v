@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 2023/10/06 21:14:42
+// Create Date: 2023/10/07 19:25:51
 // Design Name: 
-// Module Name: mux_wb
+// Module Name: mux_221_2
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,16 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
+module mux_221_2(
 
-module mux_wb(
-    input [1:0] index, 
-    input [31:0] data1,
-    input [31:0] data2,
-    input [31:0] data3,
-    input [31:0] data4,
-    output [31:0] wbdata //写回数据
     );
-    assign wbdata = (index == 2'b00) ? data1 : 
-                    (index == 2'b01) ? data2 : 
-                    (index == 2'b10) ? data3 : data4;
 endmodule

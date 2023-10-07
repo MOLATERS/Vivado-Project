@@ -25,9 +25,9 @@ module MEM_WB(
 
         //CU控制输入
         input wreg,
-        input m2reg,
+        input [1:0] m2reg,
         output reg outwreg,
-        output reg outm2reg,
+        output reg [1:0] outm2reg,
 
         //ALU结果传递
         input [31:0] aluout,

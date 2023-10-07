@@ -18,7 +18,7 @@
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
-`define DATA_FILE_PATH ""
+`define DATA_FILE_PATH "E:\\Xlinx_project\\lab_1\\lab_1.data\\base_data_data"
 
 module DMEM(
     input         clk      ,//时钟信号

@@ -19,6 +19,23 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
+// 按照OP分类
+`define Add 6'b100000
+`define Sub 6'b100010
+`define And 6'b100100
+`define Or 6'b100101
+`define Xor 6'b100110
+`define Slt 6'b101010
+`define Movz 6'b001010
+`define Sll 6'b000000
+
+//不同的Func
+`define Cal 6'b000000
+`define Sw 6'b101011
+`define Lw 6'b100011
+`define Bne 6'b000101
+`define J 6'000010
+
 
 module cpu(
     input           clk,           // clock, 100MHz
@@ -59,6 +76,7 @@ wire [2:0] id_bsourse; // B data choice
 wire [4:0]  id_rn; // the addr of chosen reg
 wire [31:0] id_ra; //代表的是读出的A寄存器中的值
 wire [31:0] id_rb; //代表的是读出的B寄存器中的值
+wire id_equal; // 代表的是A和B是否相等
 wire [4:0]  wb_rn; //代表写回的时候使用的地址
 wire [31:0] wb_data; //代表写回的时候使用的数据
 wire wb_wreg; //代表是否能够写回Regfile的使能
@@ -80,8 +98,16 @@ wire [4:0] mem_rn; //传输的是写入寄存器的地址
 wire [31:0] mem_bsourse; //传输的是在rt地址位置的数
 wire [1:0] wb_m2reg; // 传送的写入数据选择
 wire [31:0] wb_aluout; // 传送的是alu的计算结果
+wire [5:0] id_op; //作为CU的op输入
+wire [5:0] id_func; //作为CU的func输入
+wire [4:0] id_sa; //作为CU的sa输入
+wire [31:0] id_imm; //作为立即数输入
+wire [31:0] bpc; //作为跳转的内容
+wire [31:0] ex_imm;
+
 
     PC mypc(
+        .stop(stop),
         .clk(clk),
         .NPC(npc),
         .resetn(resetn),
@@ -95,7 +121,7 @@ wire [31:0] wb_aluout; // 传送的是alu的计算结果
 
     IMEM myInstRom(
         .clk(clk),
-        .imem_addr(pc),
+        .imem_addr(pc[7:0]),
         .imem_rdata(if_inst)
     );
 
@@ -107,9 +133,6 @@ wire [31:0] wb_aluout; // 传送的是alu的计算结果
         .ID_npc(id_pc4),
         .ID_ir(id_inst)
     );
-
-
-
 
     Decoder mydecoder(
         .IR(if_inst),
@@ -124,12 +147,17 @@ wire [31:0] wb_aluout; // 传送的是alu的计算结果
         .instr_index(id_index)
     );
 
-
+    Cond mycond(
+        .ra(id_ra),
+        .rb(id_rb),
+        .equal(id_equal)
+    );
 
     CU myCU(
         .func(id_func),
         .op(id_op),
         .Zero(ex_zero),
+        .Equal(id_equal),
         .wmem(id_wmem),
         .wreg(id_wreg),
         .aluc(id_aluc),
@@ -152,8 +180,6 @@ wire [31:0] wb_aluout; // 传送的是alu的计算结果
         .result(bpc)
     );
 
-
-
     Regfile myregfile(
         .clk(clk),
         .raddr1(id_rs),
@@ -164,8 +190,6 @@ wire [31:0] wb_aluout; // 传送的是alu的计算结果
         .waddr(wb_rn),
         .wdata(wb_data)
     ); 
-
-
 
     ID_EX myID_EX(
       .clk(clk),
@@ -208,10 +232,14 @@ wire [31:0] wb_aluout; // 传送的是alu的计算结果
 
     // ALU的接口标识
 
+wire [31:0] ex_data1;
+wire [31:0] ex_data2;
+wire [31:0] ex_aluout;
+wire [31:0] mem_inst;
     ALU myALU(
         .A(ex_data1),
         .B(ex_data2),
-        .Cin(0),
+        .Cin(1'b0),
         .Card(ex_aluc),
         .F(ex_aluout),
         .Zero(ex_zero)
@@ -234,7 +262,7 @@ wire [31:0] wb_aluout; // 传送的是alu的计算结果
         .out_aluout(mem_aluout),
 
         //数值传递部分
-        .EX_rb(ex_bsourse),
+        .EX_rb(ex_rb),
         .EX_rn(ex_rn),
         .MEM_rn(mem_rn),
         .MEM_rb(mem_bsourse),
@@ -243,16 +271,17 @@ wire [31:0] wb_aluout; // 传送的是alu的计算结果
         .EX_ir(ex_inst),
         .MEM_ir(mem_inst)
     );
-
+wire [31:0] mem_memdata;
 
     DMEM myDataMem(
             .clk(clk),
-            .dmem_addr(mem_aluout),
+            .dmem_addr(mem_aluout[7:0]),
             .dmem_wdata(mem_bsourse),
             .dmem_wen(mem_wmem),
             .dmem_rdata(mem_memdata)
     );
 
+wire [31:0] wb_memdata;
 
     MEM_WB myMEM_WB(
         .clk(clk),
@@ -277,8 +306,6 @@ wire [31:0] wb_aluout; // 传送的是alu的计算结果
     );
 
 
-
-
 // all kinds of mux    
     mux_421 WBdata(
         .data1(wb_aluout),
@@ -288,10 +315,10 @@ wire [31:0] wb_aluout; // 传送的是alu的计算结果
     );
 
     mux_221 RegAddr(
-        .data1(id_rt),
-        .data2(id_rd),
+        .data1(id_rd),
+        .data2(id_rt),
         .result(id_rn),
-        .index(regaddr)
+        .index(id_regaddr)
     );
 
     mux_421 PCmux(
@@ -321,8 +348,6 @@ wire [31:0] wb_aluout; // 传送的是alu的计算结果
         .index(bsourse),
         .result(ex_data2)
     );
-
-
 
 
 endmodule
