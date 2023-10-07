@@ -21,14 +21,17 @@
 
 
 module PC(
-    input wire [31:0] NPC,
-    input wire reset,
-    output wire [31:0] PC
+    input clk,
+    input [31:0] NPC,
+    input resetn,
+    output reg [31:0] PC
     );
     reg [31:0] PC_next;
     always @(*) begin
-        if (reset) 
+        if (!resetn) 
             PC_next = 32'h00000000;
     end
-    assign PC = PC_next;
+    always @(posedge clk)begin
+        PC <= NPC;
+    end    
 endmodule

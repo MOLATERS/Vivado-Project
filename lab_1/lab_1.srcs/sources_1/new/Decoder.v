@@ -34,7 +34,7 @@ module Decoder(
     );
 
     always @(*) begin
-        op <= IR[10:0];
+        op <= IR[5:0];
         func <= IR[31:26];
         rs <= IR[25:21];
         rt <= IR[20:16];

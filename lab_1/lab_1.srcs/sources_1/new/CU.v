@@ -38,7 +38,7 @@
 `define PC      5'b10011
 //更新PC
 module CU(
-    input [10:0] func,
+    input [5:0] func,
     input [5:0] op,
     input Zero,                 // 零标志位
     output reg wmem,           // 存储器写使能
@@ -176,8 +176,7 @@ module CU(
                 wmem <= 0;
                 wreg <= 0;
                 aluc <= `PC;       // ALU功能码用于分支地址计算
-                // if(Instruct[25:21]!=Instruct[20:16]) PCsourse <= 1;  // PC数据来源：不相等跳转
-                // else PCsourse <= 0;
+                PCsourse <= 0;
                 m2reg <= 0;
                 regaddr <= 0;
                 asourse <= 1;            // ALU输入A来源：寄存器NPC

@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 2023/10/06 21:14:44
+// Create Date: 2023/10/07 12:03:40
 // Design Name: 
-// Module Name: mux_pc
+// Module Name: adder
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,18 +20,12 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module mux_pc(
-    input data1,
-    input data2,
-    input index,
-    output npc
+module adder(
+    input [31:0] data1,
+    input [31:0] data2,
+    output [31:0] result
     );
-    
-    mux_221 mux_pc (
-        .data1(data1),
-        .data2(data2),
-        .index(index),
-        .result(npc)
-    );
+
+    assign result = data1 << 2 + data2 ;
 
 endmodule

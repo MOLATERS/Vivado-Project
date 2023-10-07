@@ -21,6 +21,42 @@
 
 
 module EX_MEM(
+    input clk,
 
+    //CU的控制部分
+        input wreg,
+        input [1:0] m2reg,
+        input wmem,
+
+        output reg outwreg,
+        output reg [1:0] outm2reg,
+        output reg outwmem,
+
+    //ALU的输出部分
+        input [31:0] aluout,
+        output reg [31:0] out_aluout,
+
+    //数值传递部分
+        input [31:0] EX_rb,
+        input [4:0] EX_rn,
+
+        output reg [31:0] MEM_rb,
+        output reg [4:0] MEM_rn,
+
+    //指令存储
+        input [31:0] EX_ir,
+        output reg [31:0] MEM_ir
     );
+
+    always @(posedge clk) begin
+        
+        out_aluout <= aluout;
+        outwreg <= wreg;
+        outm2reg <= m2reg;
+        outwmem <= wmem;
+        MEM_ir <= EX_ir;
+        MEM_rb <= EX_rb;
+        MEM_rn <= EX_rn;
+
+    end
 endmodule

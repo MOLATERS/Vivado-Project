@@ -21,6 +21,35 @@
 
 
 module MEM_WB(
+        input clk,
 
+        //CU控制输入
+        input wreg,
+        input m2reg,
+        output reg outwreg,
+        output reg outm2reg,
+
+        //ALU结果传递
+        input [31:0] aluout,
+        output reg [31:0] outaluout,
+
+        //MEM结果传递
+        input [31:0] ldm,
+        output reg [31:0] outldm,
+
+        //rn传递
+        input [4:0] MEM_rn,
+        output reg [4:0] WB_rn
     );
+
+        always @(posedge clk) begin
+            outm2reg <= m2reg;
+            outwreg <= wreg;
+            outaluout <= aluout;
+            outldm <= ldm;
+            WB_rn <= MEM_rn;
+        end
+
+        
+
 endmodule
