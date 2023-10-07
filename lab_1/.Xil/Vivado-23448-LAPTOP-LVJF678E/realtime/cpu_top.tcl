@@ -52,8 +52,8 @@ set rt::rc [catch {
       E:/Xlinx_project/lab_1/lab_1.srcs/sources_1/new/add4.v
       E:/Xlinx_project/lab_1/lab_1.srcs/sources_1/new/adder.v
       E:/Xlinx_project/lab_1/lab_1.srcs/sources_1/new/cpu.v
-      E:/Xlinx_project/lab_1/lab_1.srcs/sources_1/new/mux_221.v
       E:/Xlinx_project/lab_1/lab_1.srcs/sources_1/new/mux_421.v
+      E:/Xlinx_project/lab_1/lab_1.srcs/sources_1/new/mux_421_2.v
       E:/Xlinx_project/lab_1/lab_1.srcs/sources_1/new/mux_821.v
       E:/Xlinx_project/lab_1/lab_1.srcs/sources_1/new/cpu_top.v
     }

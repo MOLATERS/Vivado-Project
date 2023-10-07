@@ -56,12 +56,31 @@ module ID_EX(
         output reg [31:0] EX_inst
     );
 
+    Container ID_EX_IR(
+        .in(ID_inst),
+        .out(EX_inst),
+        .clk(clk)
+    );
+
+    Container Imm(
+        .in(ID_Imm),
+        .out(EX_Imm),
+        .clk(clk)
+    );
+
+    Container A(
+        .in(ID_ra),
+        .out(EX_ra),
+        .clk(clk)
+    );
+
+    Container B(
+        .in(ID_rb),
+        .out(EX_rb),
+        .clk(clk)
+    );
 
     always @(posedge clk) begin
-        EX_inst <= ID_inst;
-        EX_Imm <= ID_Imm;
-        EX_ra <= ID_ra;
-        EX_rb <= ID_rb;
         EX_rn <= ID_rn;
         outwmem <= wmem;
         outwreg <= wreg;
@@ -69,8 +88,5 @@ module ID_EX(
         outasourse <= asourse;
         outbsourse <= bsourse;
     end
-
-
-
 
 endmodule

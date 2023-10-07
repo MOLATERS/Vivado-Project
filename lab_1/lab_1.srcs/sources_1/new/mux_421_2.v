@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 2023/10/06 22:59:09
+// Create Date: 2023/10/01 22:43:20
 // Design Name: 
-// Module Name: IF_ID
+// Module Name: mux_421
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,26 +20,15 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module IF_ID(
-        input clk,
-        input [31:0] IF_npc,
-        input [31:0] IF_ir,
-        output [31:0] ID_npc,
-        output [31:0] ID_ir
+module mux_421_2(
+    input [1:0] index, 
+    input [4:0] data1,
+    input [4:0] data2,
+    input [4:0] data3,
+    input [4:0] data4,
+    output [4:0] result
     );
-
-    Container NPC(
-        .in(IF_npc),
-        .out(ID_npc),
-        .clk(clk)
-    );
-
-    Container IF_ID_IR(
-        .in(IF_ir),
-        .out(ID_ir),
-        .clk(clk)
-    );
-
-    
-
+    assign result = (index == 2'b00) ? data1 : 
+                    (index == 2'b01) ? data2 : 
+                    (index == 2'b10) ? data3 : data4;
 endmodule

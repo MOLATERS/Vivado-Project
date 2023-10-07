@@ -21,7 +21,7 @@
 
 
 module EX_MEM(
-    input clk,
+        input clk,
 
     //CU的控制部分
         input wreg,
@@ -48,15 +48,29 @@ module EX_MEM(
         output reg [31:0] MEM_ir
     );
 
+    Container ALUout(
+        .in(aluout),
+        .out(out_aluout),
+        .clk(clk)
+    );
+
+    Container EX_MEM_IR(
+        .in(EX_ir),
+        .out(MEM_ir),
+        .clk(clk)
+    );
+
+    Container B(
+        .in(EX_rb),
+        .out(MEM_rb),
+        .clk(clk)
+    );
+
     always @(posedge clk) begin
-        
-        out_aluout <= aluout;
         outwreg <= wreg;
         outm2reg <= m2reg;
         outwmem <= wmem;
-        MEM_ir <= EX_ir;
-        MEM_rb <= EX_rb;
         MEM_rn <= EX_rn;
-
     end
+    
 endmodule

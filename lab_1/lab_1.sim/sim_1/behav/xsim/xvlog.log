@@ -32,15 +32,13 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/lab_1/lab_1.srcs/s
 INFO: [VRFC 10-311] analyzing module adder
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/lab_1/lab_1.srcs/sources_1/new/cpu.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module cpu
-INFO: [VRFC 10-2458] undeclared symbol stop, assumed default net type wire [E:/Xlinx_project/lab_1/lab_1.srcs/sources_1/new/cpu.v:110]
-INFO: [VRFC 10-2458] undeclared symbol asourse, assumed default net type wire [E:/Xlinx_project/lab_1/lab_1.srcs/sources_1/new/cpu.v:339]
-INFO: [VRFC 10-2458] undeclared symbol bsourse, assumed default net type wire [E:/Xlinx_project/lab_1/lab_1.srcs/sources_1/new/cpu.v:348]
+INFO: [VRFC 10-2458] undeclared symbol stop, assumed default net type wire [E:/Xlinx_project/lab_1/lab_1.srcs/sources_1/new/cpu.v:125]
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/lab_1/lab_1.srcs/sources_1/new/cpu_top.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module cpu_top
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/lab_1/lab_1.srcs/sources_1/new/mux_221.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mux_221
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/lab_1/lab_1.srcs/sources_1/new/mux_421.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module mux_421
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/lab_1/lab_1.srcs/sources_1/new/mux_421_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_421_2
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/lab_1/lab_1.srcs/sources_1/new/mux_821.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module mux_821
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xlinx_project/lab_1/lab_1.srcs/sim_1/new/cpu_tb.v" into library xil_defaultlib

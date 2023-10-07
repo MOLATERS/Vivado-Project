@@ -21,6 +21,10 @@
 
 
 module mux_221_2(
-
+    input index, 
+    input [4:0] data1,
+    input [4:0] data2,
+    output [4:0] result
     );
+    assign result = (index == 1'b0) ? data1 : data2;
 endmodule
