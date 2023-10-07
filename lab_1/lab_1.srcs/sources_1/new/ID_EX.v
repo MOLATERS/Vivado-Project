@@ -21,6 +21,8 @@
 
 
 module ID_EX(
+        input clk,
+
 
         //接收CU的输入
         input wreg,
@@ -32,26 +34,42 @@ module ID_EX(
         input [2:0] bsourse,
 
         //CU数值传递
-        output outwreg,
-        output [4:0] outaluc,
-        output [1:0] outpcsourse,
-        output [1:0] outm2reg,
-        output [1:0] outregaddr,
-        output [2:0] outasourse,
-        output [2:0] outbsourse,
+        output reg outwreg,
+        output reg [4:0] outaluc,
+        output reg [1:0] outpcsourse,
+        output reg [1:0] outm2reg,
+        output reg [1:0] outregaddr,
+        output reg [2:0] outasourse,
+        output reg [2:0] outbsourse,
 
         //交给ALU的参数        
         input [31:0] ID_ra,
         input [31:0] ID_rb,
         input [31:0] ID_Imm,
-        output [31:0] EX_ra,
-        output [31:0] EX_rb,
-        output [31:0] EX_Imm,
+        output reg [31:0] EX_ra,
+        output reg [31:0] EX_rb,
+        output reg [31:0] EX_Imm,
 
         //决定写入的地址
         input [4:0] ID_rn,
-        output [4:0] EX_rn
+        output reg [4:0] EX_rn,
+
+        //接收IR
+        input [31:0] ID_ir,
+        output reg [31:0] EX_ir
     );
 
-
+    always @(posedge clk) begin
+        EX_ir <= ID_ir;
+        outwreg <= wreg;
+        outaluc <= outaluc;
+        outpcsourse <= pcsourse;
+        outregaddr <= regaddr;
+        outasourse <= asourse;
+        outbsourse <= bsourse;
+        EX_Imm <= ID_Imm;
+        EX_ra <= ID_ra;
+        EX_rb <= ID_rb;
+        EX_rn <= ID_rn;
+    end
 endmodule
