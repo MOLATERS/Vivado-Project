@@ -22,7 +22,13 @@
 
 module ID_EX(
         input clk,
-
+        input resetn,
+        input [1:0] pcsourse,
+        output reg [1:0] outpcsourse,
+        input [31:0] npc,
+        input [31:0] bpc,
+        output reg [31:0] npcout,
+        output reg [31:0] bpcout,
         //接收CU的输入
         input wmem,
         input wreg,
@@ -43,9 +49,9 @@ module ID_EX(
         input [31:0] ID_ra,
         input [31:0] ID_rb,
         input [31:0] ID_Imm,
-        output reg [31:0] EX_ra,
-        output reg [31:0] EX_rb,
-        output reg [31:0] EX_Imm,
+        output [31:0] EX_ra,
+        output [31:0] EX_rb,
+        output [31:0] EX_Imm,
 
         //决定写入的地址
         input [4:0] ID_rn,
@@ -53,40 +59,61 @@ module ID_EX(
 
         //接收IR
         input [31:0] ID_inst,
-        output reg [31:0] EX_inst
+        output [31:0] EX_inst
     );
 
     Container ID_EX_IR(
+        .resetn(resetn),
         .in(ID_inst),
         .out(EX_inst),
         .clk(clk)
     );
 
     Container Imm(
+        .resetn(resetn),
         .in(ID_Imm),
         .out(EX_Imm),
         .clk(clk)
     );
 
     Container A(
+        .resetn(resetn),
         .in(ID_ra),
         .out(EX_ra),
         .clk(clk)
     );
 
     Container B(
+        .resetn(resetn),
         .in(ID_rb),
         .out(EX_rb),
         .clk(clk)
     );
 
+
     always @(posedge clk) begin
         EX_rn <= ID_rn;
+        outpcsourse <= pcsourse;
         outwmem <= wmem;
         outwreg <= wreg;
-        outaluc <= outaluc;
+        outaluc <= aluc;
+        outm2reg <= m2reg;
         outasourse <= asourse;
         outbsourse <= bsourse;
+        npcout <= npc;
+        bpcout <= bpc;
+    end
+
+    always @(*) begin
+        if(!resetn)begin
+        EX_rn <= 32'h00000000;
+        outwmem <= 32'h00000000;
+        outwreg <= 32'h00000000;
+        outaluc <= 32'h00000000;
+        outm2reg <= 32'h00000000;
+        outasourse <= 32'h00000000;
+        outbsourse <= 32'h00000000;
+    end
     end
 
 endmodule

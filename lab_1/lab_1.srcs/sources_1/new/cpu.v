@@ -48,15 +48,12 @@ module cpu(
     output [31:0]   debug_wb_rf_wdata // 当前指令需要写回的数据
     );
 
+
     
 wire [31:0] bpc; //作为跳转的内容
 wire [31:0] npc; // chosen npc
-wire [5:0]  op; // oparation for instruction
 wire [31:0] pc; // chosen pc (same as npc)
 wire [1:0]  pcsourse ; // pc choice
-wire [5:0]  func; // function for instruction
-wire [4:0]  sa; // as the number (imm) for the SLL
-
 
 wire [31:0] if_pc4; // answer for pc add 4
 wire [31:0] if_inst; // taken instruction
@@ -120,6 +117,11 @@ wire [4:0]  wb_rn; //代表写回的时候使用的地址
 wire [31:0] wb_data; //代表写回的时候使用的数据
 wire        wb_wreg; //代表是否能够写回Regfile的使能
 
+assign debug_wb_pc = pc;
+assign debug_wb_rf_wen = wb_m2reg;
+assign debug_wb_rf_addr = wb_rn;
+assign debug_wb_rf_wdata = wb_data;
+
 
 PC mypc(
     .stop(stop),
@@ -142,6 +144,7 @@ IMEM myInstRom(
 
 IF_ID myIF_ID(
     .clk(clk),
+    .resetn(resetn),
     .IF_ir(if_inst),
     .IF_npc(if_pc4),
     .ID_npc(id_pc4),
@@ -204,9 +207,20 @@ Regfile myregfile(
     .wdata(wb_data)
 ); 
 
+wire [31:0] ex_bpc;//传递跳转指令
+wire [31:0] ex_pc4;//传递PC+4
+wire [
+    1:0] ex_pcsourse;
+
 ID_EX myID_EX(
     .clk(clk),
-
+    .resetn(resetn),
+    .pcsourse(pcsourse),
+    .outpcsourse(ex_pcsourse),
+    .npc(id_pc4),
+    .bpc(bpc),
+    .npcout(ex_pc4),
+    .bpcout(ex_bpc),
 //接收CU的输入
     .wmem(id_wmem),
     .wreg(id_wreg),
@@ -255,10 +269,19 @@ ALU myALU(
     .Zero(ex_zero)
 );
 
+wire [31:0] mem_pc4;
+wire [31:0] mem_bpc;
+wire [1:0] mem_pcsourse;
 
 EX_MEM myEX_MEM(
     .clk(clk),
-
+    .resetn(resetn),
+    .pcsourse(ex_pcsourse),
+    .outpcsourse(mem_pcsourse),
+    .npc(ex_pc4),
+    .bpc(ex_bpc),
+    .npcout(mem_pc4),
+    .bpcout(mem_bpc),
     //CU的控制部分
     .wreg(ex_wreg),
     .m2reg(ex_m2reg),
@@ -292,10 +315,19 @@ DMEM myDataMem(
 );
 
 wire [31:0] wb_memdata;
+wire [31:0] wb_pc4;
+wire [31:0] wb_bpc;
+wire [1:0] wb_pcsourse;
 
 MEM_WB myMEM_WB(
     .clk(clk),
-
+    .resetn(resetn),
+    .pcsourse(mem_pcsourse),
+    .outpcsourse(wb_pcsourse),
+    .npc(mem_pc4),
+    .bpc(mem_bpc),
+    .npcout(wb_pc4),
+    .bpcout(wb_bpc),
     //CU控制输入
     .wreg(mem_wreg),
     .m2reg(mem_m2reg),
@@ -336,11 +368,11 @@ mux_421_2 RegAddr(
 );
 
 mux_421 PCmux(
-    .data1(if_pc4),
-    .data2(bpc),
+    .data1(mem_pc4),
+    .data2(mem_bpc),
     .data3({id_pc4[31:28], id_index[25:24] , id_index << 2}), //代表jpc
     .data4(32'b0),
-    .index(pcsourse),
+    .index(mem_pcsourse),
     .result(npc)
 );
 

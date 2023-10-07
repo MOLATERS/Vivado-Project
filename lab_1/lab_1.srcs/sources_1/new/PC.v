@@ -28,13 +28,20 @@ module PC(
     output reg [31:0] PC
     );
     reg [31:0] PC_next;
-    always @(*) begin
+    reg pause;
 
+    initial begin
+        pause <= 0;
+        PC_next <= NPC;
     end
+
     always @(posedge clk or negedge resetn)begin
-    if(stop) begin
+    if(!pause) begin
+        PC_next <= NPC;
         if (!resetn) PC_next = 32'h00000000;
-        PC <= NPC;
+        PC <= PC_next;
     end
-    end    
+    end  
+
+
 endmodule

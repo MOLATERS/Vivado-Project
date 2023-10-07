@@ -18,5 +18,17 @@ Compiling module xil_defaultlib.Cond
 Compiling module xil_defaultlib.CU
 Compiling module xil_defaultlib.Extender
 Compiling module xil_defaultlib.adder
-Compiling module xil_defaultlib.Regfile_default_1
-ERROR: [XSIM 43-3294] Signal EXCEPTION_ACCESS_VIOLATION received.
+Compiling module xil_defaultlib.Regfile_default
+Compiling module xil_defaultlib.ID_EX
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.EX_MEM
+Compiling module xil_defaultlib.DMEM_default
+Compiling module xil_defaultlib.MEM_WB
+Compiling module xil_defaultlib.mux_421
+Compiling module xil_defaultlib.mux_421_2
+Compiling module xil_defaultlib.mux_821
+Compiling module xil_defaultlib.cpu
+Compiling module xil_defaultlib.cpu_top
+Compiling module xil_defaultlib.cpu_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot cpu_tb_behav

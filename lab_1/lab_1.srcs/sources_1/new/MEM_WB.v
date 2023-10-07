@@ -22,6 +22,13 @@
 
 module MEM_WB(
         input clk,
+        input resetn,
+        input [1:0] pcsourse,
+        output reg [1:0] outpcsourse,
+        input [31:0] npc,
+        input [31:0] bpc,
+        output reg [31:0] npcout,
+        output reg [31:0] bpcout,
 
         //CU控制输入
         input wreg,
@@ -31,7 +38,7 @@ module MEM_WB(
 
         //ALU结果传递
         input [31:0] aluout,
-        output reg [31:0] out_aluout,
+        output [31:0] out_aluout,
 
         //MEM结果传递
         input [31:0] ldm,
@@ -42,14 +49,21 @@ module MEM_WB(
         output reg [4:0] WB_rn
     );
 
+    Container ALUout(
+        .in(aluout),
+        .out(out_aluout),
+        .clk(clk),
+        .resetn(resetn)
+    );
+
         always @(posedge clk) begin
+            npcout <= npc;
+            bpcout <= bpc;
             outm2reg <= m2reg;
             outwreg <= wreg;
-            out_aluout <= aluout;
             outldm <= ldm;
             WB_rn <= MEM_rn;
+            outpcsourse <= pcsourse;
         end
-
-        
 
 endmodule

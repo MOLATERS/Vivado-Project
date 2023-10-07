@@ -22,7 +22,13 @@
 
 module EX_MEM(
         input clk,
-
+        input resetn,
+        input [1:0] pcsourse,
+        output reg [1:0] outpcsourse,
+        input [31:0] npc,
+        input [31:0] bpc,
+        output reg [31:0] npcout,
+        output reg [31:0] bpcout,
     //CU的控制部分
         input wreg,
         input [1:0] m2reg,
@@ -34,43 +40,58 @@ module EX_MEM(
 
     //ALU的输出部分
         input [31:0] aluout,
-        output reg [31:0] out_aluout,
+        output [31:0] out_aluout,
 
     //数值传递部分
         input [31:0] EX_rb,
         input [4:0] EX_rn,
 
-        output reg [31:0] MEM_rb,
+        output [31:0] MEM_rb,
         output reg [4:0] MEM_rn,
 
     //指令存储
         input [31:0] EX_ir,
-        output reg [31:0] MEM_ir
+        output [31:0] MEM_ir
     );
 
     Container ALUout(
+        .resetn(resetn),
         .in(aluout),
         .out(out_aluout),
         .clk(clk)
     );
 
     Container EX_MEM_IR(
+        .resetn(resetn),
         .in(EX_ir),
         .out(MEM_ir),
         .clk(clk)
     );
 
     Container B(
+        .resetn(resetn),
         .in(EX_rb),
         .out(MEM_rb),
         .clk(clk)
     );
 
     always @(posedge clk) begin
+        npcout <= npc;
+        bpcout <= bpc;
         outwreg <= wreg;
         outm2reg <= m2reg;
         outwmem <= wmem;
         MEM_rn <= EX_rn;
+        outpcsourse <= pcsourse;
     end
-    
+
+    always @(*) begin
+        if(!resetn) begin
+        outwreg <= 32'h00000000;
+        outm2reg <= 32'h00000000;
+        outwmem <= 32'h00000000;
+        MEM_rn <= 32'h00000000;
+    end
+    end
+
 endmodule

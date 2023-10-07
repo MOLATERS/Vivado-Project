@@ -1,0 +1,151 @@
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+==============================================================
+Test begin!
+--------------------------------------------------------------
+Error!!!
+    Reference : PC = 0x00000004, write back reg number =  2, write back data = 0x00000002
+    Error     : PC = 0x00000004, write back reg number =  1, write back data = 0x00000001
+--------------------------------------------------------------
+==============================================================
+$finish called at time : 2020 ns : File "E:/Xlinx_project/lab_1/lab_1.srcs/sources_1/new/cpu_top.v" Line 79
+--------------------------------------------------------------
+Error!!!
+    Reference : PC = 0x00000004, write back reg number =  2, write back data = 0x00000002
+    Error     : PC = 0x00000004, write back reg number =  1, write back data = 0x00000001
+--------------------------------------------------------------
+==============================================================
+$finish called at time : 2030 ns : File "E:/Xlinx_project/lab_1/lab_1.srcs/sources_1/new/cpu_top.v" Line 79
+--------------------------------------------------------------
+Error!!!
+    Reference : PC = 0x00000004, write back reg number =  2, write back data = 0x00000002
+    Error     : PC = 0x00000004, write back reg number =  1, write back data = 0x00000001
+--------------------------------------------------------------
+==============================================================
+$finish called at time : 2040 ns : File "E:/Xlinx_project/lab_1/lab_1.srcs/sources_1/new/cpu_top.v" Line 79
+--------------------------------------------------------------
+Error!!!
+    Reference : PC = 0x00000004, write back reg number =  2, write back data = 0x00000002
+    Error     : PC = 0x00000004, write back reg number =  1, write back data = 0x00000001
+--------------------------------------------------------------
+==============================================================
+$finish called at time : 2050 ns : File "E:/Xlinx_project/lab_1/lab_1.srcs/sources_1/new/cpu_top.v" Line 79
+--------------------------------------------------------------
+Error!!!
+    Reference : PC = 0x00000008, write back reg number =  3, write back data = 0x00000003
+    Error     : PC = 0x00000008, write back reg number =  2, write back data = 0x00000002
+--------------------------------------------------------------
+==============================================================
+$finish called at time : 2070 ns : File "E:/Xlinx_project/lab_1/lab_1.srcs/sources_1/new/cpu_top.v" Line 79
+--------------------------------------------------------------
+Error!!!
+    Reference : PC = 0x00000008, write back reg number =  3, write back data = 0x00000003
+    Error     : PC = 0x00000008, write back reg number =  2, write back data = 0x00000002
+--------------------------------------------------------------
+==============================================================
+$finish called at time : 2080 ns : File "E:/Xlinx_project/lab_1/lab_1.srcs/sources_1/new/cpu_top.v" Line 79
+--------------------------------------------------------------
+Error!!!
+    Reference : PC = 0x00000008, write back reg number =  3, write back data = 0x00000003
+    Error     : PC = 0x00000008, write back reg number =  2, write back data = 0x00000002
+--------------------------------------------------------------
+==============================================================
+$finish called at time : 2090 ns : File "E:/Xlinx_project/lab_1/lab_1.srcs/sources_1/new/cpu_top.v" Line 79
+--------------------------------------------------------------
+Error!!!
+    Reference : PC = 0x00000008, write back reg number =  3, write back data = 0x00000003
+    Error     : PC = 0x00000008, write back reg number =  2, write back data = 0x00000002
+--------------------------------------------------------------
+==============================================================
+$finish called at time : 2100 ns : File "E:/Xlinx_project/lab_1/lab_1.srcs/sources_1/new/cpu_top.v" Line 79
+--------------------------------------------------------------
+Error!!!
+    Reference : PC = 0x0000000c, write back reg number =  4, write back data = 0x00000004
+    Error     : PC = 0x0000000c, write back reg number =  3, write back data = 0x00000003
+--------------------------------------------------------------
+==============================================================
+$finish called at time : 2120 ns : File "E:/Xlinx_project/lab_1/lab_1.srcs/sources_1/new/cpu_top.v" Line 79
+--------------------------------------------------------------
+Error!!!
+    Reference : PC = 0x0000000c, write back reg number =  4, write back data = 0x00000004
+    Error     : PC = 0x0000000c, write back reg number =  3, write back data = 0x00000003
+--------------------------------------------------------------
+==============================================================
+$finish called at time : 2130 ns : File "E:/Xlinx_project/lab_1/lab_1.srcs/sources_1/new/cpu_top.v" Line 79
+--------------------------------------------------------------
+Error!!!
+    Reference : PC = 0x0000000c, write back reg number =  4, write back data = 0x00000004
+    Error     : PC = 0x0000000c, write back reg number =  3, write back data = 0x00000003
+--------------------------------------------------------------
+==============================================================
+$finish called at time : 2140 ns : File "E:/Xlinx_project/lab_1/lab_1.srcs/sources_1/new/cpu_top.v" Line 79
+--------------------------------------------------------------
+Error!!!
+    Reference : PC = 0x0000000c, write back reg number =  4, write back data = 0x00000004
+    Error     : PC = 0x0000000c, write back reg number =  3, write back data = 0x00000003
+--------------------------------------------------------------
+==============================================================
+$finish called at time : 2150 ns : File "E:/Xlinx_project/lab_1/lab_1.srcs/sources_1/new/cpu_top.v" Line 79
+--------------------------------------------------------------
+Error!!!
+    Reference : PC = 0x00000010, write back reg number =  5, write back data = 0x00000005
+    Error     : PC = 0x00000010, write back reg number =  4, write back data = 0x00000004
+--------------------------------------------------------------
+==============================================================
+$finish called at time : 2170 ns : File "E:/Xlinx_project/lab_1/lab_1.srcs/sources_1/new/cpu_top.v" Line 79
+--------------------------------------------------------------
+Error!!!
+    Reference : PC = 0x00000010, write back reg number =  5, write back data = 0x00000005
+    Error     : PC = 0x00000010, write back reg number =  4, write back data = 0x00000004
+--------------------------------------------------------------
+==============================================================
+$finish called at time : 2180 ns : File "E:/Xlinx_project/lab_1/lab_1.srcs/sources_1/new/cpu_top.v" Line 79
+--------------------------------------------------------------
+Error!!!
+    Reference : PC = 0x00000010, write back reg number =  5, write back data = 0x00000005
+    Error     : PC = 0x00000010, write back reg number =  4, write back data = 0x00000004
+--------------------------------------------------------------
+==============================================================
+$finish called at time : 2190 ns : File "E:/Xlinx_project/lab_1/lab_1.srcs/sources_1/new/cpu_top.v" Line 79
+--------------------------------------------------------------
+Error!!!
+    Reference : PC = 0x00000010, write back reg number =  5, write back data = 0x00000005
+    Error     : PC = 0x00000010, write back reg number =  4, write back data = 0x00000004
+--------------------------------------------------------------
+==============================================================
+$finish called at time : 2200 ns : File "E:/Xlinx_project/lab_1/lab_1.srcs/sources_1/new/cpu_top.v" Line 79
+--------------------------------------------------------------
+Error!!!
+    Reference : PC = 0x00000014, write back reg number =  4, write back data = 0x00000003
+    Error     : PC = 0x00000014, write back reg number =  5, write back data = 0x00000005
+--------------------------------------------------------------
+==============================================================
+$finish called at time : 2220 ns : File "E:/Xlinx_project/lab_1/lab_1.srcs/sources_1/new/cpu_top.v" Line 79
+--------------------------------------------------------------
+Error!!!
+    Reference : PC = 0x00000014, write back reg number =  4, write back data = 0x00000003
+    Error     : PC = 0x00000014, write back reg number =  5, write back data = 0x00000005
+--------------------------------------------------------------
+==============================================================
+$finish called at time : 2230 ns : File "E:/Xlinx_project/lab_1/lab_1.srcs/sources_1/new/cpu_top.v" Line 79
+--------------------------------------------------------------
+Error!!!
+    Reference : PC = 0x00000014, write back reg number =  4, write back data = 0x00000003
+    Error     : PC = 0x00000014, write back reg number =  5, write back data = 0x00000005
+--------------------------------------------------------------
+==============================================================
+$finish called at time : 2240 ns : File "E:/Xlinx_project/lab_1/lab_1.srcs/sources_1/new/cpu_top.v" Line 79
+--------------------------------------------------------------
+Error!!!
+    Reference : PC = 0x00000014, write back reg number =  4, write back data = 0x00000003
+    Error     : PC = 0x00000014, write back reg number =  5, write back data = 0x00000005
+--------------------------------------------------------------
+==============================================================
+$finish called at time : 2250 ns : File "E:/Xlinx_project/lab_1/lab_1.srcs/sources_1/new/cpu_top.v" Line 79
+--------------------------------------------------------------
+Error!!!
+    Reference : PC = 0x00000014, write back reg number =  4, write back data = 0x00000003
+    Error     : PC = 0x0000001c, write back reg number =  1, write back data = 0x00000000
+--------------------------------------------------------------
+==============================================================
+$finish called at time : 2360 ns : File "E:/Xlinx_project/lab_1/lab_1.srcs/sources_1/new/cpu_top.v" Line 79

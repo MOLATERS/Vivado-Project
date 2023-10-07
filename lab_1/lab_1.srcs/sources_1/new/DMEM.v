@@ -25,7 +25,7 @@ module DMEM(
     input  [7:0]  dmem_addr ,//选定存储地址
     input  [31:0] dmem_wdata,//输入的数据
     input         dmem_wen  ,//写使能
-    output reg [31:0] dmem_rdata//读出的指令
+    output [31:0] dmem_rdata//读出的指令
 );
     parameter ADDR = 8 ;//地址宽度
     parameter NUMB = 1<<ADDR;//寄存器个数
@@ -44,9 +44,7 @@ module DMEM(
         if(dmem_wen) DMEM[addr] <= dmem_wdata;//如果写使能打开就能往里面写数据
     end
 
-    always @(negedge clk) begin
-        dmem_rdata <= DMEM[addr];
-    end
+    assign dmem_rdata = DMEM[addr];
 
     
 endmodule

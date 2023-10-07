@@ -22,6 +22,7 @@
 
 module IF_ID(
         input clk,
+        input resetn,
         input [31:0] IF_npc,
         input [31:0] IF_ir,
         output [31:0] ID_npc,
@@ -29,12 +30,14 @@ module IF_ID(
     );
 
     Container NPC(
+        .resetn(resetn),
         .in(IF_npc),
         .out(ID_npc),
         .clk(clk)
     );
 
     Container IF_ID_IR(
+        .resetn(resetn),
         .in(IF_ir),
         .out(ID_ir),
         .clk(clk)

@@ -23,9 +23,13 @@
 module Container(
     input wire [31:0] in,
     input clk,
+    input resetn,
     output reg [31:0] out
     );
-
+    always @(*) begin
+        if(!resetn)
+            out <= 32'h00000000;
+    end
     always @(posedge clk) begin
         out <= in;
     end
