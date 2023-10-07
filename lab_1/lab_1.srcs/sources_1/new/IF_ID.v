@@ -28,6 +28,13 @@ module IF_ID(
         output [31:0] ID_ir
     );
 
+    reg [31:0] prIR = 32'h00000000;
+    reg [31:0] prprIR = 32'h00000000;
+
+    always @(*) begin
+        // if(prIR[])
+    end
+
     Container NPC(
         .in(IF_npc),
         .out(ID_npc),
