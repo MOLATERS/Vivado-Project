@@ -947,3 +947,6 @@ expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sourc
 selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, cpu_top (cpu_top.v), U_cpu : cpu (cpu.v), if_id : IF_ID (IF_ID.v)]", 8, false); // B (F, cs)
 selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, cpu_top (cpu_top.v), U_cpu : cpu (cpu.v), if_id : IF_ID (IF_ID.v)]", 8, false, false, false, false, false, true); // B (F, cs) - Double Click
 // Launch External Editor: 'C:/Users/Slater/AppData/Local/Programs/Microsoft VS Code/Code.exe -g "E:/Xlinx_project/example_lab_1/example_lab_1.srcs/sources_1/new/IF_ID.v":23'
+// TclEventType: FILE_SET_CHANGE
+// WARNING: HEventQueue.dispatchEvent() is taking  3067 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 3080 ms. Increasing delay to 9240 ms.

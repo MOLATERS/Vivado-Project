@@ -23,9 +23,11 @@
 module adder(
     input [31:0] data1,
     input [31:0] data2,
-    output [31:0] result
+    output reg [31:0] result
     );
 
-    assign result = data1 << 2 + data2 ;
-
+    always @(*) begin
+        result <= data1 << 2 + data2;
+    end
+    
 endmodule

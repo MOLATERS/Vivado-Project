@@ -27,15 +27,12 @@ module PC(
     input wire resetn,
     output reg [31:0] PC
     );
-    reg pause;
-    initial begin
-        pause <= 0;
-    end
+
     always @(posedge clk or negedge resetn)begin
-    if(!pause) begin
+    // if(!stop) begin
         if (!resetn) PC <= 32'h00000000;
         else PC <= NPC;
-    end
+    // end
     end  
 
 endmodule

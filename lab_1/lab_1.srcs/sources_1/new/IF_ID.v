@@ -31,7 +31,7 @@ module IF_ID(
         output reg [31:0] ID_npc,
         output reg [31:0] ID_ir
     );
-    
+
     // Container NPC(
     //     .resetn(resetn),
     //     .in(IF_npc),
@@ -46,7 +46,7 @@ module IF_ID(
     //     .clk(clk)
     // );
 
-    always @(posedge clk or posedge resetn) begin
+    always @(posedge clk or negedge resetn) begin
         if(!resetn) begin
         outpc <= 32'h00000000;
         ID_ir <= 32'h00000000;

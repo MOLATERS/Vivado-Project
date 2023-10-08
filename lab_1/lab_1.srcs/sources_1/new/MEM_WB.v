@@ -89,6 +89,15 @@ module MEM_WB(
         WB_rn <= 5'b00000;
         outpc <= 32'h00000000;
         end
+        else if (MEM_inst == 32'h00000000) begin
+        outpcsourse <= 32'h00000000;
+        npcout <= 32'h00000000;
+        bpcout <= 32'h00000000;
+        outm2reg <= 0;
+        outwreg <= 0;
+        WB_rn <= 5'b00000;
+        outpc <= 32'h00000000;
+        end
         else begin
         outpcsourse <= pcsourse;
         npcout <= npc;

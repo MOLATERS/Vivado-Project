@@ -20,6 +20,7 @@
 `define PC      5'b10011//更新PC
 
 module CU(
+    input [31:0] inst,
     input resetn,
     input [5:0] func,
     input [5:0] op,
@@ -41,6 +42,10 @@ module CU(
 
     always @(*) begin
         if(!resetn) begin
+        Func <= 6'b111111;
+        Op <= 6'b000000;
+        end
+        else if (inst == 32'h00000000) begin
         Func <= 6'b111111;
         Op <= 6'b000000;
         end

@@ -131,7 +131,7 @@ wire [31:0] ex_pc4;//传递PC+4
 wire [ 1:0] ex_pcsourse;
 wire [31:0] ex_cpc;
 
-assign debug_wb_pc = mem_cpc;
+assign debug_wb_pc = wb_cpc;
 assign debug_wb_rf_wen = wb_wreg;
 assign debug_wb_rf_addr = wb_rn;
 assign debug_wb_rf_wdata = wb_data;
@@ -169,7 +169,7 @@ IF_ID myIF_ID(
 
 Decoder mydecoder(
     .resetn(resetn),
-    .IR(if_inst),
+    .IR(id_inst),
     .op(id_op),
     .func(id_func),
     .rs(id_rs),
@@ -188,6 +188,7 @@ Cond mycond(
 );
 
 CU myCU(
+    .inst(id_inst),
     .resetn(resetn),
     .func(id_func),
     .op(id_op),
@@ -425,6 +426,7 @@ mux_821 BsourseMux(
     .index(ex_bsourse),
     .result(ex_data2)
 );
+
 
 
 endmodule
