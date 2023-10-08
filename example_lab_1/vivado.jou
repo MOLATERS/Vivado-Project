@@ -19,3 +19,5 @@ add_wave {{/cpu_tb/U_cpu_top/U_cpu}}
 run all
 relaunch_sim
 run 100 ns
+current_wave_config {Untitled 1}
+add_wave {{/cpu_tb/U_cpu_top/U_cpu/data_RAM}} 
