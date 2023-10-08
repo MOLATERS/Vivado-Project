@@ -23,6 +23,10 @@
 module ID_EX(
         input clk,
         input resetn,
+
+
+        input [31:0] cpc,
+        output reg [31:0] outpc,
         input [1:0] pcsourse,
         output reg [1:0] outpcsourse,
         input [31:0] npc,
@@ -90,10 +94,26 @@ module ID_EX(
         .clk(clk)
     );
 
+    // always@(*) begin
+    // end
 
     always @(posedge clk) begin
-        EX_rn <= ID_rn;
+        if(!resetn)begin
+        outpc <= cpc;
+        EX_rn <= 32'h00000000;
+        outwmem <= 32'h00000000;
+        outwreg <= 32'h00000000;
+        outaluc <= 32'h00000000;
+        outm2reg <= 32'h00000000;
+        outasourse <= 0;
+        outbsourse <= 0;
+        npcout <= 32'h00000000;
+        bpcout <= 32'h00000000;
+        outpcsourse <= 0;
+        end
+        else begin
         outpcsourse <= pcsourse;
+        EX_rn <= ID_rn;
         outwmem <= wmem;
         outwreg <= wreg;
         outaluc <= aluc;
@@ -102,17 +122,7 @@ module ID_EX(
         outbsourse <= bsourse;
         npcout <= npc;
         bpcout <= bpc;
-    end
-
-    always @(*) begin
-        if(!resetn)begin
-        EX_rn <= 32'h00000000;
-        outwmem <= 32'h00000000;
-        outwreg <= 32'h00000000;
-        outaluc <= 32'h00000000;
-        outm2reg <= 32'h00000000;
-        outasourse <= 32'h00000000;
-        outbsourse <= 32'h00000000;
+        outpc <= cpc;
     end
     end
 

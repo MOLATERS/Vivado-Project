@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 2023/10/07 19:25:51
+// Create Date: 2023/10/02 10:47:34
 // Design Name: 
-// Module Name: mux_221_2
+// Module Name: Extender
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,11 +20,12 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module mux_221_2(
-    input index, 
-    input [4:0] data1,
-    input [4:0] data2,
-    output [4:0] result
+module Extender(
+    input wire [15:0] Ime_in,
+    output wire [31:0] Ime_out
     );
-    assign result = (index == 1'b0) ? data1 : data2;
+
+    assign Ime_out = (Ime_in[15])?{16'hffff,Ime_in[15:0]}:{16'h0,Ime_in[15:0]};
+    
 endmodule
+

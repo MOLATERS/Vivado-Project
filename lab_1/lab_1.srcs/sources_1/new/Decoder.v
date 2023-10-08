@@ -21,6 +21,7 @@
 
 
 module Decoder(
+    input resetn,
     input [31:0] IR,
     output reg [5:0] op,
     output reg [5:0] func,
@@ -34,6 +35,18 @@ module Decoder(
     );
 
     always @(*) begin
+        if(!resetn)begin
+        op <= 0;
+        func <= 0;
+        rs <= 0;
+        rt <= 0;
+        rd <= 0;
+        base <= 0;
+        offset <= 0;
+        sa <= 0;
+        instr_index <= 0;
+        end
+        else begin
         op <= IR[5:0];
         func <= IR[31:26];
         rs <= IR[25:21];
@@ -44,5 +57,5 @@ module Decoder(
         sa <= IR[10:6];
         instr_index <= IR[25:0];
     end
-
+    end
 endmodule

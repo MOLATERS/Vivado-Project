@@ -1,0 +1,21 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Sun Oct  8 14:54:39 2023
+# Process ID: 20180
+# Current directory: E:/Xlinx_project/example_lab_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17164 E:\Xlinx_project\example_lab_1\example_lab_1.xpr
+# Log file: E:/Xlinx_project/example_lab_1/vivado.log
+# Journal file: E:/Xlinx_project/example_lab_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/Xlinx_project/example_lab_1/example_lab_1.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source cpu_tb.tcl
+current_wave_config {}
+add_wave {{/cpu_tb/U_cpu_top/U_cpu}} 
+run all
+relaunch_sim
+run 100 ns

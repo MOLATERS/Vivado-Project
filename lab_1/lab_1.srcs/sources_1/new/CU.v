@@ -20,6 +20,7 @@
 `define PC      5'b10011//更新PC
 
 module CU(
+    input resetn,
     input [5:0] func,
     input [5:0] op,
     input Zero,                 // 零标志位
@@ -37,9 +38,16 @@ module CU(
     reg [5:0] Op;
     reg [5:0] Func;
     
+
     always @(*) begin
+        if(!resetn) begin
+        Func <= 6'b111111;
+        Op <= 6'b000000;
+        end
+        else begin
         Func <= func;
         Op <= op;
+        end
         case (Func)
             6'b000000: begin
                 case (Op)
@@ -161,13 +169,13 @@ module CU(
             6'b000101: begin // BNE操作（如果不相等则分支）
                 wmem <= 0;
                 wreg <= 0;
-                aluc <= 5'b00000;       // ALU功能码用于分支地址计算
+                aluc <= `PC;       // ALU功能码用于分支地址计算
                 if(Equal == 1) PCsourse <= 0;
                 else  PCsourse <= 1;
                 m2reg <= 0;
                 regaddr <= 0;
-                asourse <= 0;            // ALU输入A来源：寄存器NPC
-                bsourse <= 0;            // ALU输入B来源：寄存器Imm
+                asourse <= 6;            // ALU输入A来源：寄存器NPC
+                bsourse <= 1;            // ALU输入B来源：寄存器Imm
             end
 
             6'b000010: begin // J操作（跳转）
@@ -182,7 +190,7 @@ module CU(
             end
             default: begin
                 wmem <= 0;            // 默认值
-                wreg <= 5'b00000;
+                wreg <= 0;
                 aluc <= 0;
                 PCsourse <= 0;
                 m2reg <= 0;

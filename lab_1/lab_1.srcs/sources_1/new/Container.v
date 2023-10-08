@@ -26,12 +26,10 @@ module Container(
     input resetn,
     output reg [31:0] out
     );
-    always @(*) begin
-        if(!resetn)
-            out <= 32'h00000000;
-    end
+    
     always @(posedge clk) begin
-        out <= in;
+    if(!resetn) out <= 32'h00000000;
+    else out <= in;
     end
 
 endmodule

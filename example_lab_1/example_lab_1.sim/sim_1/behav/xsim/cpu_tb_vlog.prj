@@ -1,0 +1,28 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../example_lab_1.srcs/sources_1/new/ALU.v" \
+"../../../../example_lab_1.srcs/sources_1/new/CU.v" \
+"../../../../example_lab_1.srcs/sources_1/new/EX_MEM.v" \
+"../../../../example_lab_1.srcs/sources_1/new/Extender.v" \
+"../../../../example_lab_1.srcs/sources_1/new/ID_EX.v" \
+"../../../../example_lab_1.srcs/sources_1/new/IF_ID.v" \
+"../../../../example_lab_1.srcs/sources_1/new/MEM_WB.v" \
+"../../../../example_lab_1.srcs/sources_1/new/PC.v" \
+"../../../../example_lab_1.srcs/sources_1/new/PC_adder.v" \
+"../../../../example_lab_1.srcs/sources_1/new/cpu.v" \
+"../../../../example_lab_1.srcs/sources_1/new/cpu_top.v" \
+"../../../../example_lab_1.srcs/sources_1/new/data_ram.v" \
+"../../../../example_lab_1.srcs/sources_1/new/data_selecter_2_to_1.v" \
+"../../../../example_lab_1.srcs/sources_1/new/data_selecter_4_to_1.v" \
+"../../../../example_lab_1.srcs/sources_1/new/data_selecter_8_to_1.v" \
+"../../../../example_lab_1.srcs/sources_1/new/ir_ROM.v" \
+"../../../../example_lab_1.srcs/sources_1/new/pc_adder_res.v" \
+"../../../../example_lab_1.srcs/sources_1/new/regfiles.v" \
+"../../../../example_lab_1.srcs/sources_1/new/super_CU.v" \
+"../../../../example_lab_1.srcs/sim_1/new/cpu_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

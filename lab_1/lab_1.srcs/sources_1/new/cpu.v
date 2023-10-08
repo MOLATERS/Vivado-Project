@@ -82,7 +82,7 @@ wire [5:0]  id_op; //作为CU的op输入
 wire [5:0]  id_func; //作为CU的func输入
 wire [4:0]  id_sa; //作为CU的sa输入
 wire [31:0] id_imm; //作为立即数输入
-
+wire [31:0] id_cpc;
 
 wire        ex_zero ; // get the Zero flag in ALU
 wire        ex_wmem ; // write memery access
@@ -109,6 +109,10 @@ wire [4:0]  mem_rn; //传输的是写入寄存器的地址
 wire [31:0] mem_inst;
 wire [31:0] mem_bsourse; //传输的是在rt地址位置的数
 wire [31:0] mem_memdata;
+wire [31:0] mem_pc4;
+wire [31:0] mem_bpc;
+wire [1:0]  mem_pcsourse;
+wire [31:0] mem_cpc;
 
 
 wire [1:0]  wb_m2reg; // 传送的写入数据选择
@@ -116,9 +120,19 @@ wire [31:0] wb_aluout; // 传送的是alu的计算结果
 wire [4:0]  wb_rn; //代表写回的时候使用的地址
 wire [31:0] wb_data; //代表写回的时候使用的数据
 wire        wb_wreg; //代表是否能够写回Regfile的使能
+wire [31:0] wb_memdata;
+wire [31:0] wb_pc4;
+wire [31:0] wb_bpc;
+wire [1:0]  wb_pcsourse;
+wire [31:0] wb_inst;
+wire [31:0] wb_cpc;
+wire [31:0] ex_bpc;//传递跳转指令
+wire [31:0] ex_pc4;//传递PC+4
+wire [ 1:0] ex_pcsourse;
+wire [31:0] ex_cpc;
 
-assign debug_wb_pc = pc;
-assign debug_wb_rf_wen = wb_m2reg;
+assign debug_wb_pc = mem_cpc;
+assign debug_wb_rf_wen = wb_wreg;
 assign debug_wb_rf_addr = wb_rn;
 assign debug_wb_rf_wdata = wb_data;
 
@@ -143,6 +157,8 @@ IMEM myInstRom(
 );
 
 IF_ID myIF_ID(
+    .cpc(pc),
+    .outpc(id_cpc),
     .clk(clk),
     .resetn(resetn),
     .IF_ir(if_inst),
@@ -152,6 +168,7 @@ IF_ID myIF_ID(
 );
 
 Decoder mydecoder(
+    .resetn(resetn),
     .IR(if_inst),
     .op(id_op),
     .func(id_func),
@@ -171,6 +188,7 @@ Cond mycond(
 );
 
 CU myCU(
+    .resetn(resetn),
     .func(id_func),
     .op(id_op),
     .Zero(ex_zero),
@@ -207,12 +225,11 @@ Regfile myregfile(
     .wdata(wb_data)
 ); 
 
-wire [31:0] ex_bpc;//传递跳转指令
-wire [31:0] ex_pc4;//传递PC+4
-wire [
-    1:0] ex_pcsourse;
+
 
 ID_EX myID_EX(
+    .cpc(id_cpc),
+    .outpc(ex_cpc),
     .clk(clk),
     .resetn(resetn),
     .pcsourse(pcsourse),
@@ -269,11 +286,14 @@ ALU myALU(
     .Zero(ex_zero)
 );
 
-wire [31:0] mem_pc4;
-wire [31:0] mem_bpc;
-wire [1:0] mem_pcsourse;
 
 EX_MEM myEX_MEM(
+
+    //PC跟踪
+    .cpc(ex_cpc),
+    .outpc(mem_cpc),
+
+
     .clk(clk),
     .resetn(resetn),
     .pcsourse(ex_pcsourse),
@@ -282,6 +302,7 @@ EX_MEM myEX_MEM(
     .bpc(ex_bpc),
     .npcout(mem_pc4),
     .bpcout(mem_bpc),
+
     //CU的控制部分
     .wreg(ex_wreg),
     .m2reg(ex_m2reg),
@@ -314,12 +335,11 @@ DMEM myDataMem(
         .dmem_rdata(mem_memdata)
 );
 
-wire [31:0] wb_memdata;
-wire [31:0] wb_pc4;
-wire [31:0] wb_bpc;
-wire [1:0] wb_pcsourse;
-
 MEM_WB myMEM_WB(
+    //PC跟踪
+    .cpc(mem_cpc),
+    .outpc(wb_cpc),
+    
     .clk(clk),
     .resetn(resetn),
     .pcsourse(mem_pcsourse),
@@ -344,7 +364,11 @@ MEM_WB myMEM_WB(
 
     //rn传递
     .MEM_rn(mem_rn),
-    .WB_rn(wb_rn)
+    .WB_rn(wb_rn),
+
+    //Instruct传递
+    .MEM_inst(mem_inst),
+    .WB_inst(wb_inst)
 );
 
 
@@ -368,7 +392,7 @@ mux_421_2 RegAddr(
 );
 
 mux_421 PCmux(
-    .data1(mem_pc4),
+    .data1(if_pc4),
     .data2(mem_bpc),
     .data3({id_pc4[31:28], id_index[25:24] , id_index << 2}), //代表jpc
     .data4(32'b0),
@@ -381,9 +405,9 @@ mux_821 AsourseMux(
     .data2({27'b0,ex_inst[25:21]}),
     .data3({27'b0,ex_inst[10:6]}),
     .data4(mem_aluout),
-    .data5(wb_data),
-    .data6(32'b0),
-    .data7(32'b0),
+    .data5(wb_aluout),
+    .data6(wb_memdata),
+    .data7(ex_pc4),
     .data8(32'b0),
     .index(ex_asourse),
     .result(ex_data1)
@@ -393,8 +417,8 @@ mux_821 BsourseMux(
     .data1(ex_rb),
     .data2(ex_imm),
     .data3(mem_aluout),
-    .data4(wb_data),
-    .data5(32'b0),
+    .data4(wb_aluout),
+    .data5(wb_memdata),
     .data6(32'b0),
     .data7(32'b0),
     .data8(32'b0),

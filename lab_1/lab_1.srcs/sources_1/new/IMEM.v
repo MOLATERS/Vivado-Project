@@ -4,7 +4,7 @@
 module IMEM(
     input         clk      ,//时钟信号
     input  [7:0]  imem_addr ,//选定存储地址
-    output reg [31:0] imem_rdata//读出的指令
+    output [31:0] imem_rdata//读出的指令
 );
     parameter ADDR = 8 ;//地址宽度
     parameter NUMB = 1<<ADDR;//寄存器个数
@@ -17,7 +17,9 @@ module IMEM(
     $readmemh(`INS_FILE_PATH , IMEM);
     end
 
-    always @(posedge clk) begin //根据时钟信号决定写入（上升沿写入）
-        imem_rdata <= IMEM[addr];
-    end
+    // always @(posedge clk) begin //根据时钟信号决定写入（上升沿写入）
+    //     imem_rdata <= IMEM[addr];
+    // end
+    assign imem_rdata = IMEM[addr];
+    
 endmodule

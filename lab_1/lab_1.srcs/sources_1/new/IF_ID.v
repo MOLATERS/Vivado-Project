@@ -22,27 +22,48 @@
 
 module IF_ID(
         input clk,
+        input stop,
+        input [31:0] cpc,
+        output reg [31:0] outpc,
         input resetn,
         input [31:0] IF_npc,
         input [31:0] IF_ir,
-        output [31:0] ID_npc,
-        output [31:0] ID_ir
+        output reg [31:0] ID_npc,
+        output reg [31:0] ID_ir
     );
+    
+    // Container NPC(
+    //     .resetn(resetn),
+    //     .in(IF_npc),
+    //     .out(ID_npc),
+    //     .clk(clk)
+    // );
 
-    Container NPC(
-        .resetn(resetn),
-        .in(IF_npc),
-        .out(ID_npc),
-        .clk(clk)
-    );
+    // Container IF_ID_IR(
+    //     .resetn(resetn),
+    //     .in(IF_ir),
+    //     .out(ID_ir),
+    //     .clk(clk)
+    // );
 
-    Container IF_ID_IR(
-        .resetn(resetn),
-        .in(IF_ir),
-        .out(ID_ir),
-        .clk(clk)
-    );
-
+    always @(posedge clk or posedge resetn) begin
+        if(!resetn) begin
+        outpc <= 32'h00000000;
+        ID_ir <= 32'h00000000;
+        ID_npc <= 32'h00000000;
+        outpc <= 32'h00000000;
+        end
+        else if(IF_ir == 0) begin
+            ID_ir <= 32'h00000000;
+            ID_npc <= 32'h00000000;
+            outpc <= cpc;
+        end
+        else begin
+            outpc <= cpc;
+            ID_ir <= IF_ir;
+            ID_npc <= IF_npc;
+        end
+    end
     
 
 endmodule
