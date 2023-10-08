@@ -94,15 +94,13 @@ module EX_MEM(
         bpcout <= 32'h00000000;
     end
     else if (EX_ir == 32'h00000000) begin
-        outm2reg <= 32'h00000000;
-        outwmem <= 32'h00000000;
-        MEM_rn <= 32'h00000000;
-        outpc <= 32'h00000000;
-        outpcsourse <= 32'h00000000;
+        outm2reg <= 0;
+        outwmem <= 0;
+        MEM_rn <= 5'b00000;
+        outpc <= cpc;
+        outpcsourse <= 0;
         npcout <= 32'h00000000;
-        bpcout <= 32'h00000000;
-        // outwreg <= wreg;
-        // outpc <= cpc;
+        bpcout <= bpc;
         end
     else begin
         outpcsourse <= pcsourse;

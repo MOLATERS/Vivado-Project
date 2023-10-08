@@ -112,17 +112,16 @@ module ID_EX(
         outpcsourse <= 0;
         end
         else if (ID_inst == 32'h00000000) begin
-        // outpc <= cpc;
-        // outwreg <= wreg;
-        EX_rn <= 32'h00000000;
+        EX_rn <= 5'b00000;
         outwmem <= 32'h00000000;
         outwreg <= 32'h00000000;
-        outaluc <= 32'h00000000;
-        outm2reg <= 32'h00000000;
+        outaluc <= 6'b000000;
+        outm2reg <= 0;
         outasourse <= 0;
         outbsourse <= 0;
         npcout <= 32'h00000000;
-        bpcout <= 32'h00000000;
+        outpc <= cpc;
+        bpcout <= bpc;
         outpcsourse <= 0;
         end
         else begin

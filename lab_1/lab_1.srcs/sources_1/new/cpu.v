@@ -130,6 +130,7 @@ wire [31:0] ex_bpc;//传递跳转指令
 wire [31:0] ex_pc4;//传递PC+4
 wire [ 1:0] ex_pcsourse;
 wire [31:0] ex_cpc;
+wire id_zero;
 
 assign debug_wb_pc = wb_cpc;
 assign debug_wb_rf_wen = wb_wreg;
@@ -187,12 +188,17 @@ Cond mycond(
     .equal(id_equal)
 );
 
+Zero zero(
+    .data(id_rb),
+    .zero(id_zero)
+);
+
 CU myCU(
     .inst(id_inst),
     .resetn(resetn),
     .func(id_func),
     .op(id_op),
-    .Zero(ex_zero),
+    .Zero(id_zero),
     .Equal(id_equal),
     .wmem(id_wmem),
     .wreg(id_wreg),
@@ -225,8 +231,6 @@ Regfile myregfile(
     .waddr(wb_rn),
     .wdata(wb_data)
 ); 
-
-
 
 ID_EX myID_EX(
     .cpc(id_cpc),
@@ -317,10 +321,12 @@ EX_MEM myEX_MEM(
     .out_aluout(mem_aluout),
 
     //数值传递部分
+    // .EX_ra(ex_ra),
     .EX_rb(ex_rb),
     .EX_rn(ex_rn),
     .MEM_rn(mem_rn),
     .MEM_rb(mem_bsourse),
+    // .MEM_ra(mem_asourse),
 
     //指令存储部分
     .EX_ir(ex_inst),

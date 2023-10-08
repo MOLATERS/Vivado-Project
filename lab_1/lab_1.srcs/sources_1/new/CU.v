@@ -119,9 +119,9 @@ module CU(
                     6'b001010: begin // MOVZ操作（如果为零则移动）
                         wmem <= 0;
                         wreg <= Zero;        // 如果零标志位为1，则寄存器写使能
-                        aluc <= `GB;
+                        aluc <= `GA;
                         PCsourse <= 0;
-                        m2reg <= 2;       // 寄存器文件数据来源：寄存器A
+                        m2reg <= 0;       // 寄存器文件数据来源：寄存器A
                         regaddr <= 0;
                         asourse <= 0;
                         bsourse <= 0;
@@ -165,7 +165,7 @@ module CU(
                 PCsourse <= 0;
                 m2reg <= 1;         // 寄存器文件数据来源：寄存器LMD
                 regaddr <= 1;            // 地址来源：寄存器rt
-                asourse <= 1;            // ALU输入A来源：指令中的base部分
+                asourse <= 0;            // ALU输入A来源：指令中的base部分
                 bsourse <= 1;            // ALU输入B来源：寄存器Imm
             end
 
