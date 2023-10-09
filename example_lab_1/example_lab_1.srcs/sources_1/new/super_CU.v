@@ -37,14 +37,19 @@ module super_CU(
     
     always@(*)
     begin
-        if ((id_ex_ir[31:26]==6'b100011&&if_id_ir[31:26]==6'b0 &&id_ex_ir[20:16]==if_id_ir[25:21])||(id_ex_ir[31:26]==6'b100011&&if_id_ir[31:26]==6'b0 &&id_ex_ir[20:16]==if_id_ir[20:16])||(id_ex_ir[31:26]==6'b100011&&if_id_ir[31:26]==6'b100011 &&id_ex_ir[20:16]==if_id_ir[25:21]))//气泡
+        if ((id_ex_ir[31:26]==6'b100011&&if_id_ir[31:26]==6'b0 &&id_ex_ir[20:16]==if_id_ir[25:21])||
+        (id_ex_ir[31:26]==6'b100011&&if_id_ir[31:26]==6'b0 &&id_ex_ir[20:16]==if_id_ir[20:16])
+        ||(id_ex_ir[31:26]==6'b100011&&if_id_ir[31:26]==6'b100011 &&id_ex_ir[20:16]==if_id_ir[25:21]))
+        //气泡
         begin
             stop=1;
             ir=32'b0;
         end
-        else if((ex_mem_ir[31:26]==6'b100011&&if_id_ir[31:26]==6'b100011 &&ex_mem_ir[20:16]==if_id_ir[25:21]))//写后读
+        else if((ex_mem_ir[31:26]==6'b100011
+        &&if_id_ir[31:26]==6'b100011 
+        &&ex_mem_ir[20:16]==if_id_ir[25:21]))//写后读
         begin
-            stop=1;
+            stop=1; 
             ir=32'b0;
         end
         else

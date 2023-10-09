@@ -1,5 +1,8 @@
 `timescale 1ns / 1ps
-`define INS_FILE_PATH "E:\\Xlinx_project\\lab_1\\lab_1.data\\base_inst_data"
+// `define INS_FILE_PATH "E:\\Xlinx_project\\lab_1\\lab_1.data\\base_inst_data"
+`define INS_FILE_PATH "E:\\Xlinx_project\\lab_1\\lab_1.data\\additional_inst_data1"
+// `define INS_FILE_PATH "E:\\Xlinx_project\\lab_1\\lab_1.data\\additional_inst_data2"
+
 
 module IMEM(
     input         clk      ,//时钟信号

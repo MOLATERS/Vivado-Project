@@ -23,6 +23,7 @@
 //`define DATA_FILE_PATH "C:\\Users\\water_boy\\lab1_env_new\\lab_1\\lab_1.data\\base_data_data"
 //`define DATA_FILE_PATH "C:\\Users\\water_boy\\lab1_env_new\\lab_1\\lab_1.data\\additional_data_data1"
 `define DATA_FILE_PATH "E:\\Xlinx_project\\lab_1\\lab_1.data\\base_data_data"
+// `define DATA_FILE_PATH "E:\\Xlinx_project\\lab_1\\lab_1.data\\additional_data_data1"
 
 module data_ram(
     input         clk      ,

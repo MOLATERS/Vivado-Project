@@ -132,6 +132,15 @@ wire [ 1:0] ex_pcsourse;
 wire [31:0] ex_cpc;
 wire id_zero;
 
+wire [1:0] ex_rbsourse;
+wire [2:0] ex_a_sel;
+wire [2:0] ex_b_sel;
+
+wire [31:0] id_chosen_inst;
+wire [31:0] wb_bsourse;
+wire [31:0] ex_chosen_rb;
+
+
 assign debug_wb_pc = wb_cpc;
 assign debug_wb_rf_wen = wb_wreg;
 assign debug_wb_rf_addr = wb_rn;
@@ -160,6 +169,7 @@ IMEM myInstRom(
 IF_ID myIF_ID(
     .cpc(pc),
     .outpc(id_cpc),
+    .stop(stop),
     .clk(clk),
     .resetn(resetn),
     .IF_ir(if_inst),
@@ -188,6 +198,7 @@ Cond mycond(
     .equal(id_equal)
 );
 
+// TODO 注意这里要修改一下判断条件，因为没有办法及时更新
 Zero zero(
     .data(id_rb),
     .zero(id_zero)
@@ -272,12 +283,15 @@ ID_EX myID_EX(
     .EX_rn(ex_rn),
 
 //IR
-    .ID_inst(id_inst),
+    .ID_inst(id_chosen_inst),
     .EX_inst(ex_inst)
 );
 
 // A 和 B 的选择器
 
+// TODO 记得要再试试加上stop来管理每一个暂停
+
+// TODO 这里加上Locker，注意管脚有没有错误 最后再来
 
 // ALU的接口标识
 
@@ -292,8 +306,8 @@ ALU myALU(
 );
 
 
-EX_MEM myEX_MEM(
 
+EX_MEM myEX_MEM(
     //PC跟踪
     .cpc(ex_cpc),
     .outpc(mem_cpc),
@@ -322,7 +336,7 @@ EX_MEM myEX_MEM(
 
     //数值传递部分
     // .EX_ra(ex_ra),
-    .EX_rb(ex_rb),
+    .EX_rb(ex_chosen_rb),
     .EX_rn(ex_rn),
     .MEM_rn(mem_rn),
     .MEM_rb(mem_bsourse),
@@ -334,6 +348,7 @@ EX_MEM myEX_MEM(
 );
 
 
+
 DMEM myDataMem(
         .clk(clk),
         .dmem_addr(mem_aluout[7:0]),
@@ -341,6 +356,7 @@ DMEM myDataMem(
         .dmem_wen(mem_wmem),
         .dmem_rdata(mem_memdata)
 );
+
 
 MEM_WB myMEM_WB(
     //PC跟踪
@@ -369,17 +385,60 @@ MEM_WB myMEM_WB(
     .ldm(mem_memdata),
     .outldm(wb_memdata),
 
+
     //rn传递
     .MEM_rn(mem_rn),
     .WB_rn(wb_rn),
 
     //Instruct传递
     .MEM_inst(mem_inst),
-    .WB_inst(wb_inst)
+    .WB_inst(wb_inst),
+
+    .MEM_rb(mem_bsourse),
+    .WB_rb(wb_bsourse)
 );
 
 
+wire active;
+
+Locker myLocker(
+
+    //接收所有指令
+    .if_id_inst(id_inst),
+    .id_ex_inst(ex_inst),
+    .ex_mem_inst(mem_inst),
+    .mem_wb_inst(wb_inst),
+
+    //选择更新的B的数值
+    .ex_rbsourse(ex_rbsourse),
+    .ex_mem_rb(mem_bsourse),
+    .mem_wb_rb(wb_bsourse),
+
+    //A的选择和B的选择控制
+    .a_sel(ex_asourse),
+    .b_sel(ex_bsourse),
+    .asourse(ex_a_sel),
+    .bsourse(ex_b_sel),
+
+    //暂停控制
+    .stop(stop),
+    .id_inst(id_chosen_inst),
+
+    //检测是否在工作
+    .active(active)
+);
+
 // all kinds of mux    
+mux_421 Bget(
+    .data1(ex_rb),
+    .data2(mem_aluout),
+    .data3(mem_memdata),
+    .data4(0),
+    .index(ex_rbsourse),
+    .result(ex_chosen_rb)
+);
+
+
 mux_421 WBdata(
     .data1(wb_aluout),
     .data2(wb_memdata),
@@ -414,9 +473,9 @@ mux_821 AsourseMux(
     .data4(mem_aluout),
     .data5(wb_aluout),
     .data6(wb_memdata),
-    .data7(ex_pc4),
+    .data7(32'b0),
     .data8(32'b0),
-    .index(ex_asourse),
+    .index(ex_a_sel),
     .result(ex_data1)
 );
 
@@ -429,9 +488,10 @@ mux_821 BsourseMux(
     .data6(32'b0),
     .data7(32'b0),
     .data8(32'b0),
-    .index(ex_bsourse),
+    .index(ex_b_sel),
     .result(ex_data2)
 );
+
 
 
 

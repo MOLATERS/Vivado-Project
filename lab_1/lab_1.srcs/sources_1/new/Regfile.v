@@ -1,5 +1,6 @@
 `timescale 1ns / 1ps
 `define REG_FILE_PATH "E:\\Xlinx_project\\lab_1\\lab_1.data\\base_reg_data"
+
 module Regfile(
     input clk,//时钟信号
     input [4:0] raddr1,//寄存器堆读地址1

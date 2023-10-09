@@ -52,7 +52,11 @@ module MEM_WB(
 
         //INSTRUCTION传递
         input [31:0] MEM_inst,
-        output [31:0] WB_inst
+        output [31:0] WB_inst,
+
+        //b
+        input [31:0] MEM_rb,
+        output reg [31:0] WB_rb
     );
 
     Container ALUout(
@@ -87,6 +91,7 @@ module MEM_WB(
         outm2reg <= 0;
         outwreg <= 0;
         WB_rn <= 5'b00000;
+        WB_rb <= 32'h00000000;
         outpc <= 32'h00000000;
         end
         else if (MEM_inst == 32'h00000000) begin
@@ -95,10 +100,13 @@ module MEM_WB(
         outm2reg <= 0;
         outwreg <= 0;
         WB_rn <= 5'b00000;
-        bpcout <= bpc;
+        WB_rb <= 32'h00000000;
         outpc <= 32'h00000000;
+        bpcout <= bpc;
+        outpc <= cpc;
         end
         else begin
+        WB_rb <= MEM_rb;
         outpcsourse <= pcsourse;
         bpcout <= bpc;
         npcout <= npc;

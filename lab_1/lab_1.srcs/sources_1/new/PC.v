@@ -29,10 +29,10 @@ module PC(
     );
 
     always @(posedge clk or negedge resetn)begin
-    // if(!stop) begin
+    if(!stop) begin
         if (!resetn) PC <= 32'h00000000;
         else PC <= NPC;
-    // end
+    end
     end  
 
 endmodule

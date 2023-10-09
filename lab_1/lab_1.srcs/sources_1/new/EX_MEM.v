@@ -97,9 +97,9 @@ module EX_MEM(
         outm2reg <= 0;
         outwmem <= 0;
         MEM_rn <= 5'b00000;
-        outpc <= cpc;
         outpcsourse <= 0;
         npcout <= 32'h00000000;
+        outpc <= cpc;
         bpcout <= bpc;
         end
     else begin

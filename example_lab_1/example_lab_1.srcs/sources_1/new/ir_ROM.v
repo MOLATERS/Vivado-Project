@@ -20,8 +20,10 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 //`define INS_FILE_PATH "C:\\Users\\water_boy\\lab1_env_new\\lab_1\\lab_1.data\\base_inst_data"
-//`define INS_FILE_PATH "C:\\Users\\water_boy\\lab1_env_new\\lab_1\\lab_1.data\\additional_inst_data1"
+// `define INS_FILE_PATH "C:\\Users\\water_boy\\lab1_env_new\\lab_1\\lab_1.data\\additional_inst_data1"
 `define INS_FILE_PATH "E:\\Xlinx_project\\lab_1\\lab_1.data\\base_inst_data"
+// `define INS_FILE_PATH "E:\\Xlinx_project\\lab_1\\lab_1.data\\additional_inst_data1"
+
 module ir_ROM(
     input  [7:0]  ir_rom_addr ,
     output [31:0] ir_rom_rdata

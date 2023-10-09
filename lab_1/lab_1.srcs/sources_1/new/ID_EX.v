@@ -122,7 +122,7 @@ module ID_EX(
         npcout <= 32'h00000000;
         outpc <= cpc;
         bpcout <= bpc;
-        outpcsourse <= 0;
+        // outpcsourse <= 0;
         end
         else begin
         outpcsourse <= pcsourse;

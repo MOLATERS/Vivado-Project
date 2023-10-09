@@ -1,0 +1,112 @@
+/*
+
+Xilinx Vivado v2020.1 (64-bit) [Major: 2020, Minor: 1]
+SW Build: 2902540 on Wed May 27 19:54:49 MDT 2020
+IP Build: 2902112 on Wed May 27 22:43:36 MDT 2020
+
+Process ID (PID): 9544
+License: Customer
+
+Current time: 	Mon Oct 09 12:27:31 CST 2023
+Time zone: 	China Standard Time (Asia/Shanghai)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1920x1080
+Screen resolution (DPI): 142
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=17
+
+Java version: 	9.0.4 64-bit
+Java home: 	E:/Xlinx/Vivado/2020.1/tps/win64/jre9.0.4
+Java executable location: 	E:/Xlinx/Vivado/2020.1/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	Slater
+User home directory: C:/Users/Slater
+User working directory: E:/Xlinx_project/example_lab_1
+User country: 	CN
+User language: 	zh
+User locale: 	zh_CN
+
+RDI_BASEROOT: E:/Xlinx/Vivado
+HDI_APPROOT: E:/Xlinx/Vivado/2020.1
+RDI_DATADIR: E:/Xlinx/Vivado/2020.1/data
+RDI_BINDIR: E:/Xlinx/Vivado/2020.1/bin
+
+Vivado preferences file location: C:/Users/Slater/AppData/Roaming/Xilinx/Vivado/2020.1/vivado.xml
+Vivado preferences directory: C:/Users/Slater/AppData/Roaming/Xilinx/Vivado/2020.1/
+Vivado layouts directory: C:/Users/Slater/AppData/Roaming/Xilinx/Vivado/2020.1/data/layouts
+PlanAhead jar file location: 	E:/Xlinx/Vivado/2020.1/lib/classes/planAhead.jar
+Vivado log file location: 	E:/Xlinx_project/example_lab_1/vivado.log
+Vivado journal file location: 	E:/Xlinx_project/example_lab_1/vivado.jou
+Engine tmp dir: 	E:/Xlinx_project/example_lab_1/.Xil/Vivado-9544-LAPTOP-LVJF678E
+
+Xilinx Environment Variables
+----------------------------
+XILINX: E:/Xlinx/Vivado/2020.1/ids_lite/ISE
+XILINX_DSP: E:/Xlinx/Vivado/2020.1/ids_lite/ISE
+XILINX_PLANAHEAD: E:/Xlinx/Vivado/2020.1
+XILINX_VIVADO: E:/Xlinx/Vivado/2020.1
+XILINX_VIVADO_HLS: E:/Xlinx/Vivado/2020.1
+
+
+GUI allocated memory:	199 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,097 MB
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// TclEventType: PROJECT_OPEN_DIALOG
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 113 MB (+115617kb) [00:00:05]
+// [Engine Memory]: 1,097 MB (+998394kb) [00:00:05]
+// bz (cs):  Open Project : addNotify
+// Opening Vivado Project: E:\Xlinx_project\example_lab_1\example_lab_1.xpr. Version: Vivado v2020.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project E:/Xlinx_project/example_lab_1/example_lab_1.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project E:/Xlinx_project/example_lab_1/example_lab_1.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 123 MB (+5001kb) [00:00:08]
+// WARNING: HEventQueue.dispatchEvent() is taking  1981 ms.
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xlinx/Vivado/2020.1/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,097 MB. GUI used memory: 59 MB. Current time: 10/9/23, 12:27:31 PM CST
+// Project name: example_lab_1; location: E:/Xlinx_project/example_lab_1; part: xc7a200tfbv676-2
+dismissDialog("Open Project"); // bz (cs)
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// Tcl Message: update_compile_order -fileset sources_1 
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, cpu_top (cpu_top.v)]", 1); // B (F, cs)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, cpu_top (cpu_top.v), U_cpu : cpu (cpu.v)]", 2); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, cpu_top (cpu_top.v), U_cpu : cpu (cpu.v)]", 2, true); // B (F, cs) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, cpu_top (cpu_top.v), U_cpu : cpu (cpu.v)]", 2, true, false, false, false, false, true); // B (F, cs) - Double Click - Node
+// Launch External Editor: 'C:/Users/Slater/AppData/Local/Programs/Microsoft VS Code/Code.exe -g "E:/Xlinx_project/example_lab_1/example_lab_1.srcs/sources_1/new/cpu.v":23'
