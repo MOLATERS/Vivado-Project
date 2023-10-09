@@ -19,8 +19,8 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 // `define DATA_FILE_PATH "E:\\Xlinx_project\\lab_1\\lab_1.data\\base_data_data"
-`define DATA_FILE_PATH "E:\\Xlinx_project\\lab_1\\lab_1.data\\additional_data_data1"
-// `define DATA_FILE_PATH "E:\\Xlinx_project\\lab_1\\lab_1.data\\additional_data_data2"
+// `define DATA_FILE_PATH "E:\\Xlinx_project\\lab_1\\lab_1.data\\additional_data_data1"
+`define DATA_FILE_PATH "E:\\Xlinx_project\\lab_1\\lab_1.data\\additional_data_data2"
 
 
 

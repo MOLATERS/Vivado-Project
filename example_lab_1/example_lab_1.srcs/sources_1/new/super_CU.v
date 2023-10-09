@@ -61,11 +61,19 @@ module super_CU(
         
         
         
-        if (ex_mem_ir[31:26]==6'b0&&id_ex_ir[31:26]==6'b0 &&ex_mem_ir[15:11]==id_ex_ir[25:21]&& !(ex_mem_ir[10:0]==11'b00000001010 && ex_mem_B != 32'b0)&&!(ex_mem_ir==32'b0&&id_ex_ir[10:0]==32'b0))
+        if (ex_mem_ir[31:26]==6'b0
+        &&id_ex_ir[31:26]==6'b0 
+        &&ex_mem_ir[15:11]==id_ex_ir[25:21]
+        && !(ex_mem_ir[10:0]==11'b00000001010 && ex_mem_B != 32'b0)
+        &&!(ex_mem_ir==32'b0&&id_ex_ir[10:0]==32'b0))
         begin
             A_sel=3'b011;
         end
-        else if (ex_mem_ir[31:26]==6'b0&&id_ex_ir[31:26]==6'b100011 &&ex_mem_ir[15:11]==id_ex_ir[25:21]&& !(ex_mem_ir[10:0]==11'b00000001010 && ex_mem_B != 32'b0))
+        else if (ex_mem_ir[31:26]==6'b0
+        &&id_ex_ir[31:26]==6'b100011 
+        &&ex_mem_ir[15:11]==id_ex_ir[25:21]
+        && !(ex_mem_ir[10:0]==11'b00000001010 
+        && ex_mem_B != 32'b0))
         begin
             A_sel=3'b011;
         end

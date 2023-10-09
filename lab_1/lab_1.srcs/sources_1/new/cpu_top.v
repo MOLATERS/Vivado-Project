@@ -5,8 +5,8 @@
 `timescale 1ns / 1ps
 
 // `define TRACE_FILE_PATH "../../../../lab_1.data/base_cpu_trace"
-`define TRACE_FILE_PATH "../../../../lab_1.data/additional_cpu_trace1"
-//`define TRACE_FILE_PATH "../../../../lab_1.data/additional_cpu_trace2"
+// `define TRACE_FILE_PATH "../../../../lab_1.data/additional_cpu_trace1"
+`define TRACE_FILE_PATH "../../../../lab_1.data/additional_cpu_trace2"
 
 `define TEST_COUNT 40
 

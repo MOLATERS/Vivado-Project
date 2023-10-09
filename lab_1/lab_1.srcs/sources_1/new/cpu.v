@@ -204,6 +204,11 @@ Zero zero(
     .zero(id_zero)
 );
 
+Zero zero_change(
+    .data(ex_chosen_rb),
+    .zero(ex_zero)
+);
+
 CU myCU(
     .inst(id_inst),
     .resetn(resetn),
@@ -371,6 +376,7 @@ MEM_WB myMEM_WB(
     .bpc(mem_bpc),
     .npcout(wb_pc4),
     .bpcout(wb_bpc),
+
     //CU控制输入
     .wreg(mem_wreg),
     .m2reg(mem_m2reg),
@@ -400,6 +406,8 @@ MEM_WB myMEM_WB(
 
 
 wire active;
+// wire wreg_sel;
+// wire [1:0] pcsourse_sel;
 
 Locker myLocker(
 
@@ -419,6 +427,10 @@ Locker myLocker(
     .b_sel(ex_bsourse),
     .asourse(ex_a_sel),
     .bsourse(ex_b_sel),
+
+    //wreg选择,跳转选择
+    // .wregsourse(),
+    // .pcsourse(),
 
     //暂停控制
     .stop(stop),

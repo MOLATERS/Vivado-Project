@@ -18,7 +18,22 @@
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
+// 按照OP分类
+`define Add 6'b100000
+`define Sub 6'b100010
+`define And 6'b100100
+`define Or 6'b100101
+`define Xor 6'b100110
+`define Slt 6'b101010
+`define Movz 6'b001010
+`define Sll 6'b000000
 
+//不同的Func
+`define Cal 6'b000000
+`define Sw 6'b101011
+`define Lw 6'b100011
+`define Bne 6'b000101
+`define J 6'000010
 
 module EX_MEM(
         input clk,
@@ -33,6 +48,7 @@ module EX_MEM(
         input [31:0] bpc,
         output reg [31:0] npcout,
         output reg [31:0] bpcout,
+
     //CU的控制部分
         input wreg,
         input [1:0] m2reg,
@@ -103,10 +119,15 @@ module EX_MEM(
         bpcout <= bpc;
         end
     else begin
+        if(EX_rb != 0 && EX_ir[31:26] == `Cal && EX_ir[5:0] == `Movz)begin
+            outwreg <= 1;
+        end
+        else 
+        outwreg <= 0;
         outpcsourse <= pcsourse;
         npcout <= npc;
         bpcout <= bpc;
-        outwreg <= wreg;
+        // outwreg <= wreg;
         outm2reg <= m2reg;
         outwmem <= wmem;
         MEM_rn <= EX_rn;

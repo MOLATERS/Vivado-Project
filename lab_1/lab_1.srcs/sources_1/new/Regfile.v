@@ -22,7 +22,7 @@ module Regfile(
     $readmemh(`REG_FILE_PATH , Reg_files);
     end
 
-    always @(posedge clk) begin
+    always @(negedge clk) begin
         if(we) Reg_files[waddr] <= wdata;//如果使能变化且到达时钟的上升沿
     end
     
